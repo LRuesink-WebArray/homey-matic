@@ -1,0 +1,24 @@
+{
+  "name": "homeymatic",
+  "version": "1.0.0",
+  "description": "Connect Homematic CCU with Homey",
+  "main": "app.js",
+  "dependencies": {
+    "binrpc": "^3.2.1",
+    "homematic-xmlrpc": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twendt/homey-matic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twendt/homey-matic/issues"
+  },
+  "homepage": "https://github.com/twendt/homey-matic#readme"
+}

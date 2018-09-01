@@ -1,0 +1,442 @@
+{
+  "id": "de.twendt.homey.matic",
+  "version": "1.0.0",
+  "compatibility": ">=1.5.0",
+  "sdk": 2,
+  "name": {
+    "en": "Homematic"
+  },
+  "description": {
+    "en": "Connect Homematic with Homey"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Timo Wendt",
+    "email": "homey@tjwendt.de"
+  },
+  "capabilities": {
+    "homematic_thermostat_mode": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Auto",
+            "nl": "Auto"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Manu",
+            "nl": "Manu"
+          }
+        }
+      ],
+      "title": {
+        "en": "Mode"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true
+    },
+    "homematic_thermostat_boost": {
+      "type": "boolean",
+      "title": {
+        "en": "Boost"
+      },
+      "uiComponent": "button",
+      "getable": true,
+      "setable": true
+    }
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "HM-SwI-3-FM-pressed-1",
+        "title": {
+          "en": "Button 1 Pressed"
+        },
+        "args": [
+          {
+            "name": "HM-SwI-3-FM",
+            "type": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      },
+      {
+        "id": "HM-SwI-3-FM-pressed-2",
+        "title": {
+          "en": "Button 2 Pressed"
+        },
+        "args": [
+          {
+            "name": "HM-SwI-3-FM",
+            "type": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      },
+      {
+        "id": "HM-SwI-3-FM-pressed-3",
+        "title": {
+          "en": "Button 3 Pressed"
+        },
+        "args": [
+          {
+            "name": "HM-SwI-3-FM",
+            "type": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      }
+    ]
+  },
+  "drivers": [
+    {
+      "id": "HM-WS550STH-I",
+      "name": {
+        "en": "HM-WS550STH-I"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-SwI-3-FM",
+      "name": {
+        "en": "HM-SwI-3-FM"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SPI",
+      "name": {
+        "en": "HmIP-SPI"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HMIP-SWDO",
+      "name": {
+        "en": "HMIP-SWDO"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-Sec-SCo",
+      "name": {
+        "en": "HM-Sec-SCo"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HMIP-WTH",
+      "name": {
+        "en": "HMIP-WTH"
+      },
+      "class": "other",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "measure_humidity",
+        "homematic_thermostat_boost"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "measure_humidity"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ]
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-eTRV-2",
+      "name": {
+        "en": "HmIP-eTRV-2"
+      },
+      "class": "other",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ]
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HMIP-eTRV",
+      "name": {
+        "en": "HMIP-eTRV"
+      },
+      "class": "other",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    }
+  ]
+}
