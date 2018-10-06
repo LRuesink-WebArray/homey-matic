@@ -55,6 +55,38 @@
       "uiComponent": "button",
       "getable": true,
       "setable": true
+    },
+    "homematic_thermostat_weekprofile": {
+      "type": "enum",
+      "title": {
+        "en": "Weekprofile"
+      },
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "1",
+            "nl": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2",
+            "nl": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3",
+            "nl": "3"
+          }
+        }
+      ],
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true
     }
   },
   "flow": {
@@ -214,6 +246,84 @@
           }
         ]
       }
+    ],
+    "actions": [
+      {
+        "id": "homematic_thermostat_set_weekprofile",
+        "title": {
+          "en": "Set Week Profile"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HmIP-eTRV-2"
+          },
+          {
+            "name": "weekprofile",
+            "title": "Week Profile",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "homematic_thermostat_set_weekprofile",
+        "title": {
+          "en": "Set Week Profile"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HMIP-eTRV"
+          },
+          {
+            "name": "weekprofile",
+            "title": "Week Profile",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              }
+            ]
+          }
+        ]
+      }
     ]
   },
   "drivers": [
@@ -278,8 +388,10 @@
       "name": {
         "en": "HM-PB-4-WM"
       },
-      "class": "sensor",
-      "capabilities": [],
+      "class": "button",
+      "capabilities": [
+        "button"
+      ],
       "images": {
         "large": "/drivers/sensor/assets/images/large.png",
         "small": "/drivers/sensor/assets/images/small.png"
@@ -452,7 +564,8 @@
         "target_temperature",
         "measure_temperature",
         "measure_humidity",
-        "homematic_thermostat_boost"
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile"
       ],
       "mobile": {
         "components": [
@@ -477,6 +590,15 @@
             "capabilities": [
               "homematic_thermostat_mode"
             ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
           },
           {
             "id": "thermostat",
@@ -512,12 +634,13 @@
       "name": {
         "en": "HmIP-eTRV-2"
       },
-      "class": "other",
+      "class": "thermostat",
       "capabilities": [
         "homematic_thermostat_mode",
         "target_temperature",
         "measure_temperature",
-        "homematic_thermostat_boost"
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile"
       ],
       "mobile": {
         "components": [
@@ -541,6 +664,15 @@
             "capabilities": [
               "homematic_thermostat_mode"
             ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
           },
           {
             "id": "thermostat",
@@ -581,7 +713,8 @@
         "homematic_thermostat_mode",
         "target_temperature",
         "measure_temperature",
-        "homematic_thermostat_boost"
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile"
       ],
       "mobile": {
         "components": [
@@ -595,6 +728,15 @@
             "id": "toggle",
             "capabilities": [
               "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
             ],
             "options": {
               "showTitle": true

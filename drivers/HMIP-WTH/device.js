@@ -37,6 +37,16 @@ const capabilityMap = {
             "channel": 1,
             "valueType": "int"
         }
+    },
+    "homematic_thermostat_weekprofile": {
+        "channel": 1,
+        "key": "ACTIVE_PROFILE",
+        "valueType": "string",
+        "set": {
+            "key": "ACTIVE_PROFILE",
+            "channel": 1,
+            "valueType": "int"
+        }
     }
 }
 

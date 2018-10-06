@@ -12,7 +12,8 @@ class HomematicDriver extends Driver {
             'measure_humidity',
             'target_temperature',
             'homematic_thermostat_mode',
-            'homematic_thermostat_boost'
+            'homematic_thermostat_boost',
+            'homematic_thermostat_weekprofile'
         ]
         this.homematicType = 'HMIP-WTH'
         this.log(this.homematicType, 'has been inited');
