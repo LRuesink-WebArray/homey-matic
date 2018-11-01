@@ -21,6 +21,10 @@ The following devices are currently implemented:
 * HmIP-SPI
 * HMIP-SWDO
 * HMIP-WTH
+* HIP-PSM
+* H-LC-Dim1T-FM
+* HM-LC-Sw1-FM
+* HmIP-WRC6
 
 Known issues:
 
