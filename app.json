@@ -756,7 +756,7 @@
       "name": {
         "en": "HMIP-WTH"
       },
-      "class": "other",
+      "class": "thermostat",
       "capabilities": [
         "homematic_thermostat_mode",
         "target_temperature",
@@ -906,7 +906,7 @@
       "name": {
         "en": "HMIP-eTRV"
       },
-      "class": "other",
+      "class": "thermostat",
       "capabilities": [
         "homematic_thermostat_mode",
         "target_temperature",
