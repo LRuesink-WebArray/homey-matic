@@ -22,6 +22,38 @@
     "email": "homey@tjwendt.de"
   },
   "capabilities": {
+    "homematic_rhs_state": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "2",
+          "title": {
+            "en": "Open",
+            "nl": "Open"
+          }
+        },
+        {
+          "id": "0",
+          "title": {
+            "en": "Closed",
+            "nl": "Closed"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Tilted",
+            "nl": "Tilted"
+          }
+        }
+      ],
+      "title": {
+        "en": "State"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": false
+    },
     "homematic_thermostat_mode": {
       "type": "enum",
       "values": [
@@ -127,6 +159,44 @@
             "name": "HM-SwI-3-FM",
             "type": "device",
             "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      },
+      {
+        "id": "HM-Sec-RHS-changed",
+        "title": {
+          "en": "Handle state changed"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HM-Sec-RHS"
+          },
+          {
+            "name": "state",
+            "title": "State",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "CLOSED"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "TILTED"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "OPEN"
+                }
+              }
+            ]
           }
         ]
       },
@@ -636,6 +706,36 @@
       },
       "class": "sensor",
       "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-Sec-RHS",
+      "name": {
+        "en": "HM-Sec-RHS"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "homematic_rhs_state"
+      ],
       "images": {
         "large": "/drivers/sensor/assets/images/large.png",
         "small": "/drivers/sensor/assets/images/small.png"
