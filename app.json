@@ -133,12 +133,12 @@
       {
         "id": "HM-PB-4-WM-press",
         "title": {
-          "en": "Button Pressed"
+          "en": "Button Event"
         },
         "tokens": [
           {
             "name": "button",
-            "type": "number",
+            "type": "string",
             "title": {
               "en": "Button"
             }
@@ -156,27 +156,51 @@
             "type": "dropdown",
             "values": [
               {
-                "id": "1",
+                "id": "AO",
                 "label": {
-                  "en": "1"
+                  "en": "AO"
                 }
               },
               {
-                "id": "2",
+                "id": "AI",
                 "label": {
-                  "en": "2"
+                  "en": "AI"
                 }
               },
               {
-                "id": "3",
+                "id": "BO",
                 "label": {
-                  "en": "3"
+                  "en": "BO"
                 }
               },
               {
-                "id": "4",
+                "id": "BI",
                 "label": {
-                  "en": "4"
+                  "en": "BI"
+                }
+              },
+              {
+                "id": "AOBO",
+                "label": {
+                  "en": "AOBO"
+                }
+              },
+              {
+                "id": "AIBI",
+                "label": {
+                  "en": "AIBI"
+                }
+              },
+              {
+                "id": "AOBI",
+                "label": {
+                  "en": "AOBI"
+                }
+              },
+              {
+                "id": "AIBO",
+                "label": {
+                  "en": "AIBO"
                 }
               }
             ]
@@ -197,49 +221,17 @@
                 "label": {
                   "en": "Long"
                 }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HM-PB-4-WM-released",
-        "title": {
-          "en": "Button Released"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HM-PB-4-WM"
-          },
-          {
-            "name": "button",
-            "title": "Button",
-            "type": "dropdown",
-            "values": [
+              },
               {
-                "id": "1",
+                "id": "down",
                 "label": {
-                  "en": "1"
+                  "en": "Down"
                 }
               },
               {
-                "id": "2",
+                "id": "released",
                 "label": {
-                  "en": "2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "4"
+                  "en": "Released"
                 }
               }
             ]
