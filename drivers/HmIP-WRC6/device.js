@@ -18,11 +18,6 @@ class HomematicDevice extends Device {
             Homey.app.hm.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_LONG', (value) => {
                 self._driver.triggerButtonPressedFlow(self, { "button": button }, { "button": button, "pressType": "long" })
             });
-            Homey.app.hm.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-WORKING', (value) => {
-                if (value === false) {
-                    self._driver.triggerButtonReleasedFlow(self, { "button": button }, { "button": button })
-                }
-            });
         }
     }
 }
