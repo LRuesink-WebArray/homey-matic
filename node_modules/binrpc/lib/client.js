@@ -11,6 +11,7 @@ var binrpc = require('./protocol.js');
  * @param {string} options.host the hostname or ip address to connect to
  * @param {number} options.port the port to connect to
  * @param {number} [options.reconnectTimeout=2500] wait milliseconds until trying to reconnect after the socket was closed
+ * @param {number} [options.responseTimeout=5000] wait milliseconds for method call response
  * @param {number} [options.queueMaxLength=15] maximum number of methodCalls that are allowed in the queue
  */
 /** @exports client */
@@ -41,6 +42,12 @@ var Client = function (options) {
      * @type {boolean}
      */
     this.pending = false;
+
+    /**
+     * Time in milliseconds. How long to wait for a method call response
+     * @type {number}
+     */
+    this.responseTimeout = options.responseTimeout || 5000;
 
     /**
      * connect
@@ -152,12 +159,12 @@ var Client = function (options) {
                 });
                 that.socket.on('timeout', function () {
                     writeEnd();
-                    obj.callback(new Error('timeout'));
+                    obj.callback(new Error('socket timeout'));
                 });
                 timeout = setTimeout(function () {
                     writeEnd();
-                    obj.callback(new Error('timeout'));
-                }, 5000);
+                    obj.callback(new Error('response timeout'));
+                }, that.responseTimeout);
                 that.socket.write(obj.buf, function (err) {
                     if (err && typeof obj.callback === 'function') {
                         writeEnd();

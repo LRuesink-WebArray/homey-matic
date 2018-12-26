@@ -15,7 +15,7 @@ describe('client server disconnect', function () {
             }, 10000);
         });
         rpcClient.methodCall('veryslow', [''], function (err, res) {
-            err.toString().should.equal('Error: timeout');
+            err.toString().should.equal('Error: response timeout');
             done(err ? undefined : new Error(''));
         });
     });
