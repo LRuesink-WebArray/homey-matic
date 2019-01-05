@@ -119,6 +119,20 @@
       "uiComponent": "picker",
       "getable": true,
       "setable": true
+    },
+    "homematic_measure_valve": {
+      "type": "number",
+      "title": {
+        "en": "Valve"
+      },
+      "getable": true,
+      "setable": false,
+      "units": {
+        "en": "%"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1
     }
   },
   "flow": {
@@ -872,7 +886,8 @@
         "target_temperature",
         "measure_temperature",
         "homematic_thermostat_boost",
-        "homematic_thermostat_weekprofile"
+        "homematic_thermostat_weekprofile",
+        "homematic_measure_valve"
       ],
       "mobile": {
         "components": [
@@ -894,7 +909,8 @@
           {
             "id": "picker",
             "capabilities": [
-              "homematic_thermostat_mode"
+              "homematic_thermostat_mode",
+              "homematic_thermostat_weekprofile"
             ]
           },
           {
@@ -946,7 +962,8 @@
         "target_temperature",
         "measure_temperature",
         "homematic_thermostat_boost",
-        "homematic_thermostat_weekprofile"
+        "homematic_thermostat_weekprofile",
+        "homematic_measure_valve"
       ],
       "mobile": {
         "components": [

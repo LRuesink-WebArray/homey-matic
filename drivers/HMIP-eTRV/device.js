@@ -43,6 +43,11 @@ const capabilityMap = {
             "channel": 1,
             "valueType": "int"
         }
+    },
+    "homematic_measure_valve": {
+        "channel": 1,
+        "key": "LEVEL",
+        "valueType": "floatPercent"
     }
 }
 

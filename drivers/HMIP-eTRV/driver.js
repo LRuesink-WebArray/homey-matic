@@ -12,7 +12,8 @@ class HomematicDriver extends Driver {
             'target_temperature',
             'homematic_thermostat_mode',
             'homematic_thermostat_boost',
-            'homematic_thermostat_weekprofile'
+            'homematic_thermostat_weekprofile',
+            'homematic_measure_valve'
         ]
         this.homematicType = 'HMIP-eTRV'
         this.log(this.homematicType, 'has been inited');
