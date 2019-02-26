@@ -4,7 +4,7 @@ const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
 const capabilityMap = {
-    "alarm_contact": {
+    "alarm_smoke": {
         "channel": 1,
         "key": "STATE",
         "valueType": "boolean"
