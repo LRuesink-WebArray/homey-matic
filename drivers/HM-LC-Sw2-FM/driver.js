@@ -8,9 +8,9 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [
-            'alarm_contact','alarm_battery'
+            'onoff.relay1','onoff.relay2'
         ]
-        this.homematicType = 'HM-Sec-SCo'
+        this.homematicType = 'HM-LC-Sw2-FM'
         this.log(this.homematicType, 'has been inited');
     }
 
