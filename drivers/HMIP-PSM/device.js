@@ -18,13 +18,11 @@ const capabilityMap = {
     },
     "measure_voltage": {
         "channel": 6,
-        "key": "VOLTAGE",
-        "valueType": "V"
+        "key": "VOLTAGE"
     },
     "measure_current": {
         "channel": 6,
-        "key": "CURRENT",
-        "valueType": "V"
+        "key": "CURRENT"
     },
     "meter_power": {
         "channel": 6,
