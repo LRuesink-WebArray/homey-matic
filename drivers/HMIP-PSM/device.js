@@ -22,7 +22,8 @@ const capabilityMap = {
     },
     "measure_current": {
         "channel": 6,
-        "key": "CURRENT"
+        "key": "CURRENT",
+        "valueType": "mA"
     },
     "meter_power": {
         "channel": 6,
