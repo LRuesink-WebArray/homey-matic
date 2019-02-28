@@ -10,6 +10,8 @@ class HomematicDriver extends Driver {
         this.capabilities = [
             'onoff',
             'measure_power',
+            'measure_voltage',
+            'measure_current',
             'meter_power'
         ]
         this.homematicType = 'HMIP-PSM'
