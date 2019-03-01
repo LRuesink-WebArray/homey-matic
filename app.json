@@ -127,6 +127,7 @@
       },
       "getable": true,
       "setable": false,
+      "insights": true,
       "units": {
         "en": "%"
       },
@@ -717,6 +718,34 @@
       "id": "HMIP-SWDO",
       "name": {
         "en": "HMIP-SWDO"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SWD",
+      "name": {
+        "en": "HmIP-SWD"
       },
       "class": "sensor",
       "capabilities": [],
