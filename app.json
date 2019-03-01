@@ -675,8 +675,8 @@
       "class": "socket",
       "capabilities": [],
       "images": {
-        "large": "/drivers/HMIP-PSM/assets/images/large.png",
-        "small": "/drivers/HMIP-PSM/assets/images/small.png"
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
       },
       "pair": [
         {
