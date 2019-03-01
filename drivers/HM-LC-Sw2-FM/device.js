@@ -4,15 +4,21 @@ const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
 const capabilityMap = {
-    "alarm_contact": {
+    "onoff.relay1": {
         "channel": 1,
         "key": "STATE",
-        "valueType": "boolean"
+        "set": {
+            "key": "STATE",
+            "channel": 1
+        }
     },
-    "alarm_battery": {
-        "channel": 1,
-        "key": "LOWBAT",
-        "valueType": "boolean"
+    "onoff.relay2": {
+        "channel": 2,
+        "key": "STATE",
+        "set": {
+            "key": "STATE",
+            "channel": 2
+        }
     }
 }
 
