@@ -1,0 +1,112 @@
+{
+    "triggers": [
+        {
+            "id": "HM-PB-4-WM-press",
+            "title": {
+                "en": "Button Event"
+            },
+            "tokens": [
+                {
+                    "name": "button",
+                    "type": "string",
+                    "title": {
+                        "en": "Button"
+                    }
+                }
+            ],
+            "args": [
+                {
+                    "name": "device",
+                    "type": "device",
+                    "filter": "driver_id=HM-PB-4-WM"
+                },
+                {
+                    "name": "button",
+                    "title": "Button",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "AO",
+                            "label": {
+                                "en": "AO"
+                            }
+                        },
+                        {
+                            "id": "AI",
+                            "label": {
+                                "en": "AI"
+                            }
+                        },
+                        {
+                            "id": "BO",
+                            "label": {
+                                "en": "BO"
+                            }
+                        },
+                        {
+                            "id": "BI",
+                            "label": {
+                                "en": "BI"
+                            }
+                        },
+                        {
+                            "id": "AOBO",
+                            "label": {
+                                "en": "AOBO"
+                            }
+                        },
+                        {
+                            "id": "AIBI",
+                            "label": {
+                                "en": "AIBI"
+                            }
+                        },
+                        {
+                            "id": "AOBI",
+                            "label": {
+                                "en": "AOBI"
+                            }
+                        },
+                        {
+                            "id": "AIBO",
+                            "label": {
+                                "en": "AIBO"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pressType",
+                    "title": "Press Type",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "short",
+                            "label": {
+                                "en": "Short"
+                            }
+                        },
+                        {
+                            "id": "long",
+                            "label": {
+                                "en": "Long"
+                            }
+                        },
+                        {
+                            "id": "down",
+                            "label": {
+                                "en": "Down"
+                            }
+                        },
+                        {
+                            "id": "released",
+                            "label": {
+                                "en": "Released"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -21,593 +21,13 @@
     "name": "Timo Wendt",
     "email": "homey@tjwendt.de"
   },
-  "capabilities": {
-    "homematic_rhs_state": {
-      "type": "enum",
-      "values": [
-        {
-          "id": "2",
-          "title": {
-            "en": "Open",
-            "nl": "Open"
-          }
-        },
-        {
-          "id": "0",
-          "title": {
-            "en": "Closed",
-            "nl": "Closed"
-          }
-        },
-        {
-          "id": "1",
-          "title": {
-            "en": "Tilted",
-            "nl": "Tilted"
-          }
-        }
-      ],
-      "title": {
-        "en": "State"
-      },
-      "uiComponent": "picker",
-      "getable": true,
-      "setable": false
-    },
-    "homematic_thermostat_mode": {
-      "type": "enum",
-      "values": [
-        {
-          "id": "0",
-          "title": {
-            "en": "Auto",
-            "nl": "Auto"
-          }
-        },
-        {
-          "id": "1",
-          "title": {
-            "en": "Manu",
-            "nl": "Manu"
-          }
-        }
-      ],
-      "title": {
-        "en": "Mode"
-      },
-      "uiComponent": "picker",
-      "getable": true,
-      "setable": true
-    },
-    "homematic_thermostat_boost": {
-      "type": "boolean",
-      "title": {
-        "en": "Boost"
-      },
-      "uiComponent": "button",
-      "getable": true,
-      "setable": true
-    },
-    "homematic_thermostat_weekprofile": {
-      "type": "enum",
-      "title": {
-        "en": "Weekprofile"
-      },
-      "values": [
-        {
-          "id": "1",
-          "title": {
-            "en": "1",
-            "nl": "1"
-          }
-        },
-        {
-          "id": "2",
-          "title": {
-            "en": "2",
-            "nl": "2"
-          }
-        },
-        {
-          "id": "3",
-          "title": {
-            "en": "3",
-            "nl": "3"
-          }
-        }
-      ],
-      "uiComponent": "picker",
-      "getable": true,
-      "setable": true
-    },
-    "homematic_measure_valve": {
-      "type": "number",
-      "title": {
-        "en": "Valve"
-      },
-      "getable": true,
-      "setable": false,
-      "insights": true,
-      "units": {
-        "en": "%"
-      },
-      "min": 0,
-      "max": 100,
-      "step": 1
-    }
-  },
-  "flow": {
-    "triggers": [
-      {
-        "id": "HM-SwI-3-FM-pressed-1",
-        "title": {
-          "en": "Button 1 Pressed"
-        },
-        "args": [
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
-          }
-        ]
-      },
-      {
-        "id": "HM-SwI-3-FM-pressed-2",
-        "title": {
-          "en": "Button 2 Pressed"
-        },
-        "args": [
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
-          }
-        ]
-      },
-      {
-        "id": "HM-SwI-3-FM-pressed-3",
-        "title": {
-          "en": "Button 3 Pressed"
-        },
-        "args": [
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
-          }
-        ]
-      },
-      {
-        "id": "HM-Sec-RHS-changed",
-        "title": {
-          "en": "Handle state changed"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HM-Sec-RHS"
-          },
-          {
-            "name": "state",
-            "title": "State",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "0",
-                "label": {
-                  "en": "CLOSED"
-                }
-              },
-              {
-                "id": "1",
-                "label": {
-                  "en": "TILTED"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "OPEN"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HM-PB-4-WM-press",
-        "title": {
-          "en": "Button Event"
-        },
-        "tokens": [
-          {
-            "name": "button",
-            "type": "string",
-            "title": {
-              "en": "Button"
-            }
-          }
-        ],
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HM-PB-4-WM"
-          },
-          {
-            "name": "button",
-            "title": "Button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "AO",
-                "label": {
-                  "en": "AO"
-                }
-              },
-              {
-                "id": "AI",
-                "label": {
-                  "en": "AI"
-                }
-              },
-              {
-                "id": "BO",
-                "label": {
-                  "en": "BO"
-                }
-              },
-              {
-                "id": "BI",
-                "label": {
-                  "en": "BI"
-                }
-              },
-              {
-                "id": "AOBO",
-                "label": {
-                  "en": "AOBO"
-                }
-              },
-              {
-                "id": "AIBI",
-                "label": {
-                  "en": "AIBI"
-                }
-              },
-              {
-                "id": "AOBI",
-                "label": {
-                  "en": "AOBI"
-                }
-              },
-              {
-                "id": "AIBO",
-                "label": {
-                  "en": "AIBO"
-                }
-              }
-            ]
-          },
-          {
-            "name": "pressType",
-            "title": "Press Type",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "short",
-                "label": {
-                  "en": "Short"
-                }
-              },
-              {
-                "id": "long",
-                "label": {
-                  "en": "Long"
-                }
-              },
-              {
-                "id": "down",
-                "label": {
-                  "en": "Down"
-                }
-              },
-              {
-                "id": "released",
-                "label": {
-                  "en": "Released"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HmIP-WRC6-press",
-        "title": {
-          "en": "Button Event"
-        },
-        "tokens": [
-          {
-            "name": "button",
-            "type": "number",
-            "title": {
-              "en": "Button"
-            }
-          }
-        ],
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HmIP-WRC6"
-          },
-          {
-            "name": "button",
-            "title": "Button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "3"
-                }
-              },
-              {
-                "id": "4",
-                "label": {
-                  "en": "4"
-                }
-              },
-              {
-                "id": "5",
-                "label": {
-                  "en": "5"
-                }
-              },
-              {
-                "id": "6",
-                "label": {
-                  "en": "6"
-                }
-              }
-            ]
-          },
-          {
-            "name": "pressType",
-            "title": "Press Type",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "short",
-                "label": {
-                  "en": "Short"
-                }
-              },
-              {
-                "id": "long",
-                "label": {
-                  "en": "Long"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "actions": [
-      {
-        "id": "homematic_thermostat_set_weekprofile",
-        "title": {
-          "en": "Set Week Profile"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HmIP-eTRV-2"
-          },
-          {
-            "name": "weekprofile",
-            "title": "Week Profile",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "3"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "homematic_thermostat_set_weekprofile",
-        "title": {
-          "en": "Set Week Profile"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HMIP-eTRV"
-          },
-          {
-            "name": "weekprofile",
-            "title": "Week Profile",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "2"
-                }
-              },
-              {
-                "id": "3",
-                "label": {
-                  "en": "3"
-                }
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
   "drivers": [
     {
-      "id": "HM-WS550STH-I",
+      "id": "HM-LC-Dim1T-FM",
       "name": {
-        "en": "HM-WS550STH-I"
+        "en": "HM-LC-Dim1T-FM"
       },
-      "class": "sensor",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HM-SwI-3-FM",
-      "name": {
-        "en": "HM-SwI-3-FM"
-      },
-      "class": "sensor",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HM-PB-4-WM",
-      "name": {
-        "en": "HM-PB-4-WM"
-      },
-      "class": "button",
-      "capabilities": [
-        "button"
-      ],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HmIP-WRC6",
-      "name": {
-        "en": "HmIP-WRC6"
-      },
-      "class": "button",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HmIP-SPI",
-      "name": {
-        "en": "HmIP-SPI"
-      },
-      "class": "sensor",
+      "class": "light",
       "capabilities": [],
       "images": {
         "large": "/drivers/sensor/assets/images/large.png",
@@ -687,96 +107,14 @@
       ]
     },
     {
-      "id": "HMIP-PSM",
+      "id": "HM-PB-4-WM",
       "name": {
-        "en": "HMIP-PSM"
+        "en": "HM-PB-4-WM"
       },
-      "class": "socket",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HM-LC-Dim1T-FM",
-      "name": {
-        "en": "HM-LC-Dim1T-FM"
-      },
-      "class": "light",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HMIP-SWDO",
-      "name": {
-        "en": "HMIP-SWDO"
-      },
-      "class": "sensor",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          },
-          "options": {
-            "singular": false
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HmIP-SWD",
-      "name": {
-        "en": "HmIP-SWD"
-      },
-      "class": "sensor",
-      "capabilities": [],
+      "class": "button",
+      "capabilities": [
+        "button"
+      ],
       "images": {
         "large": "/drivers/sensor/assets/images/large.png",
         "small": "/drivers/sensor/assets/images/small.png"
@@ -885,26 +223,81 @@
       ]
     },
     {
-      "id": "HMIP-WTH",
+      "id": "HM-SwI-3-FM",
       "name": {
-        "en": "HMIP-WTH"
+        "en": "HM-SwI-3-FM"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-WS550STH-I",
+      "name": {
+        "en": "HM-WS550STH-I"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HMIP-eTRV",
+      "name": {
+        "en": "HMIP-eTRV"
       },
       "class": "thermostat",
       "capabilities": [
         "homematic_thermostat_mode",
         "target_temperature",
         "measure_temperature",
-        "measure_humidity",
         "homematic_thermostat_boost",
-        "homematic_thermostat_weekprofile"
+        "homematic_thermostat_weekprofile",
+        "homematic_measure_valve"
       ],
       "mobile": {
         "components": [
           {
             "id": "sensor",
             "capabilities": [
-              "measure_temperature",
-              "measure_humidity"
+              "measure_temperature"
             ]
           },
           {
@@ -919,13 +312,16 @@
           {
             "id": "picker",
             "capabilities": [
-              "homematic_thermostat_mode"
-            ]
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
           },
           {
             "id": "picker",
             "capabilities": [
-              "homematic_thermostat_weekprofile"
+              "homematic_thermostat_mode"
             ],
             "options": {
               "showTitle": true
@@ -1037,25 +433,166 @@
       ]
     },
     {
-      "id": "HMIP-eTRV",
+      "id": "HMIP-PSM",
       "name": {
-        "en": "HMIP-eTRV"
+        "en": "HMIP-PSM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SPI",
+      "name": {
+        "en": "HmIP-SPI"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SWD",
+      "name": {
+        "en": "HmIP-SWD"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HMIP-SWDO",
+      "name": {
+        "en": "HMIP-SWDO"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-WRC6",
+      "name": {
+        "en": "HmIP-WRC6"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/sensor/assets/images/large.png",
+        "small": "/drivers/sensor/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HMIP-WTH",
+      "name": {
+        "en": "HMIP-WTH"
       },
       "class": "thermostat",
       "capabilities": [
         "homematic_thermostat_mode",
         "target_temperature",
         "measure_temperature",
+        "measure_humidity",
         "homematic_thermostat_boost",
-        "homematic_thermostat_weekprofile",
-        "homematic_measure_valve"
+        "homematic_thermostat_weekprofile"
       ],
       "mobile": {
         "components": [
           {
             "id": "sensor",
             "capabilities": [
-              "measure_temperature"
+              "measure_temperature",
+              "measure_humidity"
             ]
           },
           {
@@ -1070,16 +607,13 @@
           {
             "id": "picker",
             "capabilities": [
-              "homematic_thermostat_weekprofile"
-            ],
-            "options": {
-              "showTitle": true
-            }
+              "homematic_thermostat_mode"
+            ]
           },
           {
             "id": "picker",
             "capabilities": [
-              "homematic_thermostat_mode"
+              "homematic_thermostat_weekprofile"
             ],
             "options": {
               "showTitle": true
@@ -1114,5 +648,511 @@
         }
       ]
     }
-  ]
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "HM-PB-4-WM-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "string",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-PB-4-WM"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HM-PB-4-WM"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "AO",
+                "label": {
+                  "en": "AO"
+                }
+              },
+              {
+                "id": "AI",
+                "label": {
+                  "en": "AI"
+                }
+              },
+              {
+                "id": "BO",
+                "label": {
+                  "en": "BO"
+                }
+              },
+              {
+                "id": "BI",
+                "label": {
+                  "en": "BI"
+                }
+              },
+              {
+                "id": "AOBO",
+                "label": {
+                  "en": "AOBO"
+                }
+              },
+              {
+                "id": "AIBI",
+                "label": {
+                  "en": "AIBI"
+                }
+              },
+              {
+                "id": "AOBI",
+                "label": {
+                  "en": "AOBI"
+                }
+              },
+              {
+                "id": "AIBO",
+                "label": {
+                  "en": "AIBO"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              },
+              {
+                "id": "down",
+                "label": {
+                  "en": "Down"
+                }
+              },
+              {
+                "id": "released",
+                "label": {
+                  "en": "Released"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HM-Sec-RHS-changed",
+        "title": {
+          "en": "Handle state changed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sec-RHS"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HM-Sec-RHS"
+          },
+          {
+            "name": "state",
+            "title": "State",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "CLOSED"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "TILTED"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "OPEN"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HM-SwI-3-FM-pressed-1",
+        "title": {
+          "en": "Button 1 Pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          },
+          {
+            "name": "HM-SwI-3-FM",
+            "type": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      },
+      {
+        "id": "HM-SwI-3-FM-pressed-2",
+        "title": {
+          "en": "Button 2 Pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          },
+          {
+            "name": "HM-SwI-3-FM",
+            "type": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      },
+      {
+        "id": "HM-SwI-3-FM-pressed-3",
+        "title": {
+          "en": "Button 3 Pressed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          },
+          {
+            "name": "HM-SwI-3-FM",
+            "type": "device",
+            "filter": "driver_id=HM-SwI-3-FM"
+          }
+        ]
+      },
+      {
+        "id": "HmIP-WRC6-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-WRC6"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HmIP-WRC6"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "6"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "id": "homematic_thermostat_set_weekprofile",
+        "title": {
+          "en": "Set Week Profile"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HMIP-eTRV"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HMIP-eTRV"
+          },
+          {
+            "name": "weekprofile",
+            "title": "Week Profile",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "homematic_thermostat_set_weekprofile",
+        "title": {
+          "en": "Set Week Profile"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-2"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=HmIP-eTRV-2"
+          },
+          {
+            "name": "weekprofile",
+            "title": "Week Profile",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "capabilities": {
+    "homematic_measure_valve": {
+      "type": "number",
+      "title": {
+        "en": "Valve"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "en": "%"
+      },
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    "homematic_rhs_state": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "2",
+          "title": {
+            "en": "Open",
+            "nl": "Open"
+          }
+        },
+        {
+          "id": "0",
+          "title": {
+            "en": "Closed",
+            "nl": "Closed"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Tilted",
+            "nl": "Tilted"
+          }
+        }
+      ],
+      "title": {
+        "en": "State"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": false
+    },
+    "homematic_thermostat_boost": {
+      "type": "boolean",
+      "title": {
+        "en": "Boost"
+      },
+      "uiComponent": "button",
+      "getable": true,
+      "setable": true
+    },
+    "homematic_thermostat_mode": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Auto",
+            "nl": "Auto"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Manu",
+            "nl": "Manu"
+          }
+        }
+      ],
+      "title": {
+        "en": "Mode"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true
+    },
+    "homematic_thermostat_weekprofile": {
+      "type": "enum",
+      "title": {
+        "en": "Weekprofile"
+      },
+      "values": [
+        {
+          "id": "1",
+          "title": {
+            "en": "1",
+            "nl": "1"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "2",
+            "nl": "2"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "3",
+            "nl": "3"
+          }
+        }
+      ],
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true
+    }
+  }
 }

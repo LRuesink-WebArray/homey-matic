@@ -1,0 +1,42 @@
+{
+    "triggers": [
+        {
+            "id": "HM-Sec-RHS-changed",
+            "title": {
+                "en": "Handle state changed"
+            },
+            "args": [
+                {
+                    "name": "device",
+                    "type": "device",
+                    "filter": "driver_id=HM-Sec-RHS"
+                },
+                {
+                    "name": "state",
+                    "title": "State",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "CLOSED"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "TILTED"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "OPEN"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

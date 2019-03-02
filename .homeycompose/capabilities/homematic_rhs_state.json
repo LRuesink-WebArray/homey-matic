@@ -1,0 +1,32 @@
+{
+    "type": "enum",
+    "values": [
+        {
+            "id": "2",
+            "title": {
+                "en": "Open",
+                "nl": "Open"
+            }
+        },
+        {
+            "id": "0",
+            "title": {
+                "en": "Closed",
+                "nl": "Closed"
+            }
+        },
+        {
+            "id": "1",
+            "title": {
+                "en": "Tilted",
+                "nl": "Tilted"
+            }
+        }
+    ],
+    "title": {
+        "en": "State"
+    },
+    "uiComponent": "picker",
+    "getable": true,
+    "setable": false
+}

@@ -1,0 +1,25 @@
+{
+    "type": "enum",
+    "values": [
+        {
+            "id": "0",
+            "title": {
+                "en": "Auto",
+                "nl": "Auto"
+            }
+        },
+        {
+            "id": "1",
+            "title": {
+                "en": "Manu",
+                "nl": "Manu"
+            }
+        }
+    ],
+    "title": {
+        "en": "Mode"
+    },
+    "uiComponent": "picker",
+    "getable": true,
+    "setable": true
+}

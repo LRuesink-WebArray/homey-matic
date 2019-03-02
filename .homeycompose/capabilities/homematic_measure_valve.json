@@ -1,0 +1,15 @@
+{
+    "type": "number",
+    "title": {
+        "en": "Valve"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": {
+        "en": "%"
+    },
+    "min": 0,
+    "max": 100,
+    "step": 1
+}
