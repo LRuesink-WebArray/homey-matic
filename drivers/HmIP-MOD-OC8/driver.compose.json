@@ -1,0 +1,28 @@
+{
+    "id": "HmIP-MOD-OC8",
+    "name": {
+        "en": "HmIP-MOD-OC8"
+    },
+    "class": "socket",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HmIP-MOD-OC8/assets/images/large.png",
+        "small": "/drivers/HmIP-MOD-OC8/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            },
+            "options": {
+                "singular": false
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}
