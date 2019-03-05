@@ -21,13 +21,18 @@ The following devices are currently implemented:
 * HmIP-SPI
 * HMIP-SWDO
 * HMIP-WTH
-* HIP-PSM
+* HMIP-PSM
 * H-LC-Dim1T-FM
 * HM-LC-Sw1-FM
 * HmIP-WRC6
+* HmIP-MOD-OC8
+* HmIP-SWD
+* HM-LC-Sw2-FM
+* HM-Sec-RHS
+* HM-Sec-SD-2
 
 Known issues:
 
 It is required that the Homey IP and the CCU IP are configured in the settings of the app. The app needs to be restarted after the settings have been saved.
 
-The IP of the Homey is required as the app run an RPC server for each interface that are required by the CCU to sends events to.
+The IP of the Homey is required as the app runs an RPC server for each interface that are required by the CCU to sends events to.
