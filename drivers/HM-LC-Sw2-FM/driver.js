@@ -8,9 +8,11 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [
-            'onoff.relay1','onoff.relay2'
+            'onoff'
         ]
         this.homematicType = 'HM-LC-Sw2-FM'
+        this.numDevices = 2
+        this.multiDevice = true
         this.log(this.homematicType, 'has been inited');
     }
 
