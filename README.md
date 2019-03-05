@@ -1,3 +1,5 @@
+# ***** This app is still in Beta *****
+
 # Homematic
 
 This app adds support for Homematic device in Homey via the CCU2/CCU3/RaspberryMatic
