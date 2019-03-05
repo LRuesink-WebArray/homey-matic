@@ -6,8 +6,8 @@
     "class": "sensor",
     "capabilities": [],
     "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-Sec-SCo/assets/images/large.png",
+        "small": "/drivers/HM-Sec-SCo/assets/images/small.png"
     },
     "pair": [
         {

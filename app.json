@@ -30,8 +30,8 @@
       "class": "light",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-LC-Dim1T-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Dim1T-FM/assets/images/small.png"
       },
       "pair": [
         {
@@ -58,8 +58,8 @@
       "class": "socket",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-LC-Sw1-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw1-FM/assets/images/small.png"
       },
       "pair": [
         {
@@ -86,8 +86,8 @@
       "class": "socket",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-LC-Sw2-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw2-FM/assets/images/small.png"
       },
       "pair": [
         {
@@ -116,8 +116,8 @@
         "button"
       ],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-PB-4-WM/assets/images/large.png",
+        "small": "/drivers/HM-PB-4-WM/assets/images/small.png"
       },
       "pair": [
         {
@@ -146,8 +146,8 @@
         "homematic_rhs_state"
       ],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-Sec-RHS/assets/images/large.png",
+        "small": "/drivers/HM-Sec-RHS/assets/images/small.png"
       },
       "pair": [
         {
@@ -174,8 +174,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-Sec-SCo/assets/images/large.png",
+        "small": "/drivers/HM-Sec-SCo/assets/images/small.png"
       },
       "pair": [
         {
@@ -202,8 +202,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-Sec-SD-2/assets/images/large.png",
+        "small": "/drivers/HM-Sec-SD-2/assets/images/small.png"
       },
       "pair": [
         {
@@ -230,8 +230,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-SwI-3-FM/assets/images/large.png",
+        "small": "/drivers/HM-SwI-3-FM/assets/images/small.png"
       },
       "pair": [
         {
@@ -258,8 +258,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-WS550STH-I/assets/images/large.png",
+        "small": "/drivers/HM-WS550STH-I/assets/images/small.png"
       },
       "pair": [
         {
@@ -336,8 +336,8 @@
         ]
       },
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HMIP-eTRV/assets/images/large.png",
+        "small": "/drivers/HMIP-eTRV/assets/images/small.png"
       },
       "pair": [
         {
@@ -412,8 +412,8 @@
         ]
       },
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HmIP-eTRV-2/assets/images/large.png",
+        "small": "/drivers/HmIP-eTRV-2/assets/images/small.png"
       },
       "pair": [
         {
@@ -468,8 +468,8 @@
       "class": "socket",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HMIP-PSM/assets/images/large.png",
+        "small": "/drivers/HMIP-PSM/assets/images/small.png"
       },
       "pair": [
         {
@@ -496,8 +496,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HmIP-SPI/assets/images/large.png",
+        "small": "/drivers/HmIP-SPI/assets/images/small.png"
       },
       "pair": [
         {
@@ -524,8 +524,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HmIP-SWD/assets/images/large.png",
+        "small": "/drivers/HmIP-SWD/assets/images/small.png"
       },
       "pair": [
         {
@@ -552,8 +552,8 @@
       "class": "sensor",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HMIP-SWDO/assets/images/large.png",
+        "small": "/drivers/HMIP-SWDO/assets/images/small.png"
       },
       "pair": [
         {
@@ -580,8 +580,8 @@
       "class": "button",
       "capabilities": [],
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HmIP-WRC6/assets/images/large.png",
+        "small": "/drivers/HmIP-WRC6/assets/images/small.png"
       },
       "pair": [
         {
@@ -656,8 +656,8 @@
         ]
       },
       "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HMIP-WTH/assets/images/large.png",
+        "small": "/drivers/HMIP-WTH/assets/images/small.png"
       },
       "pair": [
         {

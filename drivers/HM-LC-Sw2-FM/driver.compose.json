@@ -6,8 +6,8 @@
     "class": "socket",
     "capabilities": [],
     "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-LC-Sw2-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw2-FM/assets/images/small.png"
     },
     "pair": [
         {

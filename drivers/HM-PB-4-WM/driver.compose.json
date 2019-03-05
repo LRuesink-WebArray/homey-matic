@@ -8,8 +8,8 @@
         "button"
     ],
     "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-PB-4-WM/assets/images/large.png",
+        "small": "/drivers/HM-PB-4-WM/assets/images/small.png"
     },
     "pair": [
         {

@@ -6,8 +6,8 @@
     "class": "sensor",
     "capabilities": [],
     "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-WS550STH-I/assets/images/large.png",
+        "small": "/drivers/HM-WS550STH-I/assets/images/small.png"
     },
     "pair": [
         {

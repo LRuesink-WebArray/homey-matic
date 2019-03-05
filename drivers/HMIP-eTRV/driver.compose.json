@@ -56,8 +56,8 @@
         ]
     },
     "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HMIP-eTRV/assets/images/large.png",
+        "small": "/drivers/HMIP-eTRV/assets/images/small.png"
     },
     "pair": [
         {

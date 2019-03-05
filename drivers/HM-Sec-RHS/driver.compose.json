@@ -8,8 +8,8 @@
         "homematic_rhs_state"
     ],
     "images": {
-        "large": "/drivers/sensor/assets/images/large.png",
-        "small": "/drivers/sensor/assets/images/small.png"
+        "large": "/drivers/HM-Sec-RHS/assets/images/large.png",
+        "small": "/drivers/HM-Sec-RHS/assets/images/small.png"
     },
     "pair": [
         {
