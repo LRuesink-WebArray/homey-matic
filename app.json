@@ -10,16 +10,17 @@
     "en": "Connect Homematic with Homey"
   },
   "category": [
-    "tools"
+    "tools",
+    "appliances"
   ],
   "permissions": [],
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
   },
+  "homeyCommunityTopicId": 1057,
   "author": {
-    "name": "Timo Wendt",
-    "email": "homey@tjwendt.de"
+    "name": "Timo Wendt"
   },
   "drivers": [
     {
