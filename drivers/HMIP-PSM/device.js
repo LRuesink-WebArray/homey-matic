@@ -16,6 +16,15 @@ const capabilityMap = {
         "channel": 6,
         "key": "POWER"
     },
+    "measure_voltage": {
+        "channel": 6,
+        "key": "VOLTAGE"
+    },
+    "measure_current": {
+        "channel": 6,
+        "key": "CURRENT",
+        "valueType": "mA"
+    },
     "meter_power": {
         "channel": 6,
         "key": "ENERGY_COUNTER",
