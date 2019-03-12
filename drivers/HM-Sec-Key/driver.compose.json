@@ -1,0 +1,28 @@
+{
+    "id": "HM-Sec-Key",
+    "name": {
+        "en": "HM-Sec-Key"
+    },
+    "class": "lock",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-Sec-Key/assets/images/large.png",
+        "small": "/drivers/HM-Sec-Key/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            },
+            "options": {
+                "singular": false
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}
