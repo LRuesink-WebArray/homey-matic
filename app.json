@@ -31,6 +31,34 @@
   },
   "drivers": [
     {
+      "id": "HM-ES-PMSw1-Pl",
+      "name": {
+        "en": "HM-ES-PMSw1-Pl"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-ES-PMSw1-Pl/assets/images/large.png",
+        "small": "/drivers/HM-ES-PMSw1-Pl/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-LC-Dim1T-FM",
       "name": {
         "en": "HM-LC-Dim1T-FM"
@@ -126,6 +154,34 @@
       "images": {
         "large": "/drivers/HM-PB-4-WM/assets/images/large.png",
         "small": "/drivers/HM-PB-4-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          },
+          "options": {
+            "singular": false
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-Sec-Key",
+      "name": {
+        "en": "HM-Sec-Key"
+      },
+      "class": "lock",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sec-Key/assets/images/large.png",
+        "small": "/drivers/HM-Sec-Key/assets/images/small.png"
       },
       "pair": [
         {

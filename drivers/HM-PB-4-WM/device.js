@@ -24,29 +24,35 @@ class HomematicDevice extends Device {
         var self = this;
         this.db0 = 0;
         this.active = false;
-        Homey.app.hm.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-DB0', (value) => {
-            if (value == '0') {
-                self._driver.triggerButtonPressedFlow(self, { "button": buttons[self.db0] }, { "button": buttons[self.db0], "pressType": "released" })
-            } else {
-                this.active = true;
-                self._driver.triggerButtonPressedFlow(self, { "button": buttons[value] }, { "button": buttons[value], "pressType": "down" })
-            }
-            self.db0 = value;
-        });
-        for (let button = 1; button <= 4; button++) {
-            Homey.app.hm.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_SHORT', (value) => {
-                if (this.db0 != '0') {
-                    self._driver.triggerButtonPressedFlow(self, { "button": buttons[self.db0] }, { "button": buttons[self.db0], "pressType": "short" })
-                    this.active = false;
+        this.driver.getBridge({ serial: this.bridgeSerial })
+            .then(async bridge => {
+                self.bridge = bridge;
+                self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-DB0', (value) => {
+                    if (value == '0') {
+                        self._driver.triggerButtonPressedFlow(self, { "button": buttons[self.db0] }, { "button": buttons[self.db0], "pressType": "released" })
+                    } else {
+                        this.active = true;
+                        self._driver.triggerButtonPressedFlow(self, { "button": buttons[value] }, { "button": buttons[value], "pressType": "down" })
+                    }
+                    self.db0 = value;
+                });
+                for (let button = 1; button <= 4; button++) {
+                    self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_SHORT', (value) => {
+                        if (this.db0 != '0') {
+                            self._driver.triggerButtonPressedFlow(self, { "button": buttons[self.db0] }, { "button": buttons[self.db0], "pressType": "short" })
+                            this.active = false;
+                        }
+                    });
+                    self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_LONG', (value) => {
+                        if (this.active == true) {
+                            self._driver.triggerButtonPressedFlow(self, { "button": buttons[self.db0] }, { "button": buttons[self.db0], "pressType": "long" })
+                            this.active = false;
+                        }
+                    });
                 }
+            }).catch(err => {
+                this.error(err);
             });
-            Homey.app.hm.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_LONG', (value) => {
-                if (this.active == true) {
-                    self._driver.triggerButtonPressedFlow(self, { "button": buttons[self.db0] }, { "button": buttons[self.db0], "pressType": "long" })
-                    this.active = false;
-                }
-            });
-        }
     }
 }
 
