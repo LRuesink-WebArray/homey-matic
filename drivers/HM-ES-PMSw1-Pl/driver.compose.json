@@ -1,0 +1,28 @@
+{
+    "id": "HM-ES-PMSw1-Pl",
+    "name": {
+        "en": "HM-ES-PMSw1-Pl"
+    },
+    "class": "socket",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-ES-PMSw1-Pl/assets/images/large.png",
+        "small": "/drivers/HM-ES-PMSw1-Pl/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            },
+            "options": {
+                "singular": false
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}
