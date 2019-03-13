@@ -11,8 +11,8 @@ class HomematicDriver extends Driver {
             'measure_temperature',
             'measure_humidity'
         ]
-        this.homematicType = 'HM-WS550STH-I'
-        this.log('HM-WS550STH-I has been inited');
+        this.homematicTypes = ['HM-WS550STH-I'];
+        this.log(this.homematicTypes.join(','), ' has been inited');
     }
 
 

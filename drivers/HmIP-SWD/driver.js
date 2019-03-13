@@ -10,8 +10,8 @@ class HomematicDriver extends Driver {
         this.capabilities = [
             'alarm_water'
         ]
-        this.homematicType = 'HmIP-SWD'
-        this.log(this.homematicType, 'has been inited');
+        this.homematicTypes = ['HmIP-SWD'];
+        this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
 

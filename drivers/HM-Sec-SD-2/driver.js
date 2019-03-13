@@ -10,8 +10,8 @@ class HomematicDriver extends Driver {
         this.capabilities = [
             'alarm_smoke', 'alarm_battery'
         ]
-        this.homematicType = 'HM-Sec-SD-2'
-        this.log(this.homematicType, 'has been inited');
+        this.homematicTypes = ['HM-Sec-SD-2']
+        this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
 
