@@ -6,7 +6,8 @@
   "dependencies": {
     "binary": "^0.3.0",
     "put": "0.0.6",
-    "homematic-xmlrpc": "^1.0.2"
+    "homematic-xmlrpc": "^1.0.2",
+    "freeport": "1.0.5"
   },
   "devDependencies": {},
   "scripts": {
