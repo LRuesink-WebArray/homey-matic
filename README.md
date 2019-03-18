@@ -16,7 +16,7 @@ The following devices are currently implemented:
 
 * HM-Sec-SCo
 * HM-SwI-3-FM
-* HM-PB-4-WM
+* HM-PB-4-WM (this curently only works with EnOcean devices like Eltako FT55 via CUxD)
 * HM-WS550STH-I (tested via CUxD)
 * HMIP-eTRV
 * HmIP-eTRV-2
