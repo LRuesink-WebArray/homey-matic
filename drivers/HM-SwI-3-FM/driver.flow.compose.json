@@ -5,39 +5,21 @@
             "title": {
                 "en": "Button 1 Pressed"
             },
-            "args": [
-                {
-                    "name": "HM-SwI-3-FM",
-                    "type": "device",
-                    "filter": "driver_id=HM-SwI-3-FM"
-                }
-            ]
+            "args": []
         },
         {
             "id": "HM-SwI-3-FM-pressed-2",
             "title": {
                 "en": "Button 2 Pressed"
             },
-            "args": [
-                {
-                    "name": "HM-SwI-3-FM",
-                    "type": "device",
-                    "filter": "driver_id=HM-SwI-3-FM"
-                }
-            ]
+            "args": []
         },
         {
             "id": "HM-SwI-3-FM-pressed-3",
             "title": {
                 "en": "Button 3 Pressed"
             },
-            "args": [
-                {
-                    "name": "HM-SwI-3-FM",
-                    "type": "device",
-                    "filter": "driver_id=HM-SwI-3-FM"
-                }
-            ]
+            "args": []
         }
     ]
 }

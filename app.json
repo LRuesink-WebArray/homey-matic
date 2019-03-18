@@ -904,11 +904,6 @@
             "filter": "driver_id=HM-PB-4-WM"
           },
           {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HM-PB-4-WM"
-          },
-          {
             "name": "button",
             "title": "Button",
             "type": "dropdown",
@@ -1008,11 +1003,6 @@
             "filter": "driver_id=HM-Sec-RHS"
           },
           {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HM-Sec-RHS"
-          },
-          {
             "name": "state",
             "title": "State",
             "type": "dropdown",
@@ -1049,11 +1039,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HM-SwI-3-FM"
-          },
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
           }
         ]
       },
@@ -1067,11 +1052,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HM-SwI-3-FM"
-          },
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
           }
         ]
       },
@@ -1084,11 +1064,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
-          },
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
             "filter": "driver_id=HM-SwI-3-FM"
           }
         ]
@@ -1111,11 +1086,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HmIP-WRC6"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=HmIP-WRC6"
           },
           {
@@ -1196,11 +1166,6 @@
             "filter": "driver_id=HMIP-eTRV"
           },
           {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HMIP-eTRV"
-          },
-          {
             "name": "weekprofile",
             "title": "Week Profile",
             "type": "dropdown",
@@ -1236,11 +1201,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HmIP-eTRV-2"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=HmIP-eTRV-2"
           },
           {

@@ -7,11 +7,6 @@
             },
             "args": [
                 {
-                    "name": "device",
-                    "type": "device",
-                    "filter": "driver_id=HmIP-eTRV-2"
-                },
-                {
                     "name": "weekprofile",
                     "title": "Week Profile",
                     "type": "dropdown",
