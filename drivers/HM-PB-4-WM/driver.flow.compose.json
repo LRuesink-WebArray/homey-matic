@@ -16,11 +16,6 @@
             ],
             "args": [
                 {
-                    "name": "device",
-                    "type": "device",
-                    "filter": "driver_id=HM-PB-4-WM"
-                },
-                {
                     "name": "button",
                     "title": "Button",
                     "type": "dropdown",

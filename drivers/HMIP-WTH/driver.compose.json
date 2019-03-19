@@ -59,13 +59,20 @@
     },
     "pair": [
         {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
             "id": "list_devices",
             "template": "list_devices",
             "navigation": {
                 "next": "add_devices"
-            },
-            "options": {
-                "singular": false
             }
         },
         {

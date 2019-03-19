@@ -8,8 +8,8 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [];
-        this.homematicType = 'HM-SwI-3-FM';
-        this.log(this.homematicType, 'has been inited');
+        this.homematicTypes = ['HM-SwI-3-FM'];
+        this.log(this.homematicTypes.join(','), 'has been inited');
 
         this._flowTriggerButtonPressed1 = new Homey.FlowCardTriggerDevice('HM-SwI-3-FM-pressed-1')
             .register()

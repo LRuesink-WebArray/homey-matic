@@ -31,6 +31,41 @@
   },
   "drivers": [
     {
+      "id": "HM-ES-PMSw1-Pl",
+      "name": {
+        "en": "HM-ES-PMSw1-Pl"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-ES-PMSw1-Pl/assets/images/large.png",
+        "small": "/drivers/HM-ES-PMSw1-Pl/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-LC-Dim1T-FM",
       "name": {
         "en": "HM-LC-Dim1T-FM"
@@ -43,13 +78,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -71,13 +113,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -99,13 +148,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -129,13 +185,55 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-Sec-Key",
+      "name": {
+        "en": "HM-Sec-Key"
+      },
+      "class": "lock",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sec-Key/assets/images/large.png",
+        "small": "/drivers/HM-Sec-Key/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
           "options": {
-            "singular": false
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
           }
         },
         {
@@ -159,13 +257,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -187,13 +292,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -215,13 +327,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -243,13 +362,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -271,13 +397,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -349,13 +482,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -425,13 +565,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -453,13 +600,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -481,13 +635,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -509,13 +670,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -537,13 +705,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -565,13 +740,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -593,13 +775,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -669,13 +858,20 @@
       },
       "pair": [
         {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
           "id": "list_devices",
           "template": "list_devices",
           "navigation": {
             "next": "add_devices"
-          },
-          "options": {
-            "singular": false
           }
         },
         {
@@ -705,11 +901,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HM-PB-4-WM"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=HM-PB-4-WM"
           },
           {
@@ -812,11 +1003,6 @@
             "filter": "driver_id=HM-Sec-RHS"
           },
           {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HM-Sec-RHS"
-          },
-          {
             "name": "state",
             "title": "State",
             "type": "dropdown",
@@ -853,11 +1039,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HM-SwI-3-FM"
-          },
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
           }
         ]
       },
@@ -871,11 +1052,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HM-SwI-3-FM"
-          },
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
           }
         ]
       },
@@ -888,11 +1064,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HM-SwI-3-FM"
-          },
-          {
-            "name": "HM-SwI-3-FM",
-            "type": "device",
             "filter": "driver_id=HM-SwI-3-FM"
           }
         ]
@@ -915,11 +1086,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HmIP-WRC6"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=HmIP-WRC6"
           },
           {
@@ -1000,11 +1166,6 @@
             "filter": "driver_id=HMIP-eTRV"
           },
           {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=HMIP-eTRV"
-          },
-          {
             "name": "weekprofile",
             "title": "Week Profile",
             "type": "dropdown",
@@ -1040,11 +1201,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=HmIP-eTRV-2"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=HmIP-eTRV-2"
           },
           {

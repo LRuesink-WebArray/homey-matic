@@ -9,10 +9,10 @@ class HomematicDriver extends Driver {
         this.capabilities = [
             'onoff'
         ]
-        this.homematicType = 'HmIP-MOD-OC8';
+        this.homematicTypes = ['HmIP-MOD-OC8'];
         this.numDevices = 8
         this.multiDevice = true
-        this.log(this.homematicType, 'has been inited');
+        this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
 }

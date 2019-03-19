@@ -9,7 +9,7 @@ const capabilityMap = {
         "key": "STATE",
         "set": {
             "key": "STATE",
-            "channel": 3
+            "channel": 1
         }
     },
     "measure_power": {

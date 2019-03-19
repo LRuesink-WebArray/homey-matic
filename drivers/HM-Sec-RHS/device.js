@@ -16,10 +16,14 @@ class HomematicDevice extends Device {
     onInit() {
         super.onInit(capabilityMap);
         this._driver = this.getDriver();
+    }
+
+    initializeExtraEventListeners() {
         var self = this;
-        Homey.app.hm.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-STATE', (value) => {
+        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-STATE', (value) => {
             self._driver.triggerStateChangedFlow(self, { "state": value }, { "state": value })
         });
+
     }
 }
 

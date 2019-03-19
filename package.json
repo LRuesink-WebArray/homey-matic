@@ -4,8 +4,10 @@
   "description": "Connect Homematic CCU with Homey",
   "main": "app.js",
   "dependencies": {
-    "binrpc": "^3.2.2",
-    "homematic-xmlrpc": "^1.0.2"
+    "binary": "^0.3.0",
+    "put": "0.0.6",
+    "homematic-xmlrpc": "^1.0.2",
+    "freeport": "1.0.5"
   },
   "devDependencies": {},
   "scripts": {
