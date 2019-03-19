@@ -26,15 +26,16 @@ The following devices are currently implemented:
 * HMIP-PSM
 * H-LC-Dim1T-FM
 * HM-LC-Sw1-FM
+* HM-LC-Sw1-FM
 * HmIP-WRC6
 * HmIP-MOD-OC8
 * HmIP-SWD
 * HM-LC-Sw2-FM
 * HM-Sec-RHS
 * HM-Sec-SD-2
+* HM-ES-PMSw1-Pl
+* HM-Sec-Key
 
-Known issues:
+If you have a device that is not supported currently then please open an issue on github and we will look into it.
 
-It is required that the Homey IP and the CCU IP are configured in the settings of the app. The app needs to be restarted after the settings have been saved.
-
-The IP of the Homey is required as the app runs an RPC server for each interface that are required by the CCU to sends events to.
+The app uses discovery to find your CCUs on the network. We were only able to test it with a single CCU yet. Therefore it is possible that the app fails in case multiple CCUs are discovered on the network.
