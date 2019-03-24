@@ -11,6 +11,10 @@ const capabilityMap = {
     "measure_humidity": {
         "channel": 1,
         "key": "HUMIDITY"
+    },
+    "alarm_battery": {
+        "channel": 0,
+        "key": "LOWBAT"
     }
 }
 

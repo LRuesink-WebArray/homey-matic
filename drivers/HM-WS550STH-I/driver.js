@@ -9,7 +9,8 @@ class HomematicDriver extends Driver {
         super.onInit();
         this.capabilities = [
             'measure_temperature',
-            'measure_humidity'
+            'measure_humidity',
+            'alarm_battery'
         ]
         this.homematicTypes = ['HM-WS550STH-I'];
         this.log(this.homematicTypes.join(','), ' has been inited');
