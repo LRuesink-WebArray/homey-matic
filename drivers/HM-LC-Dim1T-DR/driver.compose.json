@@ -1,0 +1,35 @@
+{
+    "id": "HM-LC-Dim1T-DR",
+    "name": {
+        "en": "HM-LC-Dim1T-DR"
+    },
+    "class": "light",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-LC-Dim1T-DR/assets/images/large.png",
+        "small": "/drivers/HM-LC-Dim1T-DR/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}
