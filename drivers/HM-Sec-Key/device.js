@@ -18,7 +18,17 @@ const capabilityMap = {
         "channel": 1,
         "key": "LOWBAT",
         "valueType": "boolean"
-    }
+    },
+    "button": {
+        "channel": 1,
+        "key": "OPEN",
+        "valueType": "keymatic",
+        "set": {
+            "key": "STATE",
+            "channel": 1,
+            "valueType": "keymatic"
+        }
+    },
 }
 
 class HomematicDevice extends Device {
