@@ -16,7 +16,7 @@ const capabilityMap = {
     },
     "locked": {
         "channel": 1,
-        "key": "STATE",
+        "key": "OPEN",
         "valueType": "boolean"
     }
 }
