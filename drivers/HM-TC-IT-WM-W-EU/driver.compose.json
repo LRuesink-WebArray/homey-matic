@@ -10,7 +10,8 @@
         "measure_temperature",
         "homematic_thermostat_boost",
         "homematic_measure_valve",
-        "measure_battery"
+        "measure_battery",
+        "measure_humidity"
     ],
     "mobile": {
         "components": [
@@ -18,6 +19,12 @@
                 "id": "sensor",
                 "capabilities": [
                     "measure_temperature"
+                ]
+            },
+            {
+                "id": "sensor",
+                "capabilities": [
+                    "measure_humidity"
                 ]
             },
             {
