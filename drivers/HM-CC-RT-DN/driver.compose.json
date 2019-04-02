@@ -9,7 +9,8 @@
         "target_temperature",
         "measure_temperature",
         "homematic_thermostat_boost",
-        "homematic_measure_valve"
+        "homematic_measure_valve",
+        "measure_battery"
     ],
     "mobile": {
         "components": [
