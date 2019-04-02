@@ -19,7 +19,7 @@ const capabilityMap = {
         "key": "LOWBAT",
         "valueType": "boolean"
     },
-    "onoff": {
+    "homematic_keymatic_open": {
         "channel": 1,
         "key": "OPEN",
         "valueType": "keymatic",

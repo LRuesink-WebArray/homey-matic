@@ -1289,6 +1289,15 @@
       "getable": true,
       "setable": true
     },
+    "homematic_keymatic_open": {
+      "type": "int",
+      "title": {
+        "en": "Open"
+      },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
+    },
     "homematic_thermostat_mode": {
       "type": "enum",
       "values": [
