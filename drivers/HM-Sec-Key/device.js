@@ -4,20 +4,30 @@ const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
 const capabilityMap = {
-    "alarm_contact": {
+    "locked": {
         "channel": 1,
         "key": "STATE",
-        "valueType": "boolean"
+        "valueType": "boolean",
+        "set": {
+            "key": "STATE",
+            "channel": 1,
+            "valueType": "int"
+        }
     },
     "alarm_battery": {
         "channel": 1,
         "key": "LOWBAT",
         "valueType": "boolean"
     },
-    "locked": {
+    "button": {
         "channel": 1,
         "key": "OPEN",
-        "valueType": "boolean"
+        "valueType": "boolean",
+        "set": {
+            "key": "OPEN",
+            "channel": 1,
+            "valueType": "int"
+        }
     }
 }
 
