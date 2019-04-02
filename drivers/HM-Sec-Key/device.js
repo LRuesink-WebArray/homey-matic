@@ -11,7 +11,7 @@ const capabilityMap = {
         "set": {
             "key": "STATE",
             "channel": 1,
-            "valueType": "boolean"
+            "valueType": "keymatic_swap"
         }
     },
     "alarm_battery": {
