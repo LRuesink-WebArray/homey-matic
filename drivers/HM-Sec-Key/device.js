@@ -24,7 +24,7 @@ const capabilityMap = {
         "key": "OPEN",
         "valueType": "keymatic",
         "set": {
-            "key": "STATE",
+            "key": "OPEN",
             "channel": 1,
             "valueType": "keymatic"
         }
