@@ -10,7 +10,7 @@ const capabilityMap = {
     },
     "homematic_thermostat_boost": {
         "channel": 1,
-        "key": "BOOST_MODE",
+        "key": "BOOST_STATE",
         "set": {
             "key": "BOOST_MODE",
             "channel": 1
@@ -23,21 +23,6 @@ const capabilityMap = {
             "key": "SET_TEMPERATURE",
             "channel": 1
         }
-    },
-    "homematic_thermostat_mode": {
-        "channel": 1,
-        "key": "CONTROL_MODE",
-        "valueType": "string",
-        "set": {
-            "key": "CONTROL_MODE",
-            "channel": 1,
-            "valueType": "int"
-        }
-    },
-    "homematic_measure_valve": {
-        "channel": 1,
-        "key": "VALVE_STATE",
-        "valueType": "floatPercent"
     },
     "measure_battery": {
         "channel": 1,
