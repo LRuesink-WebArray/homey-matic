@@ -1,7 +1,7 @@
 {
-    "id": "HM-CC-RT-DN",
+    "id": "HM-TC-IT-WM-W-EU",
     "name": {
-        "en": "HM-CC-RT-DN"
+        "en": "HM-TC-IT-WM-W-EU"
     },
     "class": "thermostat",
     "capabilities": [
@@ -46,8 +46,8 @@
         ]
     },
     "images": {
-        "large": "/drivers/HM-CC-RT-DN/assets/images/large.png",
-        "small": "/drivers/HM-CC-RT-DN/assets/images/small.png"
+        "large": "/drivers/HM-TC-IT-WM-W-EU/assets/images/large.png",
+        "small": "/drivers/HM-TC-IT-WM-W-EU/assets/images/small.png"
     },
     "pair": [
         {

@@ -12,10 +12,9 @@ class HomematicDriver extends Driver {
             'target_temperature',
             'homematic_thermostat_mode',
             'homematic_thermostat_boost',
-            'homematic_thermostat_weekprofile',
             'homematic_measure_valve'
         ]
-        this.homematicTypes = ['HM-CC-RT-DN'];
+        this.homematicTypes = ['HM-TC-IT-WM-W-EU'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
