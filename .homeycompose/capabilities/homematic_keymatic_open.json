@@ -1,9 +1,0 @@
-{
-    "type": "int",
-    "title": {
-        "en": "Open"
-    },
-    "uiComponent": "button",
-    "getable": false,
-    "setable": true
-}

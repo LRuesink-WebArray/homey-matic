@@ -31,6 +31,81 @@
   },
   "drivers": [
     {
+      "id": "HM-CC-RT-DN",
+      "name": {
+        "en": "HM-CC-RT-DN"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost",
+        "homematic_measure_valve"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HM-CC-RT-DN/assets/images/large.png",
+        "small": "/drivers/HM-CC-RT-DN/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-ES-PMSw1-Pl",
       "name": {
         "en": "HM-ES-PMSw1-Pl"
@@ -40,6 +115,76 @@
       "images": {
         "large": "/drivers/HM-ES-PMSw1-Pl/assets/images/large.png",
         "small": "/drivers/HM-ES-PMSw1-Pl/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-LC-Dim1PWM-CV",
+      "name": {
+        "en": "HM-LC-Dim1PWM-CV"
+      },
+      "class": "light",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Dim1PWM-CV/assets/images/large.png",
+        "small": "/drivers/HM-LC-Dim1PWM-CV/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-LC-Dim1T-DR",
+      "name": {
+        "en": "HM-LC-Dim1T-DR"
+      },
+      "class": "light",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Dim1T-DR/assets/images/large.png",
+        "small": "/drivers/HM-LC-Dim1T-DR/assets/images/small.png"
       },
       "pair": [
         {
@@ -110,6 +255,76 @@
       "images": {
         "large": "/drivers/HM-LC-Sw1-FM/assets/images/large.png",
         "small": "/drivers/HM-LC-Sw1-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-LC-Sw1-Pl-DN-R1",
+      "name": {
+        "en": "HM-LC-Sw1-Pl-DN-R1"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-LC-Sw1PBU-FM",
+      "name": {
+        "en": "HM-LC-Sw1PBU-FM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Sw1PBU-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw1PBU-FM/assets/images/small.png"
       },
       "pair": [
         {
@@ -359,6 +574,81 @@
       "images": {
         "large": "/drivers/HM-SwI-3-FM/assets/images/large.png",
         "small": "/drivers/HM-SwI-3-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-TC-IT-WM-W-EU",
+      "name": {
+        "en": "HM-TC-IT-WM-W-EU"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost",
+        "homematic_measure_valve"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HM-TC-IT-WM-W-EU/assets/images/large.png",
+        "small": "/drivers/HM-TC-IT-WM-W-EU/assets/images/small.png"
       },
       "pair": [
         {
@@ -1287,15 +1577,6 @@
       },
       "uiComponent": "button",
       "getable": true,
-      "setable": true
-    },
-    "homematic_keymatic_open": {
-      "type": "int",
-      "title": {
-        "en": "Open"
-      },
-      "uiComponent": "button",
-      "getable": false,
       "setable": true
     },
     "homematic_thermostat_mode": {
