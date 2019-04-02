@@ -5,30 +5,30 @@ const Device = require('../../lib/device.js')
 
 const capabilityMap = {
     "measure_temperature": {
-        "channel": 1,
+        "channel": 4,
         "key": "ACTUAL_TEMPERATURE",
-        "valueType": "old_temp_get"
+        "valueType": "float"
     },
     "homematic_thermostat_boost": {
-        "channel": 1,
+        "channel": 4,
         "key": "BOOST_MODE",
         "set": {
             "key": "BOOST_MODE",
-            "channel": 1
+            "channel": 4
         }
     },
     "target_temperature": {
-        "channel": 1,
+        "channel": 4,
         "key": "SET_TEMPERATURE",
         "valueType": "float",
         "set": {
             "key": "SET_TEMPERATURE",
-            "channel": 1,
-            "valueType": "old_temp_set"
+            "channel": 4,
+            "valueType": "float"
         }
     },
     "homematic_thermostat_mode": {
-        "channel": 1,
+        "channel": 4,
         "key": "CONTROL_MODE",
         "valueType": "string",
         "set": {
@@ -38,13 +38,13 @@ const capabilityMap = {
         }
     },
     "homematic_measure_valve": {
-        "channel": 1,
+        "channel": 4,
         "key": "VALVE_STATE",
         "valueType": "float"
     },
     "measure_battery": {
-        "channel": 1,
-        "key": "BATTERY_STATE",
+        "channel": 0,
+        "key": "LOWBAT",
         "valueType": "float"
     }
 }
