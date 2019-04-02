@@ -18,16 +18,6 @@ const capabilityMap = {
         "channel": 1,
         "key": "LOWBAT",
         "valueType": "boolean"
-    },
-    "button": {
-        "channel": 1,
-        "key": "OPEN",
-        "valueType": "boolean",
-        "set": {
-            "key": "OPEN",
-            "channel": 1,
-            "valueType": "keymatic"
-        }
     }
 }
 
