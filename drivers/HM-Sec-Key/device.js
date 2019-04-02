@@ -19,7 +19,7 @@ const capabilityMap = {
         "key": "LOWBAT",
         "valueType": "boolean"
     },
-    "button": {
+    "onoff": {
         "channel": 1,
         "key": "OPEN",
         "valueType": "keymatic",
