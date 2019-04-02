@@ -27,7 +27,7 @@ const capabilityMap = {
     "measure_battery": {
         "channel": 1,
         "key": "BATTERY_STATE",
-        "valueType": "float"
+        "valueType": "boolean"
     }
 }
 
