@@ -7,11 +7,11 @@ const capabilityMap = {
     "locked": {
         "channel": 1,
         "key": "STATE",
-        "valueType": "boolean",
+        "valueType": "keymatic_swap",
         "set": {
             "key": "STATE",
             "channel": 1,
-            "valueType": "keymatic"
+            "valueType": "boolean"
         }
     },
     "alarm_battery": {
@@ -26,7 +26,7 @@ const capabilityMap = {
         "set": {
             "key": "OPEN",
             "channel": 1,
-            "valueType": "int"
+            "valueType": "keymatic"
         }
     }
 }
