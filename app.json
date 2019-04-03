@@ -247,6 +247,76 @@
       ]
     },
     {
+      "id": "HM-LC-Dim1TPBU-FM",
+      "name": {
+        "en": "HM-LC-Dim1TPBU-FM"
+      },
+      "class": "light",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Dim1TPBU-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Dim1TPBU-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-LC-Sw1-Ba-PCB",
+      "name": {
+        "en": "HM-LC-Sw1-Ba-PCB"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Sw1-Ba-PCB/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw1-Ba-PCB/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-LC-Sw1-FM",
       "name": {
         "en": "HM-LC-Sw1-FM"
@@ -256,6 +326,41 @@
       "images": {
         "large": "/drivers/HM-LC-Sw1-FM/assets/images/large.png",
         "small": "/drivers/HM-LC-Sw1-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-LC-Sw1-Pl-CT-R1",
+      "name": {
+        "en": "HM-LC-Sw1-Pl-CT-R1"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Sw1-Pl-CT-R1/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw1-Pl-CT-R1/assets/images/small.png"
       },
       "pair": [
         {
@@ -398,6 +503,41 @@
       "images": {
         "large": "/drivers/HM-PB-4-WM/assets/images/large.png",
         "small": "/drivers/HM-PB-4-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-RC-Key4-2",
+      "name": {
+        "en": "HM-RC-Key4-2"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-RC-Key4-2/assets/images/large.png",
+        "small": "/drivers/HM-RC-Key4-2/assets/images/small.png"
       },
       "pair": [
         {
@@ -1536,6 +1676,78 @@
                 "id": "released",
                 "label": {
                   "en": "Released"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HM-RC-Key4-2-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-RC-Key4-2"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
                 }
               }
             ]
