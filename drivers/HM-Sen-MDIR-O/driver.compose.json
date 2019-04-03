@@ -1,0 +1,35 @@
+{
+    "id": "HM-Sen-MDIR-O",
+    "name": {
+        "en": "HM-Sen-MDIR-O"
+    },
+    "class": "sensor",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-Sen-MDIR-O/assets/images/large.png",
+        "small": "/drivers/HM-Sen-MDIR-O/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}

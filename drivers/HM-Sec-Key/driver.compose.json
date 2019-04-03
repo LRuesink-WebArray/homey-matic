@@ -5,6 +5,11 @@
     },
     "class": "lock",
     "capabilities": [],
+    "capabilitiesOptions": {
+        "button": {
+            "title": { "en": "Open" }
+        }
+    },
     "images": {
         "large": "/drivers/HM-Sec-Key/assets/images/large.png",
         "small": "/drivers/HM-Sec-Key/assets/images/small.png"

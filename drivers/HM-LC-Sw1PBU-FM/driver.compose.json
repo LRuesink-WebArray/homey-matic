@@ -1,0 +1,35 @@
+{
+    "id": "HM-LC-Sw1PBU-FM",
+    "name": {
+        "en": "HM-LC-Sw1PBU-FM"
+    },
+    "class": "socket",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-LC-Sw1PBU-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw1PBU-FM/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}

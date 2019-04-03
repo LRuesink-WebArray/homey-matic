@@ -1,0 +1,76 @@
+{
+    "id": "HM-CC-RT-DN",
+    "name": {
+        "en": "HM-CC-RT-DN"
+    },
+    "class": "thermostat",
+    "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost",
+        "homematic_measure_valve",
+        "measure_battery"
+    ],
+    "mobile": {
+        "components": [
+            {
+                "id": "sensor",
+                "capabilities": [
+                    "measure_temperature"
+                ]
+            },
+            {
+                "id": "toggle",
+                "capabilities": [
+                    "homematic_thermostat_boost"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "picker",
+                "capabilities": [
+                    "homematic_thermostat_mode"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "thermostat",
+                "capabilities": [
+                    "target_temperature"
+                ]
+            }
+        ]
+    },
+    "images": {
+        "large": "/drivers/HM-CC-RT-DN/assets/images/large.png",
+        "small": "/drivers/HM-CC-RT-DN/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}
