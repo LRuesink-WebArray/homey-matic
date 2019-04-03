@@ -2,6 +2,7 @@
 
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
+const Convert = require('../../lib/convert.js')
 
 const capabilityMap = {
   "measure_temperature": {
@@ -27,27 +28,27 @@ const capabilityMap = {
   "homematic_thermostat_mode": {
     "channel": 1,
     "key": "SET_POINT_MODE",
-    "valueType": "string",
+    "convert": Convert.toString,
     "set": {
       "key": "CONTROL_MODE",
       "channel": 1,
-      "valueType": "int"
+      "convert": Convert.toInt
     }
   },
   "homematic_thermostat_weekprofile": {
     "channel": 1,
     "key": "ACTIVE_PROFILE",
-    "valueType": "string",
+    "convert": Convert.toString,
     "set": {
       "key": "ACTIVE_PROFILE",
       "channel": 1,
-      "valueType": "int"
+      "convert": Convert.toInt
     }
   },
   "homematic_measure_valve": {
     "channel": 1,
     "key": "LEVEL",
-    "valueType": "floatPercent"
+    "convert": Convert.floatToPercent
   }
 }
 
