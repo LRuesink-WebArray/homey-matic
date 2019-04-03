@@ -35,6 +35,8 @@ for drv in `ls drivers` ; do
     lower_drv="hm-sec-mdir"
   elif [ $lower_drv == "hm-wds10-th-o" ] ; then
     lower_drv="TH_CS"
+  elif [ $lower_drv == "hm-lc-sw1-pl-ct-r1" ] ; then
+    lower_drv="hm-lc-sw1-pl-ct"
   fi
   
   if ! [ -f drivers/$drv/assets/images/large.png ] ; then
