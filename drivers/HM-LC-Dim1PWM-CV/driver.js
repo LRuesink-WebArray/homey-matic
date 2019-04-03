@@ -11,7 +11,7 @@ class HomematicDriver extends Driver {
             'onoff',
             'dim'
         ]
-        this.homematicTypes = ['HM-LC-Dim1PWM-CVS']
+        this.homematicTypes = ['HM-LC-Dim1PWM-CV']
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
