@@ -41,7 +41,8 @@
         "target_temperature",
         "measure_temperature",
         "homematic_thermostat_boost",
-        "homematic_measure_valve"
+        "homematic_measure_valve",
+        "measure_battery"
       ],
       "mobile": {
         "components": [
@@ -502,6 +503,41 @@
       ]
     },
     {
+      "id": "HM-Sec-SC-2",
+      "name": {
+        "en": "HM-Sec-SC-2"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sec-SC-2/assets/images/large.png",
+        "small": "/drivers/HM-Sec-SC-2/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-Sec-SCo",
       "name": {
         "en": "HM-Sec-SCo"
@@ -546,6 +582,41 @@
       "images": {
         "large": "/drivers/HM-Sec-SD-2/assets/images/large.png",
         "small": "/drivers/HM-Sec-SD-2/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-Sen-MDIR-WM55",
+      "name": {
+        "en": "HM-Sen-MDIR-WM55"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sen-MDIR-WM55/assets/images/large.png",
+        "small": "/drivers/HM-Sen-MDIR-WM55/assets/images/small.png"
       },
       "pair": [
         {
@@ -617,7 +688,9 @@
         "target_temperature",
         "measure_temperature",
         "homematic_thermostat_boost",
-        "homematic_measure_valve"
+        "homematic_measure_valve",
+        "measure_battery",
+        "measure_humidity"
       ],
       "mobile": {
         "components": [
@@ -625,6 +698,12 @@
             "id": "sensor",
             "capabilities": [
               "measure_temperature"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_humidity"
             ]
           },
           {
@@ -1060,6 +1139,41 @@
       ]
     },
     {
+      "id": "HMIP-SWDO-I",
+      "name": {
+        "en": "HMIP-SWDO-I"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HMIP-SWDO-I/assets/images/large.png",
+        "small": "/drivers/HMIP-SWDO-I/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HmIP-WRC6",
       "name": {
         "en": "HmIP-WRC6"
@@ -1320,6 +1434,66 @@
                 "id": "2",
                 "label": {
                   "en": "OPEN"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HM-Sen-MDIR-WM55-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sen-MDIR-WM55"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
                 }
               }
             ]

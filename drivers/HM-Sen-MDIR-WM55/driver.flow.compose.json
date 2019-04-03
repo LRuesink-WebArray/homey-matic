@@ -1,0 +1,59 @@
+{
+    "triggers": [
+        {
+            "id": "HM-Sen-MDIR-WM55-press",
+            "title": {
+                "en": "Button Event"
+            },
+            "tokens": [
+                {
+                    "name": "button",
+                    "type": "number",
+                    "title": {
+                        "en": "Button"
+                    }
+                }
+            ],
+            "args": [
+                {
+                    "name": "button",
+                    "title": "Button",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "1"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "2"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pressType",
+                    "title": "Press Type",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "short",
+                            "label": {
+                                "en": "Short"
+                            }
+                        },
+                        {
+                            "id": "long",
+                            "label": {
+                                "en": "Long"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
