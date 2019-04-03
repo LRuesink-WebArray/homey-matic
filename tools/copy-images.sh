@@ -31,6 +31,8 @@ for drv in `ls drivers` ; do
     lower_drv="PushButton-4ch-wm"
   elif [ $lower_drv == "hm-pb-2-wm" ] ; then
     lower_drv="PushButton-2ch-wm"
+  elif [ $lower_drv == "hm-sec-mdir-2" ] ; then
+    lower_drv="hm-sec-mdir"
   fi
   
   if ! [ -f drivers/$drv/assets/images/large.png ] ; then
