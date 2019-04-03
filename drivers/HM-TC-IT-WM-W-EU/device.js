@@ -13,7 +13,8 @@ const capabilityMap = {
         "key": "BOOST_STATE",
         "set": {
             "key": "BOOST_MODE",
-            "channel": 1
+            "channel": 1,
+            "valueType": "boolean"
         }
     },
     "target_temperature": {
