@@ -10,7 +10,7 @@ const capabilityMap = {
         "valueType": "boolean"
     },
     "measure_luminance": {
-        "channel": 1,
+        "channel": 3,
         "key": "BRIGHTNESS",
         "valueType": "float"
     }
