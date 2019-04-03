@@ -8,11 +8,9 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [
-            'measure_temperature',
-            'measure_humidity',
-            'alarm_battery'
+            'onoff', 'alarm_battery'
         ]
-        this.homematicTypes = ['HM-WDS10-TH-O'];
+        this.homematicTypes = ['HM-LC-Sw1-Ba-PCB']
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
