@@ -1,13 +1,13 @@
 {
-    "id": "HM-Sec-MDIR-2",
+    "id": "HM-Sen-MDIR-O",
     "name": {
-        "en": "HM-Sec-MDIR-2"
+        "en": "HM-Sen-MDIR-O"
     },
     "class": "sensor",
     "capabilities": [],
     "images": {
-        "large": "/drivers/HM-Sec-MDIR-2/assets/images/large.png",
-        "small": "/drivers/HM-Sec-MDIR-2/assets/images/small.png"
+        "large": "/drivers/HM-Sen-MDIR-O/assets/images/large.png",
+        "small": "/drivers/HM-Sen-MDIR-O/assets/images/small.png"
     },
     "pair": [
         {
