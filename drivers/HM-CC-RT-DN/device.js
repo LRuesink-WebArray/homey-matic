@@ -23,7 +23,7 @@ const capabilityMap = {
         "set": {
             "key": "SET_TEMPERATURE",
             "channel": 4,
-            "valueType": "float"
+            "valueType": "fixed"
         }
     },
     "homematic_thermostat_mode": {
