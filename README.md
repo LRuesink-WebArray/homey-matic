@@ -31,6 +31,7 @@ The following devices are currently implemented:
 * HM-LC-Dim1T-FM
 * HM-LC-Dim1TPBU-FM
 * HM-LC-Sw1-Ba-PCB
+* HM-LC-Sw1-DR
 * HM-LC-Sw1-FM
 * HM-LC-Sw1PBU-FM
 * HM-LC-Sw1-Pl-CT-R1
