@@ -14,27 +14,44 @@ Devices can be connected via the following interfaces to the CCU:
 
 The following devices are currently implemented:
 
-* HM-Sec-SCo
-* HM-SwI-3-FM
-* HM-PB-4-WM (this curently only works with EnOcean devices like Eltako FT55 via CUxD)
-* HM-WS550STH-I (tested via CUxD)
+* HM-CC-RT-DN
+* HM-ES-PMSw1-Pl
 * HMIP-eTRV
 * HmIP-eTRV-2
-* HmIP-SPI
-* HMIP-SWDO
-* HMIP-WTH
-* HMIP-PSM
-* H-LC-Dim1T-FM
-* HM-LC-Sw1-FM
-* HM-LC-Sw1-FM
-* HmIP-WRC6
 * HmIP-MOD-OC8
+* HMIP-PSM
+* HmIP-SPI
 * HmIP-SWD
+* HMIP-SWDO
+* HMIP-SWDO-I
+* HmIP-WRC6
+* HMIP-WTH
+* HM-LC-Dim1PWM-CV
+* HM-LC-Dim1T-DR
+* HM-LC-Dim1T-FM
+* HM-LC-Dim1TPBU-FM
+* HM-LC-Sw1-Ba-PCB
+* HM-LC-Sw1-DR
+* HM-LC-Sw1-FM
+* HM-LC-Sw1PBU-FM
+* HM-LC-Sw1-Pl-CT-R1
+* HM-LC-Sw1-Pl-DN-R1
 * HM-LC-Sw2-FM
-* HM-Sec-RHS
-* HM-Sec-SD-2
-* HM-ES-PMSw1-Pl
+* HM-PB-4-WM
+* HM-RC-Key4-2
+* HM-RC-Key4-3
 * HM-Sec-Key
+* HM-Sec-MDIR-2
+* HM-Sec-RHS
+* HM-Sec-SC-2
+* HM-Sec-SCo
+* HM-Sec-SD-2
+* HM-Sen-MDIR-O
+* HM-Sen-MDIR-WM55
+* HM-SwI-3-FM
+* HM-TC-IT-WM-W-EU
+* HM-WDS10-TH-O
+* HM-WS550STH-I
 
 If you have a device that is not supported currently then please open an issue on github and we will look into it.
 
