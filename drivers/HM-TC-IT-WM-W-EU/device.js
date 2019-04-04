@@ -13,7 +13,7 @@ const capabilityMap = {
         "key": "BOOST_STATE",
         "set": {
             "key": "BOOST_MODE",
-            "channel": 1,
+            "channel": 2,
             "valueType": "boolean"
         }
     },
@@ -22,7 +22,8 @@ const capabilityMap = {
         "key": "SET_TEMPERATURE",
         "set": {
             "key": "SET_TEMPERATURE",
-            "channel": 1
+            "channel": 2,
+            "valueType": "fixed"
         }
     },
     "measure_battery": {
