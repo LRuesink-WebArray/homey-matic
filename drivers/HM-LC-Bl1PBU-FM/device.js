@@ -31,7 +31,7 @@ const convertSetState = function (value) {
 }
 
 const capabilityMap = {
-    "dim": {
+    "windowcoverings_set": {
         "channel": 1,
         "key": "LEVEL",
         "set": {

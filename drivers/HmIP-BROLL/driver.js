@@ -7,7 +7,10 @@ class HomematicDriver extends Driver {
 
     onInit() {
         super.onInit();
-        this.capabilities = [];
+        this.capabilities = [
+            windowcoverings_state,
+            windowcoverings_set
+        ];
         this.homematicTypes = ['HmIP-BROLL'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
