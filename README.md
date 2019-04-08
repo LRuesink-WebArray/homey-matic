@@ -16,6 +16,7 @@ The following devices are currently implemented:
 
 * HM-CC-RT-DN
 * HM-ES-PMSw1-Pl
+* HmIP-BROLL
 * HMIP-eTRV
 * HmIP-eTRV-2
 * HmIP-MOD-OC8
@@ -26,6 +27,7 @@ The following devices are currently implemented:
 * HMIP-SWDO-I
 * HmIP-WRC6
 * HMIP-WTH
+* HM-LC-Bl1PBU-FM
 * HM-LC-Dim1PWM-CV
 * HM-LC-Dim1T-DR
 * HM-LC-Dim1T-FM
