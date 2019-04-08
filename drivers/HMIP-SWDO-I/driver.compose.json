@@ -1,13 +1,13 @@
 {
-    "id": "HMIP-SWDO-I",
+    "id": "HmIP-SWDO-I",
     "name": {
-        "en": "HMIP-SWDO-I"
+        "en": "HmIP-SWDO-I"
     },
     "class": "sensor",
     "capabilities": [],
     "images": {
-        "large": "/drivers/HMIP-SWDO-I/assets/images/large.png",
-        "small": "/drivers/HMIP-SWDO-I/assets/images/small.png"
+        "large": "/drivers/HmIP-SWDO-I/assets/images/large.png",
+        "small": "/drivers/HmIP-SWDO-I/assets/images/small.png"
     },
     "pair": [
         {
