@@ -41,6 +41,8 @@ for drv in `ls drivers` ; do
     lower_drv="PushButton-2ch-wm"
   elif [ $lower_drv == "hmip-broll" ] ; then
     lower_drv="157_hmip-broll_hmip-bbl"
+  elif [ $lower_drv == "hmip-froll" ] ; then
+    lower_drv="145_hmip-froll_hmip-fbl"
   fi
   
   if ! [ -f drivers/$drv/assets/images/large.png ] ; then
