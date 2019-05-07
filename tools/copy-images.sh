@@ -43,6 +43,8 @@ for drv in `ls drivers` ; do
     lower_drv="157_hmip-broll_hmip-bbl"
   elif [ $lower_drv == "hmip-froll" ] ; then
     lower_drv="145_hmip-froll_hmip-fbl"
+  elif [ $lower_drv == "hmip-bwth" ] ; then
+    lower_drv="121_hmip-wth"
   fi
   
   if ! [ -f drivers/$drv/assets/images/large.png ] ; then
