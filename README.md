@@ -58,3 +58,7 @@ The following devices are currently implemented:
 If you have a device that is not supported currently then please open an issue on github and we will look into it.
 
 The app uses discovery to find your CCUs on the network. We were only able to test it with a single CCU yet. Therefore it is possible that the app fails in case multiple CCUs are discovered on the network.
+
+# Credits
+
+Thank you [@hobbyquaker](https://github.com/hobbyquaker) for your great work on binrpc, xmlrpc and hm-discover
