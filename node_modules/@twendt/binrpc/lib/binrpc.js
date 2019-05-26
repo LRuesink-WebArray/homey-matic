@@ -25,10 +25,11 @@ var Binrpc = {
      * @param {object} options
      * @param {string} options.host ip address on which the server should listen
      * @param {number} options.port port on which the server should listen
+     * @param {function} onListening function to be invoked in the server's `listening` callback
      * @returns {Server}
      */
-    createServer: function (options) {
-        return new Server(options);
+    createServer: function (options, onListening) {
+        return new Server(options, onListening);
     }
 };
 

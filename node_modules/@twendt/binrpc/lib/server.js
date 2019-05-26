@@ -12,9 +12,10 @@ var binrpc = require('./protocol.js');
  * @param {object} options
  * @param {string} options.host ip address on which the server should listen
  * @param {number} options.port port on which the server should listen
+ * @param {function} onListening function to be invoked in the server's `listening` callback
  */
 /** @exports server */
-var Server = function (options) {
+var Server = function (options, onListening) {
     var that = this;
     this.host = options.host;
     this.port = options.port;
@@ -61,7 +62,9 @@ var Server = function (options) {
     });
 
     this.server.listen(this.port, this.host, function () {
-        // console.log('listening on ' + that.port);
+        if (typeof onListening === 'function') {
+            onListening();
+        }
     });
 
     this.handleCall = function (request, client) {
