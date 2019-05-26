@@ -17,14 +17,20 @@ The following devices are currently implemented:
 * HM-CC-RT-DN
 * HM-ES-PMSw1-Pl
 * HmIP-BROLL
+* HmIP-BWTH
 * HMIP-eTRV
 * HmIP-eTRV-2
+* HmIP-FROLL
 * HmIP-MOD-OC8
+* HmIP-PCBS
 * HMIP-PSM
 * HmIP-SPI
+* HmIP-STH
+* HmIP-STHD
+* HmIP-STHO
 * HmIP-SWD
 * HMIP-SWDO
-* HMIP-SWDO-I
+* HmIP-SWDO-I
 * HmIP-WRC6
 * HMIP-WTH
 * HM-LC-Bl1PBU-FM
@@ -48,6 +54,7 @@ The following devices are currently implemented:
 * HM-Sec-SC-2
 * HM-Sec-SCo
 * HM-Sec-SD-2
+* HM-Sen-DB-PCB
 * HM-Sen-MDIR-O
 * HM-Sen-MDIR-WM55
 * HM-SwI-3-FM
@@ -58,3 +65,7 @@ The following devices are currently implemented:
 If you have a device that is not supported currently then please open an issue on github and we will look into it.
 
 The app uses discovery to find your CCUs on the network. We were only able to test it with a single CCU yet. Therefore it is possible that the app fails in case multiple CCUs are discovered on the network.
+
+# Credits
+
+Thank you [@hobbyquaker](https://github.com/hobbyquaker) for your great work on binrpc, xmlrpc and hm-discover

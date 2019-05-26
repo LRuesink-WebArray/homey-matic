@@ -1,0 +1,47 @@
+{
+    "triggers": [
+        {
+            "id": "HM-Sen-DB-PCB-press",
+            "title": {
+                "en": "Button Event"
+            },
+            "tokens": [
+                {
+                    "name": "button",
+                    "type": "number",
+                    "title": {
+                        "en": "Button"
+                    }
+                }
+            ],
+            "args": [
+                {
+                    "name": "button",
+                    "title": "Button",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "1"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pressType",
+                    "title": "Press Type",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "short",
+                            "label": {
+                                "en": "Short"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

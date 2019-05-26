@@ -1,6 +1,6 @@
 {
   "id": "de.twendt.homey.matic",
-  "version": "0.12.0",
+  "version": "0.13.0",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -888,6 +888,41 @@
       ]
     },
     {
+      "id": "HM-Sen-DB-PCB",
+      "name": {
+        "en": "HM-Sen-DB-PCB"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sen-DB-PCB/assets/images/large.png",
+        "small": "/drivers/HM-Sen-DB-PCB/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-Sen-MDIR-O",
       "name": {
         "en": "HM-Sen-MDIR-O"
@@ -1181,6 +1216,89 @@
       ]
     },
     {
+      "id": "HmIP-BWTH",
+      "name": {
+        "en": "HmIP-BWTH"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "measure_humidity",
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "measure_humidity"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HmIP-BWTH/assets/images/large.png",
+        "small": "/drivers/HmIP-BWTH/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HMIP-eTRV",
       "name": {
         "en": "HMIP-eTRV"
@@ -1349,6 +1467,41 @@
       ]
     },
     {
+      "id": "HmIP-FROLL",
+      "name": {
+        "en": "HmIP-FROLL"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-FROLL/assets/images/large.png",
+        "small": "/drivers/HmIP-FROLL/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HmIP-MOD-OC8",
       "name": {
         "en": "HmIP-MOD-OC8"
@@ -1358,6 +1511,41 @@
       "images": {
         "large": "/drivers/HmIP-MOD-OC8/assets/images/large.png",
         "small": "/drivers/HmIP-MOD-OC8/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-PCBS",
+      "name": {
+        "en": "HmIP-PCBS"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-PCBS/assets/images/large.png",
+        "small": "/drivers/HmIP-PCBS/assets/images/small.png"
       },
       "pair": [
         {
@@ -1428,6 +1616,221 @@
       "images": {
         "large": "/drivers/HmIP-SPI/assets/images/large.png",
         "small": "/drivers/HmIP-SPI/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-STH",
+      "name": {
+        "en": "HmIP-STH"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "measure_humidity",
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "measure_humidity"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HmIP-STH/assets/images/large.png",
+        "small": "/drivers/HmIP-STH/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-STHD",
+      "name": {
+        "en": "HmIP-STHD"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "measure_humidity",
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "measure_humidity"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ]
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HmIP-STHD/assets/images/large.png",
+        "small": "/drivers/HmIP-STHD/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-STHO",
+      "name": {
+        "en": "HmIP-STHO"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "measure_temperature",
+        "measure_humidity"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature",
+              "measure_humidity"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HmIP-STHO/assets/images/large.png",
+        "small": "/drivers/HmIP-STHO/assets/images/small.png"
       },
       "pair": [
         {
@@ -1970,6 +2373,54 @@
         ]
       },
       {
+        "id": "HM-Sen-DB-PCB-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sen-DB-PCB"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "HM-Sen-MDIR-WM55-press",
         "title": {
           "en": "Button Event"
@@ -2087,6 +2538,66 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HmIP-BROLL"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HmIP-FROLL-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-FROLL"
           },
           {
             "name": "button",

@@ -9,13 +9,8 @@ class HomematicDriver extends Driver {
         super.onInit();
         this.capabilities = [
             'measure_temperature',
-            'measure_humidity',
-            'target_temperature',
-            'homematic_thermostat_mode',
-            'homematic_thermostat_boost',
-            'homematic_thermostat_weekprofile'
-        ]
-        this.homematicTypes = ['HMIP-WTH', 'HmIP-WTH-2'];
+            'measure_humidity']
+        this.homematicTypes = ['HmIP-STHO'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
