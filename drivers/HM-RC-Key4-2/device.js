@@ -3,13 +3,7 @@
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
-const capabilityMap = {
-    "alarm_battery": {
-        "channel": 0,
-        "key": "LOWBAT",
-        "valueType": "boolean"
-    }
-}
+const capabilityMap = {}
 
 class HomematicDevice extends Device {
 

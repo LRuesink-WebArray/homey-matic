@@ -14,11 +14,6 @@ const capabilityMap = {
             "valueType": "keymatic_swap"
         }
     },
-    "alarm_battery": {
-        "channel": 1,
-        "key": "LOWBAT",
-        "valueType": "boolean"
-    },
     "button": {
         "channel": 1,
         "key": "OPEN",

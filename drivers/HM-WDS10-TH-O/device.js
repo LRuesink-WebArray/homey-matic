@@ -13,11 +13,6 @@ const capabilityMap = {
         "channel": 1,
         "key": "HUMIDITY",
         "valueType": "float"
-    },
-    "alarm_battery": {
-        "channel": 0,
-        "key": "LOWBAT",
-        "valueType": "boolean"
     }
 }
 

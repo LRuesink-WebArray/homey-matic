@@ -11,11 +11,6 @@ const capabilityMap = {
             "key": "STATE",
             "channel": 1
         }
-    },
-    "alarm_battery": {
-        "channel": 0,
-        "key": "LOWBAT",
-        "valueType": "boolean"
     }
 }
 

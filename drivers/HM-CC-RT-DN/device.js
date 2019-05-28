@@ -43,9 +43,9 @@ const capabilityMap = {
         "key": "VALVE_STATE",
         "valueType": "float"
     },
-    "measure_battery": {
+    "alarm_battery": {
         "channel": 4,
-        "key": "LOWBAT",
+        "key": "FAULT_REPORTING",
         "convert": Convert.faultLowbatToBoolean
     }
 }
