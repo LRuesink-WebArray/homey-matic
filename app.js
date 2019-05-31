@@ -2,7 +2,7 @@
 
 const Homey = require('homey');
 const HomeMaticDiscovery = require('./lib/HomeMaticDiscovery');
-
+const HomeMaticCCU = require('./lib/HomeMaticCCU');
 class Homematic extends Homey.App {
 
   onInit() {
@@ -13,10 +13,26 @@ class Homematic extends Homey.App {
         this.homeyIP = address.split(':')[0]
       })
 
-    this.discovery = new HomeMaticDiscovery();
     this.bridges = {};
+
+    this.settings = this.getSettings();
+    if (this.settings.ccu_host != "") {
+      this.bridges["static"] = new HomeMaticCCU("CCU", "static", this.settings.ccu_host)
+      return
+    }
+    this.discovery = new HomeMaticDiscovery();
+    // this.discovery.discover()
+
+    // this.bridges = {};
+  }
+
+  getSettings() {
+    return {
+      "ccu_host": Homey.ManagerSettings.get('ccu_host'),
+    }
   }
 }
+
 
 
 module.exports = Homematic;
