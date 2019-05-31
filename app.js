@@ -10,17 +10,19 @@ class Homematic extends Homey.App {
     this.log('Started homematic...');
     Homey.ManagerCloud.getLocalAddress()
       .then((address) => {
-        this.homeyIP = address.split(':')[0]
+        self.homeyIP = address.split(':')[0]
+      })
+      .then(function () {
+        self.bridges = {};
+
+        self.settings = self.getSettings();
+        if (self.settings.ccu_host != "") {
+          self.bridges["static"] = new HomeMaticCCU("CCU", "static", self.settings.ccu_host)
+          return
+        }
+        self.discovery = new HomeMaticDiscovery();
       })
 
-    this.bridges = {};
-
-    this.settings = this.getSettings();
-    if (this.settings.ccu_host != "") {
-      this.bridges["static"] = new HomeMaticCCU("CCU", "static", this.settings.ccu_host)
-      return
-    }
-    this.discovery = new HomeMaticDiscovery();
     // this.discovery.discover()
 
     // this.bridges = {};
