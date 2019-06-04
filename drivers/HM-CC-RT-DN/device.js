@@ -12,7 +12,8 @@ const capabilityMap = {
     },
     "homematic_thermostat_boost": {
         "channel": 4,
-        "key": "BOOST_MODE",
+        "key": "BOOST_STATE",
+        "convert": Convert.toBoolean,
         "set": {
             "key": "BOOST_MODE",
             "channel": 4
@@ -42,10 +43,10 @@ const capabilityMap = {
         "key": "VALVE_STATE",
         "valueType": "float"
     },
-    "measure_battery": {
-        "channel": 0,
-        "key": "LOWBAT",
-        "valueType": "boolean"
+    "alarm_battery": {
+        "channel": 4,
+        "key": "FAULT_REPORTING",
+        "convert": Convert.faultLowbatToBoolean
     }
 }
 

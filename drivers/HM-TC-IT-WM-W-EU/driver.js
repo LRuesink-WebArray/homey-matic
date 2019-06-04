@@ -12,7 +12,7 @@ class HomematicDriver extends Driver {
             'target_temperature',
             'homematic_thermostat_mode',
             'homematic_thermostat_boost',
-            'measure_battery',
+            'alarm_battery',
             'measure_humidity'
         ]
         this.homematicTypes = ['HM-TC-IT-WM-W-EU'];

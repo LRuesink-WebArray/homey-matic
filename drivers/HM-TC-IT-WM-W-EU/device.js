@@ -12,6 +12,7 @@ const capabilityMap = {
     "homematic_thermostat_boost": {
         "channel": 2,
         "key": "BOOST_STATE",
+        "convert": Convert.toBoolean,
         "set": {
             "key": "BOOST_MODE",
             "channel": 2,
@@ -27,10 +28,9 @@ const capabilityMap = {
             "convert": Convert.tofix
         }
     },
-    "measure_battery": {
-        "channel": 0,
-        "key": "LOWBAT",
-        "valueType": "boolean"
+    "alarm_battery": {
+        "channel": 2,
+        "key": "LOWBAT_REPORTING"
     },
     "measure_humidity": {
         "channel": 1,
