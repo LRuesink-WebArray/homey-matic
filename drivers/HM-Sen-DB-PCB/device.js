@@ -4,7 +4,6 @@ const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
 const capabilityMap = {}
-}
 
 class HomematicDevice extends Device {
 
