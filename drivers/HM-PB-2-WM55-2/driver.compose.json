@@ -1,0 +1,35 @@
+{
+    "id": "HM-PB-2-WM55-2",
+    "name": {
+        "en": "HM-PB-2-WM55-2"
+    },
+    "class": "button",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-PB-2-WM55-2/assets/images/large.png",
+        "small": "/drivers/HM-PB-2-WM55-2/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}

@@ -562,6 +562,111 @@
       ]
     },
     {
+      "id": "HM-LC-Sw4-Ba-PCB",
+      "name": {
+        "en": "HM-LC-Sw4-Ba-PCB"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Sw4-Ba-PCB/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw4-Ba-PCB/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-PB-2-FM",
+      "name": {
+        "en": "HM-PB-2-FM"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-PB-2-FM/assets/images/large.png",
+        "small": "/drivers/HM-PB-2-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-PB-2-WM55-2",
+      "name": {
+        "en": "HM-PB-2-WM55-2"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-PB-2-WM55-2/assets/images/large.png",
+        "small": "/drivers/HM-PB-2-WM55-2/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-PB-4-WM",
       "name": {
         "en": "HM-PB-4-WM"
@@ -2082,6 +2187,126 @@
   ],
   "flow": {
     "triggers": [
+      {
+        "id": "HM-PB-2-FM-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-PB-2-FM"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HM-PB-2-WM55-2-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-PB-2-WM55-2"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "HM-PB-4-WM-press",
         "title": {
