@@ -15,7 +15,6 @@ class HomematicDevice extends Device {
     initializeExtraEventListeners() {
         var self = this;
         self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-PRESS', (value) => {
-            console.log("Button 1 pressed");
             self._driver.triggerButtonPressedFlow1(self, {}, 1)
         });
         self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':2-PRESS', (value) => {
@@ -26,7 +25,6 @@ class HomematicDevice extends Device {
         });
 
         self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-INSTALL_TEST', (value) => {
-            console.log("Button 1 pressed");
             self._driver.triggerButtonPressedFlow1(self, {}, 1)
         });
         self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':2-INSTALL_TEST', (value) => {

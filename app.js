@@ -12,10 +12,16 @@ class Homematic extends Homey.App {
         self.homeyIP = address.split(':')[0]
       })
 
+    self.settings = self.getSettings();
     self.discovery = new HomeMaticDiscovery();
     this.bridges = {};
   }
 
+  getSettings() {
+    return {
+      "use_mqtt": Homey.ManagerSettings.get('use_mqtt'),
+    }
+  }
 }
 
 
