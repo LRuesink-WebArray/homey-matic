@@ -5,6 +5,12 @@
         "mqtt": {
             "use_mqtt": "Use MQTT",
             "description": "MQTT is an expert feature it requires RedMatic and Mosquitto to be setup on the CCU. Changing this setting require a restart of th app. See this link for instructions: https://github.com/twendt/homey-matic/wiki/Setup-RedMatic-and-Mosquitto"
+        },
+        "log": {
+            "title": "Log lines",
+            "button": {
+                "getLogs": "Get logs"
+            }
         }
     }
 }

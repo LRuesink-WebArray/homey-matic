@@ -23,7 +23,7 @@
     </p>
 
     <fieldset>
-        <legend>Homematic Settings</legend>
+        <legend>MQTT Settings</legend>
 
         <p data-i18n="settings.mqtt.description"></p>
 
@@ -33,16 +33,18 @@
         </div>
 
     </fieldset>
-
+    
     <button id="save" class="right">Save changes</button>
+
+    <p data-i18n="settings.log.title"></p>
+    <button class="right" id="button_getlog" onclick="showLogLines()" data-i18n="settings.log.button.getlogs">Get Logs</button>
+    <div id="loglines"></div>
 
     <script type="text/javascript">
 
         // a method named 'onHomeyReady' must be present in your code
         function onHomeyReady(Homey) {
-
-            // Tell Homey we're ready to be displayed
-            Homey.ready();
+            HomeyAPI = Homey;
 
             var useMQTTElement = document.getElementById('use_mqtt');
 
@@ -60,6 +62,21 @@
                     if (err) return Homey.alert(err);
                 });
             });
+
+            // Tell Homey we're ready to be displayed
+            Homey.ready();
+        }
+
+        function showLogLines() {
+           HomeyAPI.api('GET', 'log/getloglines/', function(err, result) {
+              if (!err) {
+                 document.getElementById('loglines').innerHTML = '';
+                 for (var i=0; i < result.length; i++) {
+                    document.getElementById('loglines').innerHTML += result[i];
+                    document.getElementById('loglines').innerHTML += "<br />";
+                 }
+              };
+           });
         }
     </script>
 
