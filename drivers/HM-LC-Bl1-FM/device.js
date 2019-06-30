@@ -30,12 +30,22 @@ const convertSetState = function (value) {
     return true
 }
 
+const convertSetLevel = function (value) {
+    if (value === 1) {
+        return "1.0"
+    } else if (value === 0) {
+        return "0.0"
+    }
+    return value
+}
+
 const capabilityMap = {
     "windowcoverings_set": {
         "channel": 1,
         "key": "LEVEL",
         "set": {
             "key": "LEVEL",
+            "convert": convertSetLevel,
             "channel": 1
         }
     },
