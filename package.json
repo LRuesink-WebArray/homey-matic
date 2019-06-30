@@ -1,6 +1,6 @@
 {
   "name": "homeymatic",
-  "version": "0.14.1",
+  "version": "0.15.0",
   "description": "Connect Homematic CCU with Homey",
   "main": "app.js",
   "dependencies": {
@@ -8,6 +8,8 @@
     "binary": "^0.3.0",
     "freeport": "1.0.5",
     "homematic-xmlrpc": "^1.0.2",
+    "mqtt": "^3.0.0",
+    "node-fetch": "^2.6.0",
     "put": "0.0.6"
   },
   "devDependencies": {},

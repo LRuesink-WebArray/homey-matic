@@ -16,7 +16,7 @@ class HomematicDriver extends Driver {
         this._flowTriggerStateChanged = new Homey.FlowCardTriggerDevice('HM-Sec-RHS-changed')
             .register()
             .registerRunListener((args, state) => {
-                console.log(args.state + " " + state.state)
+                // console.log(args.state + " " + state.state)
                 if (args.state == state.state) {
                     return Promise.resolve(true)
                 } else {
