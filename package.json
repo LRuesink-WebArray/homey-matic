@@ -8,6 +8,8 @@
     "binary": "^0.3.0",
     "freeport": "1.0.5",
     "homematic-xmlrpc": "^1.0.2",
+    "mqtt": "^3.0.0",
+    "node-fetch": "^2.6.0",
     "put": "0.0.6"
   },
   "devDependencies": {},

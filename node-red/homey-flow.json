@@ -1,0 +1,423 @@
+[
+    {
+        "id": "35c3263d.b7bb7a",
+        "type": "tab",
+        "label": "Homey",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bff892d3.de0f2",
+        "type": "mqtt in",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "topic": "hm/get",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "da2b3d6e.effd9",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "6b8bcd7f.64c9d4"
+            ]
+        ]
+    },
+    {
+        "id": "c92c0751.602958",
+        "type": "change",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "datapoint",
+                "pt": "msg",
+                "to": "payload.datapoint",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "channel",
+                "pt": "msg",
+                "to": "payload.channel",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "iface",
+                "pt": "msg",
+                "to": "payload.iface",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 100,
+        "wires": [
+            [
+                "8efe31f0.c6402"
+            ]
+        ]
+    },
+    {
+        "id": "8efe31f0.c6402",
+        "type": "ccu-get-value",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "ccuConfig": "38263145.35ea0e",
+        "iface": "",
+        "channel": "",
+        "sysvar": "Alarmmeldungen",
+        "sysvarProperty": "value",
+        "datapoint": "",
+        "datapointProperty": "value",
+        "setProp": "payload",
+        "setPropType": "msg",
+        "x": 980,
+        "y": 100,
+        "wires": [
+            [
+                "7e0c769f.b63198"
+            ]
+        ]
+    },
+    {
+        "id": "6b8bcd7f.64c9d4",
+        "type": "json",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 510,
+        "y": 100,
+        "wires": [
+            [
+                "c92c0751.602958"
+            ]
+        ]
+    },
+    {
+        "id": "7e0c769f.b63198",
+        "type": "change",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "value",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.val",
+                "pt": "msg",
+                "to": "value",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "retain",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1200,
+        "y": 100,
+        "wires": [
+            [
+                "b9b7c558.a730f8"
+            ]
+        ]
+    },
+    {
+        "id": "b9b7c558.a730f8",
+        "type": "function",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "func": "msg.topic = 'hm/status/' + msg.iface + '/' + msg.channel + '/' + msg.datapoint\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1420,
+        "y": 100,
+        "wires": [
+            [
+                "a54bcec6.3af21"
+            ]
+        ]
+    },
+    {
+        "id": "a54bcec6.3af21",
+        "type": "mqtt out",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "da2b3d6e.effd9",
+        "x": 1630,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "61977188.89359",
+        "type": "ccu-mqtt",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "ccuConfig": "38263145.35ea0e",
+        "cache": false,
+        "topicOutputEvent": "hm/status/${iface}/${channel}/${datapoint}",
+        "topicInputSetValue": "hm/set/${channel}/${datapoint}",
+        "topicOutputSysvar": "hm/status/${name}",
+        "topicInputSysvar": "hm/set/${name}",
+        "topicInputPutParam": "hm/paramset/${channelNameOrAddress}/${paramset}/${param}",
+        "topicInputPutParamset": "hm/paramset/${channelNameOrAddress}/${paramset}",
+        "topicInputRpc": "hm/rpc/${iface}/${method}/${command}/${callid}",
+        "topicOutputRpc": "hm/response/${callid}",
+        "topicCounters": "hm/counter/${iface}/${rxtx}",
+        "payloadOutput": "mqsh-basic",
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "f7e3597b.be59c8"
+            ]
+        ]
+    },
+    {
+        "id": "9cd52df3.e752b",
+        "type": "mqtt in",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "topic": "hm/set/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "da2b3d6e.effd9",
+        "x": 250,
+        "y": 280,
+        "wires": [
+            [
+                "61977188.89359"
+            ]
+        ]
+    },
+    {
+        "id": "f7e3597b.be59c8",
+        "type": "mqtt out",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "da2b3d6e.effd9",
+        "x": 610,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "1fc13431.eb24bc",
+        "type": "ccu-rpc",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "ccuConfig": "38263145.35ea0e",
+        "iface": "BidCos-RF",
+        "method": "listDevices",
+        "params": "[]",
+        "topic": "${CCU}/${Interface}/${Method}",
+        "x": 710,
+        "y": 460,
+        "wires": [
+            [
+                "c4ab23b7.2bd26"
+            ]
+        ]
+    },
+    {
+        "id": "c4ab23b7.2bd26",
+        "type": "function",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "func": "var devices = {};\n\nfor (var i=0; i < msg.payload.length; i++) {\n    msg.payload[i].HomeyInterfaceName = msg.iface;\n}\n\ndevices.devices = msg.payload;\ndevices.interfaceName = msg.iface;\n\n\nmsg.payload = devices;\nmsg.topic = 'hm/devices/response';\nmsg.retain = false;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 920,
+        "y": 520,
+        "wires": [
+            [
+                "a027bc97.1996c"
+            ]
+        ]
+    },
+    {
+        "id": "a027bc97.1996c",
+        "type": "mqtt out",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "da2b3d6e.effd9",
+        "x": 1110,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "f9e81fb9.eb08b",
+        "type": "mqtt in",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "topic": "hm/devices",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "da2b3d6e.effd9",
+        "x": 270,
+        "y": 520,
+        "wires": [
+            [
+                "c83c038c.63431"
+            ]
+        ]
+    },
+    {
+        "id": "1ca54841.ef0df8",
+        "type": "ccu-rpc",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "ccuConfig": "38263145.35ea0e",
+        "iface": "HmIP-RF",
+        "method": "listDevices",
+        "params": "[]",
+        "topic": "${CCU}/${Interface}/${Method}",
+        "x": 710,
+        "y": 520,
+        "wires": [
+            [
+                "c4ab23b7.2bd26"
+            ]
+        ]
+    },
+    {
+        "id": "6a93a09b.e4a44",
+        "type": "ccu-rpc",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "ccuConfig": "38263145.35ea0e",
+        "iface": "CUxD",
+        "method": "listDevices",
+        "params": "[]",
+        "topic": "${CCU}/${Interface}/${Method}",
+        "x": 710,
+        "y": 580,
+        "wires": [
+            [
+                "c4ab23b7.2bd26"
+            ]
+        ]
+    },
+    {
+        "id": "c83c038c.63431",
+        "type": "switch",
+        "z": "35c3263d.b7bb7a",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "BidCos-RF",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "HmIP-RF",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "CUxD",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 3,
+        "x": 490,
+        "y": 520,
+        "wires": [
+            [
+                "1fc13431.eb24bc"
+            ],
+            [
+                "1ca54841.ef0df8"
+            ],
+            [
+                "6a93a09b.e4a44"
+            ]
+        ]
+    },
+    {
+        "id": "da2b3d6e.effd9",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "localhost",
+        "broker": "localhost",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "38263145.35ea0e",
+        "type": "ccu-connection",
+        "z": "",
+        "name": "localhost",
+        "host": "localhost",
+        "regaEnabled": true,
+        "bcrfEnabled": true,
+        "iprfEnabled": true,
+        "virtEnabled": true,
+        "bcwiEnabled": false,
+        "cuxdEnabled": true,
+        "regaPoll": true,
+        "regaInterval": "30",
+        "rpcPingTimeout": "60",
+        "rpcInitAddress": "127.0.0.1",
+        "rpcServerHost": "127.0.0.1",
+        "rpcBinPort": "2047",
+        "rpcXmlPort": "2048",
+        "queueTimeout": "5000",
+        "queuePause": "250",
+        "contextStore": ""
+    }
+]

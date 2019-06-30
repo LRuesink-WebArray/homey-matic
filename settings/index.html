@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<head>
+
+    <!-- The '/homey.js' script must be included in your settings view to work -->
+    <script type="text/javascript" src="/homey.js" data-origin="settings"></script>
+
+</head>
+
+<body>
+
+    <h1 data-i18n="settings.title">
+        <!--
+            This field will automatically be filled by a translated string with key 'settings.title'.
+            Read more about translations at Internationalization.
+            -->
+    </h1>
+    <p data-i18n="settings.subtitle">
+        <!--
+            This field will also be translated
+            -->
+    </p>
+
+    <fieldset>
+        <legend>MQTT Settings</legend>
+
+        <p data-i18n="settings.mqtt.description"></p>
+
+        <div class="field row">
+            <input id="use_mqtt" type="checkbox" />
+            <label for="use_mqtt" data-i18n="settings.mqtt.use_mqtt"></label>
+        </div>
+
+    </fieldset>
+    
+    <button id="save" class="right">Save changes</button>
+
+    <p data-i18n="settings.log.title"></p>
+    <button class="right" id="button_getlog" onclick="showLogLines()" data-i18n="settings.log.button.getlogs">Get Logs</button>
+    <div id="loglines"></div>
+
+    <script type="text/javascript">
+
+        // a method named 'onHomeyReady' must be present in your code
+        function onHomeyReady(Homey) {
+            HomeyAPI = Homey;
+
+            var useMQTTElement = document.getElementById('use_mqtt');
+
+            var saveElement = document.getElementById('save');
+
+            Homey.get('use_mqtt', function (err, use_mqtt) {
+                if (err) return Homey.alert(err);
+                useMQTTElement.value = use_mqtt;
+                if (typeof use_mqtt == 'undefined' || use_mqtt == null) use_mqtt = false;
+                useMQTTElement.checked = use_mqtt;
+            });
+
+            saveElement.addEventListener('click', function (e) {
+                Homey.set('use_mqtt', useMQTTElement.checked, function (err) {
+                    if (err) return Homey.alert(err);
+                });
+            });
+
+            // Tell Homey we're ready to be displayed
+            Homey.ready();
+        }
+
+        function showLogLines() {
+           HomeyAPI.api('GET', 'log/getloglines/', function(err, result) {
+              if (!err) {
+                 document.getElementById('loglines').innerHTML = '';
+                 for (var i=0; i < result.length; i++) {
+                    document.getElementById('loglines').innerHTML += result[i];
+                    document.getElementById('loglines').innerHTML += "<br />";
+                 }
+              };
+           });
+        }
+    </script>
+
+</body>
+
+</html>
