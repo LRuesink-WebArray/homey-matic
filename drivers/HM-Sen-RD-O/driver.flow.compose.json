@@ -1,0 +1,16 @@
+{
+    "triggers": [
+        {
+            "id": "HM-Sen-RD-O-turned-on",
+            "title": {
+                "en": "Rain start"
+            }
+        },
+        {
+            "id": "HM-Sen-RD-O-turned-off",
+            "title": {
+                "en": "Rain stop"
+            }
+        }
+    ]
+}

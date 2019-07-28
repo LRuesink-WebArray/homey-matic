@@ -1,0 +1,37 @@
+{
+    "id": "HM-Sen-RD-O",
+    "name": {
+        "en": "HM-Sen-RD-O"
+    },
+    "class": "sensor",
+    "capabilities": [
+        "homematic_rhs_state"
+    ],
+    "images": {
+        "large": "/drivers/HM-Sen-RD-O/assets/images/large.png",
+        "small": "/drivers/HM-Sen-RD-O/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}

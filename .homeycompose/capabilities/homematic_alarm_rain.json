@@ -1,0 +1,22 @@
+{
+    "type": "boolean",
+    "title": {
+      "en": "Rain alarm",
+      "nl": "Regenalram",
+      "de": "Regen-Alarm"
+    },
+    "insights": true,
+    "insightsTitleTrue": {
+      "en": "Rain alarm turned on",
+      "nl": "Regensalarm ging af",
+      "de": "Regen-Alarm ist angegangen"
+    },
+    "insightsTitleFalse": {
+      "en": "Rain alarm turned off",
+      "nl": "Regenalarm ging uit",
+      "de": "Regen-Alarm ist ausgegangen"
+    },
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }

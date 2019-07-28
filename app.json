@@ -1240,6 +1240,43 @@
       ]
     },
     {
+      "id": "HM-Sen-RD-O",
+      "name": {
+        "en": "HM-Sen-RD-O"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "homematic_rhs_state"
+      ],
+      "images": {
+        "large": "/drivers/HM-Sen-RD-O/assets/images/large.png",
+        "small": "/drivers/HM-Sen-RD-O/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-SwI-3-FM",
       "name": {
         "en": "HM-SwI-3-FM"
@@ -2883,6 +2920,32 @@
         ]
       },
       {
+        "id": "HM-Sen-RD-O-turned-on",
+        "title": {
+          "en": "Rain start"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sen-RD-O"
+          }
+        ]
+      },
+      {
+        "id": "HM-Sen-RD-O-turned-off",
+        "title": {
+          "en": "Rain stop"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sen-RD-O"
+          }
+        ]
+      },
+      {
         "id": "HM-SwI-3-FM-pressed-1",
         "title": {
           "en": "Button 1 Pressed"
@@ -3206,6 +3269,28 @@
     ]
   },
   "capabilities": {
+    "homematic_alarm_rain": {
+      "type": "boolean",
+      "title": {
+        "en": "Rain alarm",
+        "nl": "Regenalram",
+        "de": "Regen-Alarm"
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Rain alarm turned on",
+        "nl": "Regensalarm ging af",
+        "de": "Regen-Alarm ist angegangen"
+      },
+      "insightsTitleFalse": {
+        "en": "Rain alarm turned off",
+        "nl": "Regenalarm ging uit",
+        "de": "Regen-Alarm ist ausgegangen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "homematic_measure_valve": {
       "type": "number",
       "title": {
