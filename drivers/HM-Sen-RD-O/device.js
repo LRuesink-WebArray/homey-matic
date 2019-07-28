@@ -4,7 +4,7 @@ const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
 const capabilityMap = {
-    "homematic_alarm_rain": {
+    "alarm_homematic_rain": {
         "channel": 1,
         "key": "STATE",
         "convert": Convert.toBoolean

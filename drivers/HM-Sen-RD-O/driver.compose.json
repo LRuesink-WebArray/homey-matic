@@ -5,7 +5,8 @@
     },
     "class": "sensor",
     "capabilities": [
-        "homematic_rhs_state"
+        "alarm_homematic_rain",
+        "onoff"
     ],
     "images": {
         "large": "/drivers/HM-Sen-RD-O/assets/images/large.png",
