@@ -10,7 +10,7 @@ class HomematicDriver extends Driver {
         this.capabilities = [
             'onoff'
         ]
-        this.homematicTypes = ['HM-LC-Sw1-Pl-DN-R1']
+        this.homematicTypes = ['HM-LC-Sw1-Pl-DN-R1', 'HM-LC-Sw1-Pl-DN-R5']
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 

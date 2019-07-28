@@ -496,7 +496,7 @@
     {
       "id": "HM-LC-Sw1-Pl-DN-R1",
       "name": {
-        "en": "HM-LC-Sw1-Pl-DN-R1"
+        "en": "HM-LC-Sw1-Pl-DN-Rx"
       },
       "class": "socket",
       "capabilities": [],
