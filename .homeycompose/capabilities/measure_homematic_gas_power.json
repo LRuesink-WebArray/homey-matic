@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "en": "Gas Power",
+      "nl": "Gas Energie",
+      "de": "Gas Energie"
+    },
+    "units": {
+      "en": "m³"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Power in Cubic Meter (m³)",
+      "nl": "Vermogen in Kubieke Meter (m³)",
+      "de": "Energie in Kubikmeter (m³)"
+    },
+    "chartType": "stepLine",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }

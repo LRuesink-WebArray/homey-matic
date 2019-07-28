@@ -144,6 +144,41 @@
       ]
     },
     {
+      "id": "HM-ES-TX-WM",
+      "name": {
+        "en": "HM-ES-TX-WM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-ES-TX-WM/assets/images/large.png",
+        "small": "/drivers/HM-ES-TX-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-LC-Bl1-FM",
       "name": {
         "en": "HM-LC-Bl1-FM"
@@ -3629,6 +3664,28 @@
       "uiComponent": "picker",
       "getable": true,
       "setable": true
+    },
+    "measure_homematic_gas_power": {
+      "type": "number",
+      "title": {
+        "en": "Gas Power",
+        "nl": "Gas Energie",
+        "de": "Gas Energie"
+      },
+      "units": {
+        "en": "m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Power in Cubic Meter (m³)",
+        "nl": "Vermogen in Kubieke Meter (m³)",
+        "de": "Energie in Kubikmeter (m³)"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     }
   }
 }
