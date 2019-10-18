@@ -1205,6 +1205,41 @@
       ]
     },
     {
+      "id": "HM-Sec-Sir-WM",
+      "name": {
+        "en": "HM-Sec-Sir-WM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sec-Sir-WM/assets/images/large.png",
+        "small": "/drivers/HM-Sec-Sir-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-Sen-DB-PCB",
       "name": {
         "en": "HM-Sen-DB-PCB"
