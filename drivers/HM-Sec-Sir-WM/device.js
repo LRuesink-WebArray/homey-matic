@@ -19,7 +19,7 @@ class HomematicDevice extends Device {
             "alarm_battery": {
                 "channel": 1,
                 "key": "LOWBAT",
-                "convert": "boolean"
+                "convert": "toBoolean"
             }
         }
         super.onInit(capabilityMap);
