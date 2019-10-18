@@ -12,7 +12,7 @@ class HomematicDriver extends Driver {
             'alarm_battery'
         ]
         this.homematicTypes = ['HM-Sec-Sir-WM']
-        this.numDevices = 2
+        this.numDevices = 3
         this.multiDevice = true
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
