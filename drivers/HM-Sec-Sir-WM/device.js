@@ -2,6 +2,7 @@
 
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
+const Convert = require('../../lib/convert.js')
 
 class HomematicDevice extends Device {
 
@@ -19,7 +20,7 @@ class HomematicDevice extends Device {
             "alarm_battery": {
                 "channel": 1,
                 "key": "LOWBAT",
-                "convert": "toBoolean"
+                "convert": Convert.toBoolean
             }
         }
         super.onInit(capabilityMap);
