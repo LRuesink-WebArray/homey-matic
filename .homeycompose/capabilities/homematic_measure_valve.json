@@ -1,7 +1,8 @@
 {
     "type": "number",
     "title": {
-        "en": "Valve"
+        "en": "Valve",
+        "de": "Ventilöffnung"
     },
     "getable": true,
     "setable": false,
