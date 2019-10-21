@@ -32,6 +32,7 @@ If you encounter any issues then please open an issue on GitHub.
 
 * HM-CC-RT-DN
 * HM-ES-PMSw1-Pl
+* HM-ES-TX-WM
 * HM-LC-Bl1-FM
 * HM-LC-Bl1PBU-FM
 * HM-LC-Dim1PWM-CV
@@ -47,9 +48,11 @@ If you encounter any issues then please open an issue on GitHub.
 * HM-LC-Sw2-FM
 * HM-LC-Sw4-Ba-PCB
 * HM-LC-Sw4-DR
+* HM-MOD-Re-8
 * HM-PB-2-FM
 * HM-PB-2-WM55-2
 * HM-PB-4-WM
+* HM-RC-8
 * HM-RC-Key4-2
 * HM-RC-Key4-3
 * HM-Sec-Key
@@ -59,9 +62,11 @@ If you encounter any issues then please open an issue on GitHub.
 * HM-Sec-SCo
 * HM-Sec-SD
 * HM-Sec-SD-2
+* HM-Sec-Sir-WM
 * HM-Sen-DB-PCB
 * HM-Sen-MDIR-O
 * HM-Sen-MDIR-WM55
+* HM-Sen-RD-O
 * HM-SwI-3-FM
 * HM-TC-IT-WM-W-EU
 * HM-WDS10-TH-O
@@ -71,7 +76,9 @@ If you encounter any issues then please open an issue on GitHub.
 * HMIP-WTH
 * HMIP-eTRV
 * HmIP-BROLL
+* HmIP-BSM
 * HmIP-BWTH
+* HmIP-FBL
 * HmIP-FROLL
 * HmIP-MOD-OC8
 * HmIP-PCBS

@@ -8,9 +8,12 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [
-            'onoff'
+            'measure_power',
+            'meter_power',
+            'measure_homematic_gas_power',
+            'meter_gas'
         ]
-        this.homematicTypes = ['HM-LC-Sw1-Pl-DN-R1', 'HM-LC-Sw1-Pl-DN-R5']
+        this.homematicTypes = ['HM-ES-TX-WM'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 

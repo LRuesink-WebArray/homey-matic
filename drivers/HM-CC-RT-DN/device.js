@@ -25,7 +25,8 @@ const capabilityMap = {
         "set": {
             "key": "SET_TEMPERATURE",
             "channel": 4,
-            "convert": Convert.tofix
+            "convert": Convert.tofix,
+            "convertMQTT": Convert.toFloat
         }
     },
     "homematic_thermostat_mode": {

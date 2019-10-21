@@ -1,13 +1,13 @@
 {
-    "id": "HM-LC-Sw1-Pl-DN-R1",
+    "id": "HM-Sec-Sir-WM",
     "name": {
-        "en": "HM-LC-Sw1-Pl-DN-Rx"
+        "en": "HM-Sec-Sir-WM"
     },
     "class": "socket",
     "capabilities": [],
     "images": {
-        "large": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/large.png",
-        "small": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/small.png"
+        "large": "/drivers/HM-Sec-Sir-WM/assets/images/large.png",
+        "small": "/drivers/HM-Sec-Sir-WM/assets/images/small.png"
     },
     "pair": [
         {

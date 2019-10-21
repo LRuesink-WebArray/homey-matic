@@ -1,13 +1,13 @@
 {
-    "id": "HM-LC-Sw1-Pl-DN-R1",
+    "id": "HM-MOD-Re-8",
     "name": {
-        "en": "HM-LC-Sw1-Pl-DN-Rx"
+        "en": "HM-MOD-Re-8"
     },
     "class": "socket",
     "capabilities": [],
     "images": {
-        "large": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/large.png",
-        "small": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/small.png"
+        "large": "/drivers/HM-MOD-Re-8/assets/images/large.png",
+        "small": "/drivers/HM-MOD-Re-8/assets/images/small.png"
     },
     "pair": [
         {

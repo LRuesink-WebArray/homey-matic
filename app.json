@@ -144,6 +144,41 @@
       ]
     },
     {
+      "id": "HM-ES-TX-WM",
+      "name": {
+        "en": "HM-ES-TX-WM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-ES-TX-WM/assets/images/large.png",
+        "small": "/drivers/HM-ES-TX-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-LC-Bl1-FM",
       "name": {
         "en": "HM-LC-Bl1-FM"
@@ -496,7 +531,7 @@
     {
       "id": "HM-LC-Sw1-Pl-DN-R1",
       "name": {
-        "en": "HM-LC-Sw1-Pl-DN-R1"
+        "en": "HM-LC-Sw1-Pl-DN-Rx"
       },
       "class": "socket",
       "capabilities": [],
@@ -669,6 +704,41 @@
       ]
     },
     {
+      "id": "HM-MOD-Re-8",
+      "name": {
+        "en": "HM-MOD-Re-8"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-MOD-Re-8/assets/images/large.png",
+        "small": "/drivers/HM-MOD-Re-8/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-PB-2-FM",
       "name": {
         "en": "HM-PB-2-FM"
@@ -750,6 +820,41 @@
       "images": {
         "large": "/drivers/HM-PB-4-WM/assets/images/large.png",
         "small": "/drivers/HM-PB-4-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-RC-8",
+      "name": {
+        "en": "HM-RC-8"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-RC-8/assets/images/large.png",
+        "small": "/drivers/HM-RC-8/assets/images/small.png"
       },
       "pair": [
         {
@@ -1100,6 +1205,41 @@
       ]
     },
     {
+      "id": "HM-Sec-Sir-WM",
+      "name": {
+        "en": "HM-Sec-Sir-WM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-Sec-Sir-WM/assets/images/large.png",
+        "small": "/drivers/HM-Sec-Sir-WM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-Sen-DB-PCB",
       "name": {
         "en": "HM-Sen-DB-PCB"
@@ -1179,6 +1319,44 @@
       "images": {
         "large": "/drivers/HM-Sen-MDIR-WM55/assets/images/large.png",
         "small": "/drivers/HM-Sen-MDIR-WM55/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HM-Sen-RD-O",
+      "name": {
+        "en": "HM-Sen-RD-O"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_homematic_rain",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/HM-Sen-RD-O/assets/images/large.png",
+        "small": "/drivers/HM-Sen-RD-O/assets/images/small.png"
       },
       "pair": [
         {
@@ -1402,6 +1580,41 @@
       "images": {
         "large": "/drivers/HmIP-BROLL/assets/images/large.png",
         "small": "/drivers/HmIP-BROLL/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-BSM",
+      "name": {
+        "en": "HmIP-BSM"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-BSM/assets/images/large.png",
+        "small": "/drivers/HmIP-BSM/assets/images/small.png"
       },
       "pair": [
         {
@@ -1653,6 +1866,41 @@
       "images": {
         "large": "/drivers/HmIP-eTRV-2/assets/images/large.png",
         "small": "/drivers/HmIP-eTRV-2/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
+      "id": "HmIP-FBL",
+      "name": {
+        "en": "HmIP-FBL"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-FBL/assets/images/large.png",
+        "small": "/drivers/HmIP-FBL/assets/images/small.png"
       },
       "pair": [
         {
@@ -2523,6 +2771,102 @@
         ]
       },
       {
+        "id": "HM-RC-8-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-RC-8"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "8"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "HM-RC-Key4-2-press",
         "title": {
           "en": "Button Event"
@@ -2813,6 +3157,32 @@
         ]
       },
       {
+        "id": "HM-Sen-RD-O-turned-on",
+        "title": {
+          "en": "Rain start"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sen-RD-O"
+          }
+        ]
+      },
+      {
+        "id": "HM-Sen-RD-O-turned-off",
+        "title": {
+          "en": "Rain stop"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sen-RD-O"
+          }
+        ]
+      },
+      {
         "id": "HM-SwI-3-FM-pressed-1",
         "title": {
           "en": "Button 1 Pressed"
@@ -2870,6 +3240,66 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HmIP-BROLL"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HmIP-FBL-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-FBL"
           },
           {
             "name": "button",
@@ -3136,10 +3566,33 @@
     ]
   },
   "capabilities": {
+    "alarm_homematic_rain": {
+      "type": "boolean",
+      "title": {
+        "en": "Rain alarm",
+        "nl": "Regenalram",
+        "de": "Regen-Alarm"
+      },
+      "insights": true,
+      "insightsTitleTrue": {
+        "en": "Rain alarm turned on",
+        "nl": "Regensalarm ging af",
+        "de": "Regen-Alarm ist angegangen"
+      },
+      "insightsTitleFalse": {
+        "en": "Rain alarm turned off",
+        "nl": "Regenalarm ging uit",
+        "de": "Regen-Alarm ist ausgegangen"
+      },
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "homematic_measure_valve": {
       "type": "number",
       "title": {
-        "en": "Valve"
+        "en": "Valve",
+        "de": "Ventilöffnung"
       },
       "getable": true,
       "setable": false,
@@ -3248,6 +3701,28 @@
       "uiComponent": "picker",
       "getable": true,
       "setable": true
+    },
+    "measure_homematic_gas_power": {
+      "type": "number",
+      "title": {
+        "en": "Gas Power",
+        "nl": "Gas Energie",
+        "de": "Gas Energie"
+      },
+      "units": {
+        "en": "m³"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Power in Cubic Meter (m³)",
+        "nl": "Vermogen in Kubieke Meter (m³)",
+        "de": "Energie in Kubikmeter (m³)"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     }
   }
 }

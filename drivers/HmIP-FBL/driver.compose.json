@@ -1,13 +1,13 @@
 {
-    "id": "HM-LC-Sw1-Pl-DN-R1",
+    "id": "HmIP-FBL",
     "name": {
-        "en": "HM-LC-Sw1-Pl-DN-Rx"
+        "en": "HmIP-FBL"
     },
-    "class": "socket",
+    "class": "button",
     "capabilities": [],
     "images": {
-        "large": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/large.png",
-        "small": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/small.png"
+        "large": "/drivers/HmIP-FBL/assets/images/large.png",
+        "small": "/drivers/HmIP-FBL/assets/images/small.png"
     },
     "pair": [
         {

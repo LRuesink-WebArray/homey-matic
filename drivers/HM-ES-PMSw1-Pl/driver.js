@@ -14,7 +14,7 @@ class HomematicDriver extends Driver {
             'measure_current',
             'meter_power'
         ]
-        this.homematicTypes = ['HM-ES-PMSw1-Pl']
+        this.homematicTypes = ['HM-ES-PMSw1-Pl', 'HM-ES-PMSw1-Pl-DN-R5']
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 

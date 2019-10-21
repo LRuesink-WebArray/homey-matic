@@ -25,7 +25,8 @@ const capabilityMap = {
         "set": {
             "key": "SET_TEMPERATURE",
             "channel": 2,
-            "convert": Convert.tofix
+            "convert": Convert.tofix,
+            "convertMQTT": Convert.toFloat
         }
     },
     "alarm_battery": {

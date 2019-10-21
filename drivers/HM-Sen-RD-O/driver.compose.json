@@ -1,13 +1,16 @@
 {
-    "id": "HM-LC-Sw1-Pl-DN-R1",
+    "id": "HM-Sen-RD-O",
     "name": {
-        "en": "HM-LC-Sw1-Pl-DN-Rx"
+        "en": "HM-Sen-RD-O"
     },
-    "class": "socket",
-    "capabilities": [],
+    "class": "sensor",
+    "capabilities": [
+        "alarm_homematic_rain",
+        "onoff"
+    ],
     "images": {
-        "large": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/large.png",
-        "small": "/drivers/HM-LC-Sw1-Pl-DN-R1/assets/images/small.png"
+        "large": "/drivers/HM-Sen-RD-O/assets/images/large.png",
+        "small": "/drivers/HM-Sen-RD-O/assets/images/small.png"
     },
     "pair": [
         {
