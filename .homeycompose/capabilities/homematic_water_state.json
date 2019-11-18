@@ -1,0 +1,33 @@
+{
+    "type": "enum",
+    "values": [
+        {
+            "id": "0",
+            "title": {
+                "en": "Dry",
+                "de": "Trocken"
+            }
+        },
+        {
+            "id": "1",
+            "title": {
+                "en": "Wet",
+                "de": "Feucht"
+            }
+        }
+        {
+            "id": "2",
+            "title": {
+                "en": "Water",
+                "nl": "Wasser"
+            }
+        },
+    ],
+    "title": {
+        "en": "State",
+        "de": "Status"
+    },
+    "uiComponent": "picker",
+    "getable": true,
+    "setable": false
+}
