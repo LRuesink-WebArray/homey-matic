@@ -13,8 +13,8 @@ class HomematicDriver extends Driver {
             'measure_voltage',
             'measure_current',
             'meter_power'
-        ]
-        this.homematicTypes = ['HM-ES-PMSw1-Pl', 'HM-ES-PMSw1-Pl-DN-R5']
+        ];
+        this.homematicTypes = ['HM-ES-PMSw1-Pl', 'HM-ES-PMSw1-Pl-DN-R5', 'HM-ES-PMSw1-DR'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
