@@ -14,14 +14,14 @@
                 "en": "Wet",
                 "de": "Feucht"
             }
-        }
+        },
         {
             "id": "2",
             "title": {
                 "en": "Water",
                 "nl": "Wasser"
             }
-        },
+        }
     ],
     "title": {
         "en": "State",

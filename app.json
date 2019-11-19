@@ -1240,6 +1240,43 @@
       ]
     },
     {
+      "id": "HM-Sec-WDS",
+      "name": {
+        "en": "HM-Sec-WDS"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "homematic_water_state"
+      ],
+      "images": {
+        "large": "/drivers/HM-Sec-WDS/assets/images/large.png",
+        "small": "/drivers/HM-Sec-WDS/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-Sen-DB-PCB",
       "name": {
         "en": "HM-Sen-DB-PCB"
@@ -3049,6 +3086,47 @@
         ]
       },
       {
+        "id": "HM-Sec-WDS-changed",
+        "title": {
+          "en": "Water state changed"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sec-WDS"
+          },
+          {
+            "name": "state",
+            "title": "Water State",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Dry",
+                  "de": "Trocken"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Wet",
+                  "de": "Feucht"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Water",
+                  "de": "Wasser"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "HM-Sen-DB-PCB-press",
         "title": {
           "en": "Button Event"
@@ -3701,6 +3779,39 @@
       "uiComponent": "picker",
       "getable": true,
       "setable": true
+    },
+    "homematic_water_state": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Dry",
+            "de": "Trocken"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Wet",
+            "de": "Feucht"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Water",
+            "nl": "Wasser"
+          }
+        }
+      ],
+      "title": {
+        "en": "State",
+        "de": "Status"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": false
     },
     "measure_homematic_gas_power": {
       "type": "number",
