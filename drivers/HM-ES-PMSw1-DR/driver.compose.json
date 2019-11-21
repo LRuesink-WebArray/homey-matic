@@ -1,0 +1,35 @@
+{
+    "id": "HM-ES-PMSw1-DR",
+    "name": {
+        "en": "HM-ES-PMSw1-DR"
+    },
+    "class": "socket",
+    "capabilities": [],
+    "images": {
+        "large": "/drivers/HM-ES-PMSw1-DR/assets/images/large.png",
+        "small": "/drivers/HM-ES-PMSw1-DR/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}
