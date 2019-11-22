@@ -2715,6 +2715,91 @@
           "template": "add_devices"
         }
       ]
+    },
+    {
+      "id": "HmIP-eTRV-B",
+      "name": {
+        "en": "HmIP-eTRV-B"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile",
+        "homematic_measure_valve"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "sensor",
+            "capabilities": [
+              "measure_temperature"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "homematic_thermostat_boost"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_weekprofile"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "picker",
+            "capabilities": [
+              "homematic_thermostat_mode"
+            ],
+            "options": {
+              "showTitle": true
+            }
+          },
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HmIP-eTRV-B/assets/images/large.png",
+        "small": "/drivers/HmIP-eTRV-B/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
     }
   ],
   "flow": {
@@ -3753,6 +3838,44 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HmIP-eTRV-2"
+          },
+          {
+            "name": "weekprofile",
+            "title": "Week Profile",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "homematic_thermostat_set_weekprofile",
+        "title": {
+          "en": "Set Week Profile"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-B"
           },
           {
             "name": "weekprofile",

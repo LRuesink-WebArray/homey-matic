@@ -1,0 +1,85 @@
+{
+    "id": "HmIP-eTRV-B",
+    "name": {
+        "en": "HmIP-eTRV-B"
+    },
+    "class": "thermostat",
+    "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile",
+        "homematic_measure_valve"
+    ],
+    "mobile": {
+        "components": [
+            {
+                "id": "sensor",
+                "capabilities": [
+                    "measure_temperature"
+                ]
+            },
+            {
+                "id": "toggle",
+                "capabilities": [
+                    "homematic_thermostat_boost"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "picker",
+                "capabilities": [
+                    "homematic_thermostat_weekprofile"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "picker",
+                "capabilities": [
+                    "homematic_thermostat_mode"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "thermostat",
+                "capabilities": [
+                    "target_temperature"
+                ]
+            }
+        ]
+    },
+    "images": {
+        "large": "/drivers/HmIP-eTRV-B/assets/images/large.png",
+        "small": "/drivers/HmIP-eTRV-B/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ]
+}

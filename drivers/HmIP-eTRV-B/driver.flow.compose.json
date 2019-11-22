@@ -1,0 +1,37 @@
+{
+    "actions": [
+        {
+            "id": "homematic_thermostat_set_weekprofile",
+            "title": {
+                "en": "Set Week Profile"
+            },
+            "args": [
+                {
+                    "name": "weekprofile",
+                    "title": "Week Profile",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "1"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "2"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "label": {
+                                "en": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
