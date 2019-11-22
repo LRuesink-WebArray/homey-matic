@@ -1713,6 +1713,41 @@
       ]
     },
     {
+      "id": "HM-WDS100-C6-O",
+      "name": {
+        "en": "HM-WDS100-C6-O"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-WDS100-C6-O/assets/images/large.png",
+        "small": "/drivers/HM-WDS100-C6-O/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-WS550STH-I",
       "name": {
         "en": "HM-WS550STH-I"
@@ -4385,6 +4420,22 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor"
+    },
+    "measure_homematic_sunshineduration": {
+      "type": "number",
+      "title": {
+        "en": "Sunshine",
+        "de": "Sonnenschein"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "units": {
+        "en": "h"
+      },
+      "min": 0,
+      "max": 255,
+      "step": 1
     }
   }
 }

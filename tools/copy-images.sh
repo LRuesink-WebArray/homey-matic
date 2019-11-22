@@ -49,6 +49,8 @@ for drv in `ls drivers` ; do
     lower_drv="132_hmip-smo"
   elif [ $lower_drv == "hm-lc-sw1-pl" ] ; then
     lower_drv="OM55_DimmerSwitch"
+  elif [ $lower_drv == "hm-wds100-c6-o" ] ; then
+    lower_drv="WeatherCombiSensor"
   elif [ $lower_drv == "hmip-pcbs" ] ; then
     lower_drv="184_hmip-pcbs2"
   elif [ $lower_drv == "hm-pb-2-fm" ] ; then
