@@ -45,6 +45,8 @@ for drv in `ls drivers` ; do
     lower_drv="145_hmip-froll_hmip-fbl"
   elif [ $lower_drv == "hmip-bwth" ] ; then
     lower_drv="121_hmip-wth"
+  elif [ $lower_drv == "hmip-smo-a" ] ; then
+    lower_drv="132_hmip-smo"
   elif [ $lower_drv == "hm-lc-sw1-pl" ] ; then
     lower_drv="OM55_DimmerSwitch"
   elif [ $lower_drv == "hmip-pcbs" ] ; then

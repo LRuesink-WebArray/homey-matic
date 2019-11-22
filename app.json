@@ -2279,6 +2279,41 @@
       ]
     },
     {
+      "id": "HmIP-SMO-A",
+      "name": {
+        "en": "HmIP-SMO-A"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-SMO-A/assets/images/large.png",
+        "small": "/drivers/HmIP-SMO-A/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HmIP-SPI",
       "name": {
         "en": "HmIP-SPI"
