@@ -2599,6 +2599,41 @@
       ]
     },
     {
+      "id": "HmIP-SWDM",
+      "name": {
+        "en": "HmIP-SWDM"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-SWDM/assets/images/large.png",
+        "small": "/drivers/HmIP-SWDM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HmIP-SWDO-I",
       "name": {
         "en": "HmIP-SWDO-I"
