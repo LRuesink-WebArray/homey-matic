@@ -13,7 +13,7 @@ const capabilityMap = {
         "channel": 1,
         "key": "HUMIDITY",
         "convert": Convert.toFloat
-    }
+    },
     "meter_rain": {
         "channel": 1,
         "key": "RAIN_COUNTER",
@@ -38,7 +38,7 @@ const capabilityMap = {
         "channel": 1,
         "key": "BRIGHTNESS",
         "convert": Convert.toInt
-    }
+    },
     "measure_homematic_sunshineduration": {
         "channel": 1,
         "key": "SUNSHINEDURATION",
