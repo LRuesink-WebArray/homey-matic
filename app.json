@@ -4728,6 +4728,28 @@
       "setable": false,
       "uiComponent": "sensor"
     },
+    "measure_homematic_iec_power": {
+      "type": "number",
+      "title": {
+        "en": "IEC Power",
+        "nl": "IEC Energie",
+        "de": "IEC Energie"
+      },
+      "units": {
+        "en": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Power in Watt",
+        "nl": "Vermogen in Watt",
+        "de": "Energie in Watt"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
+    },
     "measure_homematic_sunshineduration": {
       "type": "number",
       "title": {
@@ -4743,6 +4765,32 @@
       "min": 0,
       "max": 255,
       "step": 1
+    },
+    "meter_homematic_iec_power": {
+      "type": "number",
+      "title": {
+        "en": "IEC Power Meter",
+        "nl": "IEC Energiemeter",
+        "de": "IEC Energiezähler",
+        "fr": "IEC Compteur électrique",
+        "it": "IEC Misuratore di potenza"
+      },
+      "units": {
+        "en": "W"
+      },
+      "insights": true,
+      "desc": {
+        "en": "Power usage in KiloWattHour (kWh)",
+        "nl": "Stroomverbuik in KiloWattUur (kWh)",
+        "de": "Energieverbrauch in Kilowattstunde (kWh)",
+        "fr": "Consommation électrique en kilo Watt heure (kWh)",
+        "it": "Consumo di energia in chilowattora (kWh)"
+      },
+      "chartType": "stepLine",
+      "decimals": 2,
+      "getable": true,
+      "setable": false,
+      "uiComponent": "sensor"
     }
   }
 }
