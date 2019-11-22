@@ -986,6 +986,41 @@
       ]
     },
     {
+      "id": "HM-PBI-4-FM",
+      "name": {
+        "en": "HM-PBI-4-FM"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-PBI-4-FM/assets/images/large.png",
+        "small": "/drivers/HM-PBI-4-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HM-RC-8",
       "name": {
         "en": "HM-RC-8"
@@ -3286,6 +3321,78 @@
                 "id": "released",
                 "label": {
                   "en": "Released"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HM-PBI-4-FM-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-PBI-4-FM"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
                 }
               }
             ]
