@@ -31,6 +31,7 @@ If you encounter any issues then please open an issue on GitHub.
 ## Supported devices
 
 * HM-CC-RT-DN
+* HM-ES-PMSw1-DR
 * HM-ES-PMSw1-Pl
 * HM-ES-TX-WM
 * HM-LC-Bl1-FM
@@ -42,27 +43,33 @@ If you encounter any issues then please open an issue on GitHub.
 * HM-LC-Sw1-Ba-PCB
 * HM-LC-Sw1-DR
 * HM-LC-Sw1-FM
+* HM-LC-Sw1-Pl
 * HM-LC-Sw1-Pl-CT-R1
 * HM-LC-Sw1-Pl-DN-R1
 * HM-LC-Sw1PBU-FM
 * HM-LC-Sw2-FM
 * HM-LC-Sw4-Ba-PCB
 * HM-LC-Sw4-DR
+* HM-LC-Sw4-SM
+* HM-LC-Sw4-WM
 * HM-MOD-Re-8
 * HM-PB-2-FM
 * HM-PB-2-WM55-2
 * HM-PB-4-WM
+* HM-PBI-4-FM
 * HM-RC-8
 * HM-RC-Key4-2
 * HM-RC-Key4-3
 * HM-Sec-Key
 * HM-Sec-MDIR-2
 * HM-Sec-RHS
+* HM-Sec-SC
 * HM-Sec-SC-2
 * HM-Sec-SCo
 * HM-Sec-SD
 * HM-Sec-SD-2
 * HM-Sec-Sir-WM
+* HM-Sec-WDS
 * HM-Sen-DB-PCB
 * HM-Sen-MDIR-O
 * HM-Sen-MDIR-WM55
@@ -70,26 +77,35 @@ If you encounter any issues then please open an issue on GitHub.
 * HM-SwI-3-FM
 * HM-TC-IT-WM-W-EU
 * HM-WDS10-TH-O
+* HM-WDS100-C6-O
 * HM-WS550STH-I
 * HMIP-PSM
 * HMIP-SWDO
 * HMIP-WTH
 * HMIP-eTRV
+* HmIP-BRC2
 * HmIP-BROLL
 * HmIP-BSM
 * HmIP-BWTH
 * HmIP-FBL
 * HmIP-FROLL
+* HmIP-FSM
 * HmIP-MOD-OC8
 * HmIP-PCBS
+* HmIP-SMI
+* HmIP-SMO-A
 * HmIP-SPI
 * HmIP-STH
 * HmIP-STHD
 * HmIP-STHO
 * HmIP-SWD
+* HmIP-SWDM
 * HmIP-SWDO-I
+* HmIP-WRC2
 * HmIP-WRC6
 * HmIP-eTRV-2
+* HmIP-eTRV-B
+* HmIP-eTRV-C
 
 If you have a device that is not supported currently then please open an issue on github and we will look into it.
 
