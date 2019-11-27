@@ -1,13 +1,13 @@
 {
-    "id": "HmIP-WRC2",
+    "id": "HMIP-WRC2",
     "name": {
-        "en": "HmIP-WRC2"
+        "en": "HMIP-WRC2"
     },
     "class": "button",
     "capabilities": [],
     "images": {
-        "large": "/drivers/HmIP-WRC2/assets/images/large.png",
-        "small": "/drivers/HmIP-WRC2/assets/images/small.png"
+        "large": "/drivers/HMIP-WRC2/assets/images/large.png",
+        "small": "/drivers/HMIP-WRC2/assets/images/small.png"
     },
     "pair": [
         {

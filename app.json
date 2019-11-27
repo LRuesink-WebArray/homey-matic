@@ -1923,6 +1923,41 @@
       ]
     },
     {
+      "id": "HMIP-WRC2",
+      "name": {
+        "en": "HMIP-WRC2"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HMIP-WRC2/assets/images/large.png",
+        "small": "/drivers/HMIP-WRC2/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ]
+    },
+    {
       "id": "HMIP-WTH",
       "name": {
         "en": "HMIP-WTH"
@@ -2853,41 +2888,6 @@
       "images": {
         "large": "/drivers/HmIP-SWDO-I/assets/images/large.png",
         "small": "/drivers/HmIP-SWDO-I/assets/images/small.png"
-      },
-      "pair": [
-        {
-          "id": "list_bridges",
-          "template": "list_devices",
-          "options": {
-            "singular": true
-          },
-          "navigation": {
-            "next": "list_devices"
-          }
-        },
-        {
-          "id": "list_devices",
-          "template": "list_devices",
-          "navigation": {
-            "next": "add_devices"
-          }
-        },
-        {
-          "id": "add_devices",
-          "template": "add_devices"
-        }
-      ]
-    },
-    {
-      "id": "HmIP-WRC2",
-      "name": {
-        "en": "HmIP-WRC2"
-      },
-      "class": "button",
-      "capabilities": [],
-      "images": {
-        "large": "/drivers/HmIP-WRC2/assets/images/large.png",
-        "small": "/drivers/HmIP-WRC2/assets/images/small.png"
       },
       "pair": [
         {
@@ -3997,6 +3997,66 @@
         ]
       },
       {
+        "id": "HMIP-WRC2-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HMIP-WRC2"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "HmIP-BRC2-press",
         "title": {
           "en": "Button Event"
@@ -4195,66 +4255,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HmIP-FROLL"
-          },
-          {
-            "name": "button",
-            "title": "Button",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "1",
-                "label": {
-                  "en": "1"
-                }
-              },
-              {
-                "id": "2",
-                "label": {
-                  "en": "2"
-                }
-              }
-            ]
-          },
-          {
-            "name": "pressType",
-            "title": "Press Type",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "short",
-                "label": {
-                  "en": "Short"
-                }
-              },
-              {
-                "id": "long",
-                "label": {
-                  "en": "Long"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "HmIP-WRC2-press",
-        "title": {
-          "en": "Button Event"
-        },
-        "tokens": [
-          {
-            "name": "button",
-            "type": "number",
-            "title": {
-              "en": "Button"
-            }
-          }
-        ],
-        "args": [
-          {
-            "type": "device",
-            "name": "device",
-            "filter": "driver_id=HmIP-WRC2"
           },
           {
             "name": "button",
