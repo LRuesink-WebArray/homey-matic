@@ -45,5 +45,50 @@
             "id": "add_devices",
             "template": "add_devices"
         }
+    ],
+    "settings": [
+        {
+            "type": "group",
+            "label": {
+                "en": "Device data"
+            },
+            "children": [
+                {
+                    "id": "app",
+                    "type": "label",
+                    "label": {
+                        "en": "App"
+                    },
+                    "value": "Homematic"
+                },
+                {
+                    "id": "driver",
+                    "type": "label",
+                    "label": {
+                        "en": "Driver"
+                    },
+                    "value": "",
+                    "hint": {
+                        "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+                    }
+                },
+                {
+                    "id": "address",
+                    "type": "label",
+                    "label": {
+                        "en": "Device Address"
+                    },
+                    "value": ""
+                },
+                {
+                    "id": "ccuIP",
+                    "type": "label",
+                    "label": {
+                        "en": "CCU IP"
+                    },
+                    "value": ""
+                }
+            ]
+        }
     ]
 }
