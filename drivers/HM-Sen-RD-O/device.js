@@ -24,7 +24,6 @@ class HomematicDevice extends Device {
 
     onInit() {
         super.onInit(capabilityMap);
-        this._driver = this.getDriver();
     }
 
     initializeExtraEventListeners() {
@@ -33,9 +32,9 @@ class HomematicDevice extends Device {
         let state = {};
         self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-STATE', (value) => {
             if (value == 1) {
-                self._driver.triggerTurnedOn(self, tokens, state)
+                self.driver.triggerTurnedOn(self, tokens, state)
             } else {
-                self._driver.triggerTurnedOff(self, tokens, state)
+                self.driver.triggerTurnedOff(self, tokens, state)
             }
         });
 
