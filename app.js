@@ -8,7 +8,7 @@ const Constants = require('./lib/constants');
 
 class Homematic extends Homey.App {
 
-    onInit() {
+    async onInit() {
         this.logmodule = require("./lib/logmodule");
         this.logmodule.log('info', 'Started homematic...');
         var self = this;
@@ -22,6 +22,8 @@ class Homematic extends Homey.App {
         self.bridges = {};
         if (Homey.app.settings.use_stored_bridges) {
           self.initializeStoredBridges();
+        } else {
+            await self.discovery.discover()
         }
     }
 
