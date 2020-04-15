@@ -1,0 +1,9 @@
+{
+    "type": "boolean",
+    "title": {
+        "en": "Alarm off"
+    },
+    "uiComponent": "button",
+    "getable": false,
+    "setable": true
+}
