@@ -3,6 +3,13 @@
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
+const convertSetOnOff = function (value) {
+    if (value === true) {
+        return 1
+    }
+    return 0
+}
+
 const capabilityMap = {
     "onoff": {
         "channel": 4,
@@ -11,7 +18,7 @@ const capabilityMap = {
         "set": {
             "key": "LEVEL",
             "channel": 4,
-            "valueType": "onOffDimSet"
+            "convert": convertSetOnOff
         }
     },
     "dim": {
