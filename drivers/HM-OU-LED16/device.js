@@ -11,9 +11,11 @@ class HomematicDevice extends Device {
             "homematic_led_status": {
                 "channel": idx + 1,
                 "key": "LED_STATUS",
+                "convert": Convert.toString,
                 "set": {
                     "key": "LED_STATUS",
-                    "channel": idx + 1
+                    "channel": idx + 1,
+                    "convert": Convert.toInt
                 }
             }
         }
@@ -23,9 +25,9 @@ class HomematicDevice extends Device {
     initializeExtraEventListeners() {
         var self = this;
         let idx = this.getData().attributes.Index;
-        let button = idx+1;
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_SHORT', (value) => {
-            self.driver.triggerButtonPressedFlow(self, {"button": button}, {"button": button, "pressType": "short"})
+        let channel = idx+1;
+        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + channel + '-PRESS_SHORT', (value) => {
+            self.driver.triggerButtonPressedFlow(self, {"button": 1}, {"button": 1, "pressType": "short"})
         });
     }
 

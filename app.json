@@ -7067,12 +7067,6 @@
                 "label": {
                   "en": "Short"
                 }
-              },
-              {
-                "id": "long",
-                "label": {
-                  "en": "Long"
-                }
               }
             ]
           }
@@ -8444,6 +8438,50 @@
       }
     ],
     "actions": [
+      {
+        "id": "homematic_set_led_status",
+        "title": {
+          "en": "Set LED Status"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-OU-LED16"
+          },
+          {
+            "name": "led_status",
+            "title": "LED Status",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Off"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Red"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "Green"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Orange"
+                }
+              }
+            ]
+          }
+        ]
+      },
       {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {

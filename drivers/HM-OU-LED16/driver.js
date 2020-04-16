@@ -25,6 +25,14 @@ class HomematicDriver extends Driver {
                     return Promise.reject(false)
                 }
             })
+
+        let ledStatusAction = new Homey.FlowCardAction('homematic_set_led_status');
+        ledStatusAction
+            .register()
+            .registerRunListener((args, state) => {
+                return args.device.triggerCapabilityListener('homematic_led_status', args.led_status, {})
+
+            })
     }
 
     triggerButtonPressedFlow(device, tokens, state) {
