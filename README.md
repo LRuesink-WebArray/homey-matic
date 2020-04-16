@@ -53,9 +53,11 @@ If you encounter any issues then please open an issue on GitHub.
 * HM-LC-Sw4-SM
 * HM-LC-Sw4-WM
 * HM-MOD-Re-8
+* HM-OU-LED16
 * HM-PB-2-FM
 * HM-PB-2-WM55-2
 * HM-PB-4-WM
+* HM-PB-6-WM55
 * HM-PBI-4-FM
 * HM-RC-8
 * HM-RC-Key4-2
@@ -81,8 +83,10 @@ If you encounter any issues then please open an issue on GitHub.
 * HM-WS550STH-I
 * HMIP-PSM
 * HMIP-SWDO
+* HMIP-WRC2
 * HMIP-WTH
 * HMIP-eTRV
+* HmIP-BDT
 * HmIP-BRC2
 * HmIP-BROLL
 * HmIP-BSM
@@ -92,6 +96,7 @@ If you encounter any issues then please open an issue on GitHub.
 * HmIP-FSM
 * HmIP-MOD-OC8
 * HmIP-PCBS
+* HmIP-SLO
 * HmIP-SMI
 * HmIP-SMO-A
 * HmIP-SPI
@@ -101,7 +106,7 @@ If you encounter any issues then please open an issue on GitHub.
 * HmIP-SWD
 * HmIP-SWDM
 * HmIP-SWDO-I
-* HmIP-WRC2
+* HmIP-SWSD
 * HmIP-WRC6
 * HmIP-eTRV-2
 * HmIP-eTRV-B
