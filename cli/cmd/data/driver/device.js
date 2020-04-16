@@ -1,9 +1,10 @@
 'use strict';
 
 const Homey = require('homey');
-const Device = require('../../lib/device.js')
+const Device = require('../../lib/device.js');
 
-{{ if .Capabilities -}}
+{{ if not .MultiDevice -}}
+{{- if .Capabilities -}}
 const capabilityMap = {
     {{- range initial .Capabilities }}
     "{{.}}": {
@@ -18,13 +19,36 @@ const capabilityMap = {
         "valueType": "boolean"
     }
 }
-{{- else }}
-const capabilityMap = {}
-{{- end }}
 
+{{ else -}}
+const capabilityMap = {}
+
+{{ end -}}
+{{- end -}}
 class HomematicDevice extends Device {
 
     onInit() {
+        var idx = this.getData().attributes.Index;
+        {{- if .MultiDevice }}
+        {{ if .Capabilities -}}
+        var capabilityMap = {
+            {{- range initial .Capabilities }}
+            "{{.}}": {
+                "channel": 1,
+                "key": "STATE",
+                "valueType": "boolean"
+            },
+            {{- end }}
+            "{{last .Capabilities}}": {
+                "channel": 1,
+                "key": "STATE",
+                "valueType": "boolean"
+            }
+        }
+        {{- else }}
+        var capabilityMap = {}
+        {{- end }}
+        {{- end }}
         super.onInit(capabilityMap);
     }
 

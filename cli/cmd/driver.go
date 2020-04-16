@@ -17,12 +17,14 @@ var numberButtons uint
 var driverName, driverClass string
 var driverOutputDir string
 var capablities []string
+var multiDevice bool
 
 type driverParams struct {
 	DriverName    string
 	DriverClass   string
 	Capabilities  []string
 	NumberButtons uint
+	MultiDevice   bool
 }
 
 //go:generate go-bindata -pkg cmd data/...
@@ -36,6 +38,7 @@ var driverCmd = &cobra.Command{
 			DriverClass:   driverClass,
 			Capabilities:  capablities,
 			NumberButtons: numberButtons,
+			MultiDevice:   multiDevice,
 		}
 
 		processAssets(driverOutputDir, driverAssetPath, driverArgs)
@@ -92,4 +95,5 @@ func init() {
 	_ = driverCmd.MarkFlagRequired("output-dir")
 	driverCmd.Flags().UintVarP(&numberButtons, "buttons", "b", 0, "Number of buttons")
 	driverCmd.Flags().StringSliceVar(&capablities, "capabilities", []string{}, "List of capabilities")
+	driverCmd.Flags().BoolVarP(&multiDevice, "multi-device", "m", false, "Device is a multi device")
 }
