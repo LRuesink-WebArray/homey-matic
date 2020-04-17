@@ -3,37 +3,30 @@
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
-const convertSetOnOff = function (value) {
-    if (value === true) {
-        return 1
-    }
-    return 0
-}
-
-const capabilityMap = {
-    "onoff": {
-        "channel": 4,
-        "key": "LEVEL",
-        "valueType": "onOffDimGet",
-        "set": {
-            "key": "LEVEL",
-            "channel": 4,
-            "convert": convertSetOnOff
-        }
-    },
-    "dim": {
-        "channel": 4,
-        "key": "LEVEL",
-        "set": {
-            "key": "LEVEL",
-            "channel": 4
-        }
-    }
-}
-
 class HomematicDevice extends Device {
 
     onInit() {
+        this.mylog = Homey.app.logmodule.log;
+        var capabilityMap = {
+            "onoff": {
+                "channel": 4,
+                "key": "LEVEL",
+                "convert": this.convertGetOnOff,
+                "set": {
+                    "key": "LEVEL",
+                    "channel": 4,
+                    "convert": this.convertSetOnOff
+                }
+            },
+            "dim": {
+                "channel": 4,
+                "key": "LEVEL",
+                "set": {
+                    "key": "LEVEL",
+                    "channel": 4
+                }
+            }
+        }
         super.onInit(capabilityMap);
     }
 
@@ -49,6 +42,17 @@ class HomematicDevice extends Device {
         }
     }
 
+    convertSetOnOff(value) {
+        if (value === true) {
+            return 1
+        }
+        return 0
+    }
+
+    convertGetOnOff(value) {
+        this.mylog('info', 'Got level', value, 'for device', this.deviceAddress)
+        return value > 0;
+    }
 }
 
 module.exports = HomematicDevice;
