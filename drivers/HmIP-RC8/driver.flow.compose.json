@@ -1,0 +1,95 @@
+{
+    "triggers": [
+        {
+            "id": "HmIP-RC8-press",
+            "title": {
+                "en": "Button Event"
+            },
+            "tokens": [
+                {
+                    "name": "button",
+                    "type": "number",
+                    "title": {
+                        "en": "Button"
+                    }
+                }
+            ],
+            "args": [
+                {
+                    "name": "button",
+                    "title": "Button",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "1"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "2"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "label": {
+                                "en": "3"
+                            }
+                        },
+                        {
+                            "id": "4",
+                            "label": {
+                                "en": "4"
+                            }
+                        },
+                        {
+                            "id": "5",
+                            "label": {
+                                "en": "5"
+                            }
+                        },
+                        {
+                            "id": "6",
+                            "label": {
+                                "en": "6"
+                            }
+                        },
+                        {
+                            "id": "7",
+                            "label": {
+                                "en": "7"
+                            }
+                        },
+                        {
+                            "id": "8",
+                            "label": {
+                                "en": "8"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pressType",
+                    "title": "Press Type",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "short",
+                            "label": {
+                                "en": "Short"
+                            }
+                        },
+                        {
+                            "id": "long",
+                            "label": {
+                                "en": "Long"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
