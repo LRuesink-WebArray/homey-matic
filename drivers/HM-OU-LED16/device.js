@@ -2,6 +2,7 @@
 
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
+const Convert = require('../../lib/convert.js')
 
 class HomematicDevice extends Device {
 
