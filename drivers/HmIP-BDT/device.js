@@ -50,7 +50,7 @@ class HomematicDevice extends Device {
     }
 
     convertGetOnOff(value) {
-        this.mylog('info', 'Got level', value, 'for device', this.deviceAddress)
+        Homey.app.logmodule.log('info', 'HmIP-BDT: Got level', value)
         return value > 0;
     }
 }
