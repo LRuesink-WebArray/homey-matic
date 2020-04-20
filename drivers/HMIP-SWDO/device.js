@@ -2,12 +2,18 @@
 
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
+const Convert = require('../../lib/convert.js')
 
 const capabilityMap = {
     "alarm_contact": {
         "channel": 1,
         "key": "STATE",
-        "valueType": "boolean"
+        "convert": Convert.toBoolean
+    },
+    "alarm_battery": {
+        "channel": 0,
+        "key": "LOW_BAT",
+        "convert": Convert.toBoolean
     }
 }
 
