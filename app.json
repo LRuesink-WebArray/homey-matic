@@ -2636,6 +2636,86 @@
       ]
     },
     {
+      "id": "HM-RC-Sec4-3",
+      "name": {
+        "en": "HM-RC-Sec4-3"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-RC-Sec4-3/assets/images/large.png",
+        "small": "/drivers/HM-RC-Sec4-3/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HM-Sec-Key",
       "name": {
         "en": "HM-Sec-Key"
@@ -5564,6 +5644,86 @@
       ]
     },
     {
+      "id": "HmIP-RC8",
+      "name": {
+        "en": "HmIP-RC8"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-RC8/assets/images/large.png",
+        "small": "/drivers/HmIP-RC8/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-SLO",
       "name": {
         "en": "HmIP-SLO"
@@ -7697,6 +7857,78 @@
         ]
       },
       {
+        "id": "HM-RC-Sec4-3-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-RC-Sec4-3"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "HM-Sec-RHS-changed",
         "title": {
           "en": "Handle state changed"
@@ -8283,6 +8515,102 @@
                 "id": "2",
                 "label": {
                   "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HmIP-RC8-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-RC8"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "3"
+                }
+              },
+              {
+                "id": "4",
+                "label": {
+                  "en": "4"
+                }
+              },
+              {
+                "id": "5",
+                "label": {
+                  "en": "5"
+                }
+              },
+              {
+                "id": "6",
+                "label": {
+                  "en": "6"
+                }
+              },
+              {
+                "id": "7",
+                "label": {
+                  "en": "7"
+                }
+              },
+              {
+                "id": "8",
+                "label": {
+                  "en": "8"
                 }
               }
             ]
