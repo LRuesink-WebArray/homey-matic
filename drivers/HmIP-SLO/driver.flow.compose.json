@@ -1,0 +1,64 @@
+{
+    "triggers": [
+        {
+            "id": "HmIP-SLO-illuminance-current",
+            "title": {
+                "en": "Current Illuminance changed"
+            },
+            "tokens": [
+                {
+                    "name": "Illuminance",
+                    "type": "number",
+                    "title": {
+                        "en": "Current Illuminance"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HmIP-SLO-illuminance-average",
+            "title": {
+                "en": "Average Illuminance changed"
+            },
+            "tokens": [
+                {
+                    "name": "Illuminance",
+                    "type": "number",
+                    "title": {
+                        "en": "Average Illuminance"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HmIP-SLO-illuminance-highest",
+            "title": {
+                "en": "Highest Illuminance changed"
+            },
+            "tokens": [
+                {
+                    "name": "Illuminance",
+                    "type": "number",
+                    "title": {
+                        "en": "Highest Illuminance"
+                    }
+                }
+            ]
+        },
+        {
+            "id": "HmIP-SLO-illuminance-lowest",
+            "title": {
+                "en": "Lowest Illuminance changed"
+            },
+            "tokens": [
+                {
+                    "name": "Illuminance",
+                    "type": "number",
+                    "title": {
+                        "en": "Lowest Illuminance"
+                    }
+                }
+            ]
+        }
+    ]
+}
