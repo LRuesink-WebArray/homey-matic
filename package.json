@@ -13,7 +13,7 @@
     "put": "0.0.6"
   },
   "devDependencies": {
-    "homey": "^2.3.1"
+    "homey": "^2.3.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
