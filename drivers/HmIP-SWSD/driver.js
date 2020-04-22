@@ -8,7 +8,8 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [
-            'homematic_rhs_state',
+            'homematic_swsd_state',
+            'homematic_swsd_alarm_button',
             'alarm_battery'
         ];
         this.homematicTypes = ['HmIP-SWSD'];
