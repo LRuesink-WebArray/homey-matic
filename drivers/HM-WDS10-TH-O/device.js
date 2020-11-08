@@ -6,8 +6,7 @@ const Device = require('../../lib/device.js')
 const capabilityMap = {
     "measure_temperature": {
         "channel": 1,
-        "key": "TEMPERATURE",
-        "valueType": "boolean"
+        "key": "TEMPERATURE"
     },
     "measure_humidity": {
         "channel": 1,
