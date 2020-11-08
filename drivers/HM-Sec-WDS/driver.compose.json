@@ -75,6 +75,14 @@
                         "en": "CCU IP"
                     },
                     "value": ""
+                },
+                {
+                    "id": "ccuSerial",
+                    "type": "text",
+                    "label": {
+                        "en": "CCU Serial"
+                    },
+                    "value": ""
                 }
             ]
         }
