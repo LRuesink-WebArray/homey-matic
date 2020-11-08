@@ -1,0 +1,35 @@
+{
+    "type": "enum",
+    "values": [
+        {
+            "id": "0",
+            "title": {
+                "en": "Off"
+            }
+        },
+        {
+            "id": "1",
+            "title": {
+                "en": "Red"
+            }
+        },
+        {
+            "id": "2",
+            "title": {
+                "en": "Green"
+            }
+        },
+        {
+            "id": "3",
+            "title": {
+                "en": "Orange"
+            }
+        }
+    ],
+    "title": {
+        "en": "LED Status"
+    },
+    "uiComponent": "picker",
+    "getable": true,
+    "setable": true
+}

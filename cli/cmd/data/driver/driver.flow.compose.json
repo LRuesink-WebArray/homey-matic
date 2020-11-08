@@ -1,0 +1,56 @@
+{
+    "triggers": [
+        {
+            "id": "{{ .DriverName }}-press",
+            "title": {
+                "en": "Button Event"
+            },
+            "tokens": [
+                {
+                    "name": "button",
+                    "type": "number",
+                    "title": {
+                        "en": "Button"
+                    }
+                }
+            ],
+            "args": [
+                {
+                    "name": "button",
+                    "title": "Button",
+                    "type": "dropdown",
+                    "values": [
+                        {{- $buttons := .NumberButtons }}
+                        {{- range $val := Iterate $buttons }}
+                        {
+                            "id": "{{ $val }}",
+                            "label": {
+                                "en": "{{ $val }}"
+                            }
+                        }{{- if ne $val $buttons }},{{- end }}
+                        {{- end }}
+                    ]
+                },
+                {
+                    "name": "pressType",
+                    "title": "Press Type",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "short",
+                            "label": {
+                                "en": "Short"
+                            }
+                        },
+                        {
+                            "id": "long",
+                            "label": {
+                                "en": "Long"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

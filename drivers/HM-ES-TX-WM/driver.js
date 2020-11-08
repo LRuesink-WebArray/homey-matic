@@ -13,6 +13,8 @@ class HomematicDriver extends Driver {
             'measure_homematic_gas_power',
             'meter_gas'
         ]
+        this.numDevices = 2
+        this.multiDevice = true
         this.homematicTypes = ['HM-ES-TX-WM'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }

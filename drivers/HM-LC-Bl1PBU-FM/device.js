@@ -66,7 +66,6 @@ class HomematicDevice extends Device {
 
     onInit() {
         super.onInit(capabilityMap);
-        this._driver = this.getDriver();
     }
 
     initializeExtraEventListeners() {

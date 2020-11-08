@@ -1,0 +1,40 @@
+{
+    "triggers": [
+        {
+            "id": "HM-Sec-WDS-changed",
+            "title": {
+                "en": "Water state changed"
+            },
+            "args": [
+                {
+                    "name": "state",
+                    "title": "Water State",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Dry",
+                                "de": "Trocken"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Wet",
+                                "de": "Feucht"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "Water",
+                                "de": "Wasser"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

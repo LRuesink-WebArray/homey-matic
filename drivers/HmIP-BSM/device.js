@@ -42,10 +42,10 @@ class HomematicDevice extends Device {
         var self = this;
         for (let button = 1; button <= 2; button++) {
             self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_SHORT', (value) => {
-                self._driver.triggerButtonPressedFlow(self, { "button": button }, { "button": button, "pressType": "short" })
+                self.driver.triggerButtonPressedFlow(self, { "button": button }, { "button": button, "pressType": "short" })
             });
             self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + button + '-PRESS_LONG', (value) => {
-                self._driver.triggerButtonPressedFlow(self, { "button": button }, { "button": button, "pressType": "long" })
+                self.driver.triggerButtonPressedFlow(self, { "button": button }, { "button": button, "pressType": "long" })
             });
         }
 

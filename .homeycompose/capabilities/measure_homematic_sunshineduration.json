@@ -1,0 +1,16 @@
+{
+    "type": "number",
+    "title": {
+        "en": "Sunshine",
+        "de": "Sonnenschein"
+    },
+    "getable": true,
+    "setable": false,
+    "insights": true,
+    "units": {
+        "en": "h"
+    },
+    "min": 0,
+    "max": 255,
+    "step": 1
+}

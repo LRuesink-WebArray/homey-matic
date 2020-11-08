@@ -1,0 +1,22 @@
+{
+    "type": "number",
+    "title": {
+      "en": "IEC Power",
+      "nl": "IEC Energie",
+      "de": "IEC Energie"
+    },
+    "units": {
+      "en": "W"
+    },
+    "insights": true,
+    "desc": {
+      "en": "Power in Watt",
+      "nl": "Vermogen in Watt",
+      "de": "Energie in Watt"
+    },
+    "chartType": "stepLine",
+    "decimals": 2,
+    "getable": true,
+    "setable": false,
+    "uiComponent": "sensor"
+  }

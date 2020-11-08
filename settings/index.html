@@ -10,75 +10,137 @@
 
 <body>
 
-    <h1 data-i18n="settings.title">
-        <!--
-            This field will automatically be filled by a translated string with key 'settings.title'.
-            Read more about translations at Internationalization.
-            -->
-    </h1>
-    <p data-i18n="settings.subtitle">
-        <!--
-            This field will also be translated
-            -->
-    </p>
+<h1 data-i18n="settings.title">
+    <!--
+        This field will automatically be filled by a translated string with key 'settings.title'.
+        Read more about translations at Internationalization.
+        -->
+</h1>
+<p data-i18n="settings.subtitle">
+    <!--
+        This field will also be translated
+        -->
+</p>
 
-    <fieldset>
-        <legend>MQTT Settings</legend>
+<fieldset>
+    <legend>MQTT Settings</legend>
 
-        <p data-i18n="settings.mqtt.description"></p>
+    <p data-i18n="settings.mqtt.description"></p>
 
-        <div class="field row">
-            <input id="use_mqtt" type="checkbox" />
-            <label for="use_mqtt" data-i18n="settings.mqtt.use_mqtt"></label>
-        </div>
+    <div class="field row">
+        <input id="use_mqtt" type="checkbox"/>
+        <label for="use_mqtt" data-i18n="settings.mqtt.use_mqtt"></label>
+    </div>
 
-    </fieldset>
-    
-    <button id="save" class="right">Save changes</button>
+</fieldset>
 
-    <p data-i18n="settings.log.title"></p>
-    <button class="right" id="button_getlog" onclick="showLogLines()" data-i18n="settings.log.button.getlogs">Get Logs</button>
-    <div id="loglines"></div>
+<fieldset>
+    <legend>Discovery Settings</legend>
 
-    <script type="text/javascript">
+    <p data-i18n="settings.discovery.description"></p>
 
-        // a method named 'onHomeyReady' must be present in your code
-        function onHomeyReady(Homey) {
-            HomeyAPI = Homey;
+    <div class="field row">
+        <input id="use_stored_bridges" type="checkbox"/>
+        <label for="use_stored_bridges" data-i18n="settings.discovery.use_stored_bridges"></label>
+    </div>
 
-            var useMQTTElement = document.getElementById('use_mqtt');
+</fieldset>
 
-            var saveElement = document.getElementById('save');
+<button id="save" class="right">Save changes</button>
 
-            Homey.get('use_mqtt', function (err, use_mqtt) {
+<p data-i18n="settings.log.title"></p>
+<button class="right" id="button_getlog" onclick="showLogLines()" data-i18n="settings.log.button.getlogs">Get Logs
+</button>
+<div id="loglines"></div>
+
+<button class="right" id="button_getBridges" onclick="showBridges()" data-i18n="settings.log.button.showBridges">Show
+    Stored Bridges
+</button>
+<div id="bridges"></div>
+
+<button class="right" id="button_deleteBridges" onclick="deleteBridges()" data-i18n="settings.log.button.deleteBridges">Delete Stored Bridges
+</button>
+
+<script type="text/javascript">
+
+    // a method named 'onHomeyReady' must be present in your code
+    function onHomeyReady(Homey) {
+        HomeyAPI = Homey;
+
+        var useMQTTElement = document.getElementById('use_mqtt');
+
+        var useStoredBridges = document.getElementById('use_stored_bridges');
+
+        var saveElement = document.getElementById('save');
+
+        Homey.get('use_mqtt', function (err, use_mqtt) {
+            if (err) return Homey.alert(err);
+            useMQTTElement.value = use_mqtt;
+            if (typeof use_mqtt == 'undefined' || use_mqtt == null) use_mqtt = false;
+            useMQTTElement.checked = use_mqtt;
+        });
+
+        Homey.get('use_stored_bridges', function (err, use_stored_bridges) {
+            if (err) return Homey.alert(err);
+            useStoredBridges.value = use_stored_bridges;
+            if (typeof use_stored_bridges == 'undefined' || use_stored_bridges == null) use_stored_bridges = false;
+            useStoredBridges.checked = use_stored_bridges;
+        });
+
+        saveElement.addEventListener('click', function (e) {
+            Homey.set('use_mqtt', useMQTTElement.checked, function (err) {
                 if (err) return Homey.alert(err);
-                useMQTTElement.value = use_mqtt;
-                if (typeof use_mqtt == 'undefined' || use_mqtt == null) use_mqtt = false;
-                useMQTTElement.checked = use_mqtt;
             });
-
-            saveElement.addEventListener('click', function (e) {
-                Homey.set('use_mqtt', useMQTTElement.checked, function (err) {
-                    if (err) return Homey.alert(err);
-                });
+            Homey.set('use_stored_bridges', useStoredBridges.checked, function (err) {
+                if (err) return Homey.alert(err);
             });
+            Homey.alert('Settings saved', 'info')
+        });
 
-            // Tell Homey we're ready to be displayed
-            Homey.ready();
-        }
+        // Tell Homey we're ready to be displayed
+        Homey.ready();
+    }
 
-        function showLogLines() {
-           HomeyAPI.api('GET', 'log/getloglines/', function(err, result) {
-              if (!err) {
-                 document.getElementById('loglines').innerHTML = '';
-                 for (var i=0; i < result.length; i++) {
+    function showLogLines() {
+        HomeyAPI.api('GET', 'log/getloglines/', function (err, result) {
+            if (!err) {
+                document.getElementById('loglines').innerHTML = '';
+                for (var i = 0; i < result.length; i++) {
                     document.getElementById('loglines').innerHTML += result[i];
                     document.getElementById('loglines').innerHTML += "<br />";
-                 }
-              };
-           });
-        }
-    </script>
+                }
+            }
+            ;
+        });
+    }
+
+    function showBridges() {
+        HomeyAPI.api('GET', 'bridges/get/', function (err, result) {
+            if (!err) {
+                document.getElementById('bridges').innerHTML = '';
+                if (result.length > 0) {
+                    for (var i = 0; i < result.length; i++) {
+                        document.getElementById('bridges').innerHTML += result[i];
+                        document.getElementById('bridges').innerHTML += "<br />";
+                    }
+                } else {
+                    document.getElementById('bridges').innerHTML = 'No bridges stored';
+                }
+            }
+        });
+    }
+
+    function deleteBridges() {
+        HomeyAPI.api('GET', 'bridges/delete/', function (err, result) {
+            if (!err) {
+                HomeyAPI.alert("Bridges deleted", 'info')
+                showBridges()
+            }
+        });
+    }
+
+
+</script>
 
 </body>
 

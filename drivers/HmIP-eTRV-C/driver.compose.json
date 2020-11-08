@@ -1,0 +1,138 @@
+{
+    "id": "HmIP-eTRV-C",
+    "name": {
+        "en": "HmIP-eTRV-C"
+    },
+    "class": "thermostat",
+    "capabilities": [
+        "homematic_thermostat_mode",
+        "target_temperature",
+        "measure_temperature",
+        "homematic_thermostat_boost",
+        "homematic_thermostat_weekprofile",
+        "homematic_measure_valve"
+    ],
+    "mobile": {
+        "components": [
+            {
+                "id": "sensor",
+                "capabilities": [
+                    "measure_temperature"
+                ]
+            },
+            {
+                "id": "toggle",
+                "capabilities": [
+                    "homematic_thermostat_boost"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "picker",
+                "capabilities": [
+                    "homematic_thermostat_weekprofile"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "picker",
+                "capabilities": [
+                    "homematic_thermostat_mode"
+                ],
+                "options": {
+                    "showTitle": true
+                }
+            },
+            {
+                "id": "thermostat",
+                "capabilities": [
+                    "target_temperature"
+                ]
+            }
+        ]
+    },
+    "images": {
+        "large": "/drivers/HmIP-eTRV-C/assets/images/large.png",
+        "small": "/drivers/HmIP-eTRV-C/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ],
+    "settings": [
+        {
+            "type": "group",
+            "label": {
+                "en": "Device data"
+            },
+            "children": [
+                {
+                    "id": "app",
+                    "type": "label",
+                    "label": {
+                        "en": "App"
+                    },
+                    "value": "Homematic"
+                },
+                {
+                    "id": "driver",
+                    "type": "label",
+                    "label": {
+                        "en": "Driver"
+                    },
+                    "value": "",
+                    "hint": {
+                        "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+                    }
+                },
+                {
+                    "id": "address",
+                    "type": "label",
+                    "label": {
+                        "en": "Device Address"
+                    },
+                    "value": ""
+                },
+                {
+                    "id": "ccuIP",
+                    "type": "label",
+                    "label": {
+                        "en": "CCU IP"
+                    },
+                    "value": ""
+                },
+                {
+                    "id": "ccuSerial",
+                    "type": "text",
+                    "label": {
+                        "en": "CCU Serial"
+                    },
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}

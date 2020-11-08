@@ -1,0 +1,88 @@
+{
+    "actions": [
+        {
+            "id": "homematic_set_led_status",
+            "title": {
+                "en": "Set LED Status"
+            },
+            "args": [
+                {
+                    "name": "led_status",
+                    "title": "LED Status",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Off"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Red"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "Green"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "label": {
+                                "en": "Orange"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "triggers": [
+        {
+            "id": "HM-OU-LED16-press",
+            "title": {
+                "en": "Button Event"
+            },
+            "tokens": [
+                {
+                    "name": "button",
+                    "type": "number",
+                    "title": {
+                        "en": "Button"
+                    }
+                }
+            ],
+            "args": [
+                {
+                    "name": "button",
+                    "title": "Button",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "1"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "pressType",
+                    "title": "Press Type",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "short",
+                            "label": {
+                                "en": "Short"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

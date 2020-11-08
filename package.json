@@ -1,6 +1,6 @@
 {
   "name": "homeymatic",
-  "version": "0.16.0",
+  "version": "0.17.0",
   "description": "Connect Homematic CCU with Homey",
   "main": "app.js",
   "dependencies": {
@@ -12,7 +12,9 @@
     "node-fetch": "^2.6.0",
     "put": "0.0.6"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "homey": "^2.3.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

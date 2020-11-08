@@ -1,3 +1,4 @@
 .git
 tools/
 node-red/
+cli/

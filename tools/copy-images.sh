@@ -45,12 +45,26 @@ for drv in `ls drivers` ; do
     lower_drv="145_hmip-froll_hmip-fbl"
   elif [ $lower_drv == "hmip-bwth" ] ; then
     lower_drv="121_hmip-wth"
+  elif [ $lower_drv == "hmip-smo-a" ] ; then
+    lower_drv="132_hmip-smo"
+  elif [ $lower_drv == "hm-lc-sw1-pl" ] ; then
+    lower_drv="OM55_DimmerSwitch"
+  elif [ $lower_drv == "hm-wds100-c6-o" ] ; then
+    lower_drv="WeatherCombiSensor"
   elif [ $lower_drv == "hmip-pcbs" ] ; then
     lower_drv="184_hmip-pcbs2"
   elif [ $lower_drv == "hm-pb-2-fm" ] ; then
     lower_drv="PushButton-2ch-wm"
+  elif [ $lower_drv == "hmip-brc2" ] ; then
+    lower_drv="PushButton-2ch-wm"
   elif [ $lower_drv == "hmip-bsm" ] ; then
     lower_drv="PushButton-2ch-wm"
+  elif [ $lower_drv == "hmip-bdt" ] ; then
+    lower_drv="PushButton-2ch-wm"
+  elif [ $lower_drv == "hmip-swsd" ] ; then
+    lower_drv="104_hm-sec-sd-2"
+  elif [ $lower_drv == "hm-rc-sec4-3" ] ; then
+    lower_drv="85_hm-rc-sec4-3"
   fi
   
   if ! [ -f drivers/$drv/assets/images/large.png ] ; then
