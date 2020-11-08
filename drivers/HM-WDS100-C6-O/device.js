@@ -7,8 +7,7 @@ const Convert = require('../../lib/convert.js')
 const capabilityMap = {
     "measure_temperature": {
         "channel": 1,
-        "key": "TEMPERATURE",
-        "convert": Convert.toBoolean
+        "key": "TEMPERATURE"
     },
     "measure_humidity": {
         "channel": 1,

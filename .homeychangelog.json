@@ -1,4 +1,6 @@
 {
+  "0.17.1": {
+    "en": "Fix temperature value type of HM-WDS10-TH-O and HM-WDS100-C6-O"
   "0.17.0": {
     "en": "This release adds many devices. Add some info about devices in advanced settings."
   }
