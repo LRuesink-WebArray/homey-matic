@@ -48,7 +48,6 @@ class HomematicDevice extends Device {
                 self.driver.triggerButtonPressedFlow(self, { "button": button }, { "button": button, "pressType": "long" })
             });
         }
-
     }
 }
 
