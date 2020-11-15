@@ -1,13 +1,13 @@
 {
-    "id": "{{ .DriverName }}",
+    "id": "HM-WDS30-T-O",
     "name": {
-        "en": "{{ .DriverName }}"
+        "en": "HM-WDS30-T-O"
     },
-    "class": "{{ .DriverClass }}",
+    "class": "sensor",
     "capabilities": [],
     "images": {
-        "large": "/drivers/{{ .DriverName }}/assets/images/large.png",
-        "small": "/drivers/{{ .DriverName }}/assets/images/small.png"
+        "large": "/drivers/HM-WDS30-T-O/assets/images/large.png",
+        "small": "/drivers/HM-WDS30-T-O/assets/images/small.png"
     },
     "pair": [
         {

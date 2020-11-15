@@ -7,17 +7,11 @@ class HomematicDriver extends Driver {
 
     onInit() {
         super.onInit();
-        this.capabilities = [
-            'onoff',
-            'measure_power',
-            'measure_voltage',
-            'measure_current',
-            'meter_power'
-        ]
-        this.homematicTypes = ['HmIP-BSM'];
+        this.capabilities = []
+        this.homematicTypes = ['HM-RC-4-3'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerButtonPressed = new Homey.FlowCardTriggerDevice('HmIP-BSM-press')
+        this._flowTriggerButtonPressed = new Homey.FlowCardTriggerDevice('HM-RC-4-3-press')
             .register()
             .registerRunListener((args, state) => {
                 if (args.button == state.button && args.pressType == state.pressType) {
@@ -33,8 +27,6 @@ class HomematicDriver extends Driver {
             .trigger(device, tokens, state)
             .catch(this.error)
     }
-
-
 }
 
 module.exports = HomematicDriver;

@@ -7,11 +7,6 @@ const capabilityMap = {
     "measure_temperature": {
         "channel": 1,
         "key": "TEMPERATURE"
-    },
-    "measure_humidity": {
-        "channel": 1,
-        "key": "HUMIDITY",
-        "valueType": "float"
     }
 }
 

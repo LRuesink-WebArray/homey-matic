@@ -1,13 +1,13 @@
 {
-    "id": "{{ .DriverName }}",
+    "id": "HM-RC-4-3",
     "name": {
-        "en": "{{ .DriverName }}"
+        "en": "HM-RC-4-3"
     },
-    "class": "{{ .DriverClass }}",
+    "class": "button",
     "capabilities": [],
     "images": {
-        "large": "/drivers/{{ .DriverName }}/assets/images/large.png",
-        "small": "/drivers/{{ .DriverName }}/assets/images/small.png"
+        "large": "/drivers/HM-RC-4-3/assets/images/large.png",
+        "small": "/drivers/HM-RC-4-3/assets/images/small.png"
     },
     "pair": [
         {

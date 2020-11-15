@@ -1,13 +1,15 @@
 {
-    "id": "{{ .DriverName }}",
+    "id": "HmIP-SRH",
     "name": {
-        "en": "{{ .DriverName }}"
+        "en": "HmIP-SRH"
     },
-    "class": "{{ .DriverClass }}",
-    "capabilities": [],
+    "class": "sensor",
+    "capabilities": [
+        "homematic_rhs_state"
+    ],
     "images": {
-        "large": "/drivers/{{ .DriverName }}/assets/images/large.png",
-        "small": "/drivers/{{ .DriverName }}/assets/images/small.png"
+        "large": "/drivers/HmIP-SRH/assets/images/large.png",
+        "small": "/drivers/HmIP-SRH/assets/images/small.png"
     },
     "pair": [
         {

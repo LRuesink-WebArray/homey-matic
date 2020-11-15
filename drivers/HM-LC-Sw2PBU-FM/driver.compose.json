@@ -1,13 +1,13 @@
 {
-    "id": "{{ .DriverName }}",
+    "id": "HM-LC-Sw2PBU-FM",
     "name": {
-        "en": "{{ .DriverName }}"
+        "en": "HM-LC-Sw2PBU-FM"
     },
-    "class": "{{ .DriverClass }}",
+    "class": "socket",
     "capabilities": [],
     "images": {
-        "large": "/drivers/{{ .DriverName }}/assets/images/large.png",
-        "small": "/drivers/{{ .DriverName }}/assets/images/small.png"
+        "large": "/drivers/HM-LC-Sw2PBU-FM/assets/images/large.png",
+        "small": "/drivers/HM-LC-Sw2PBU-FM/assets/images/small.png"
     },
     "pair": [
         {

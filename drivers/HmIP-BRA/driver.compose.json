@@ -1,13 +1,13 @@
 {
-    "id": "{{ .DriverName }}",
+    "id": "HmIP-BRA",
     "name": {
-        "en": "{{ .DriverName }}"
+        "en": "HmIP-BRA"
     },
-    "class": "{{ .DriverClass }}",
+    "class": "button",
     "capabilities": [],
     "images": {
-        "large": "/drivers/{{ .DriverName }}/assets/images/large.png",
-        "small": "/drivers/{{ .DriverName }}/assets/images/small.png"
+        "large": "/drivers/HmIP-BRA/assets/images/large.png",
+        "small": "/drivers/HmIP-BRA/assets/images/small.png"
     },
     "pair": [
         {

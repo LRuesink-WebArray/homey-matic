@@ -8,11 +8,9 @@ class HomematicDriver extends Driver {
     onInit() {
         super.onInit();
         this.capabilities = [
-            'onoff'
+            'measure_temperature'
         ]
-        this.homematicTypes = ['HM-LC-Sw4-DR', 'HM-LC-Sw4-DR-2']
-        this.numDevices = 4
-        this.multiDevice = true
+        this.homematicTypes = ['HM-WDS30-T-O'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 

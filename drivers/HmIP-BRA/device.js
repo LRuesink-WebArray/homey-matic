@@ -1,40 +1,14 @@
 'use strict';
 
 const Homey = require('homey');
-const Device = require('../../lib/device.js')
+const Device = require('../../lib/device.js');
 
-const capabilityMap = {
-    "onoff": {
-        "channel": 4,
-        "key": "STATE",
-        "set": {
-            "key": "STATE",
-            "channel": 4
-        }
-    },
-    "measure_power": {
-        "channel": 7,
-        "key": "POWER"
-    },
-    "measure_voltage": {
-        "channel": 7,
-        "key": "VOLTAGE"
-    },
-    "measure_current": {
-        "channel": 7,
-        "key": "CURRENT",
-        "valueType": "mA"
-    },
-    "meter_power": {
-        "channel": 7,
-        "key": "ENERGY_COUNTER",
-        "valueType": "Wh"
-    }
-}
+const capabilityMap = {}
 
 class HomematicDevice extends Device {
 
     onInit() {
+        var idx = this.getData().attributes.Index;
         super.onInit(capabilityMap);
     }
 
@@ -49,6 +23,7 @@ class HomematicDevice extends Device {
             });
         }
     }
+
 }
 
 module.exports = HomematicDevice;
