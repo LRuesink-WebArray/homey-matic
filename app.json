@@ -6524,6 +6524,94 @@
       ]
     },
     {
+      "id": "HmIP-MOD-HO",
+      "name": {
+        "en": "HmIP-MOD-HO"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-MOD-HO/assets/images/large.png",
+        "small": "/drivers/HmIP-MOD-HO/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-MOD-OC8",
       "name": {
         "en": "HmIP-MOD-OC8"
@@ -10585,6 +10673,20 @@
         ]
       },
       {
+        "id": "homematic_mod_ho_set_partial_open",
+        "title": {
+          "en": "Set Ventialition",
+          "de": "Lüften"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-MOD-HO"
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
@@ -10722,6 +10824,16 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor"
+    },
+    "homematic_button_mod_ho_partial_open": {
+      "type": "boolean",
+      "title": {
+        "en": "Ventilation",
+        "de": "Lüften"
+      },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
     },
     "homematic_led_status": {
       "type": "enum",
@@ -11008,6 +11120,46 @@
       "min": 0,
       "max": 255,
       "step": 1
+    },
+    "measure_mod_ho_door_state": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Closed",
+            "de": "Geschlossen"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Open",
+            "de": "Offen"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Ventilation",
+            "de": "Lüftung"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Unknwon",
+            "de": "Unbekannt"
+          }
+        }
+      ],
+      "title": {
+        "en": "Door State",
+        "de": "Tor status"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": false
     },
     "meter_homematic_iec_power": {
       "type": "number",
