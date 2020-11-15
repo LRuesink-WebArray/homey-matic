@@ -6,6 +6,9 @@
     "en": "This release adds many devices. Add some info about devices in advanced settings."
   },
   "0.18.0": {
-    "en": "Add more devices, Fix HmIP-BSM"
+    "en": "Add more devices"
+  },
+  "0.18.1": {
+    "en": "Fix HmIP-BSM"
   }
 }

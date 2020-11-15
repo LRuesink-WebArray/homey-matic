@@ -1,6 +1,6 @@
 {
   "id": "de.twendt.homey.matic",
-  "version": "0.18.0",
+  "version": "0.18.1",
   "compatibility": ">=1.5.0",
   "sdk": 2,
   "name": {
@@ -9929,6 +9929,66 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=HmIP-BROLL"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "HmIP-BSM-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-BSM"
           },
           {
             "name": "button",
