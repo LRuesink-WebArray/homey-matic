@@ -52,6 +52,14 @@ const capabilityMap = {
             "channel": 1,
             "convert": SendPartialOpen
         }
+    },
+    "onoff": {
+        "channel": 2,
+        "key": "STATE",
+        "set": {
+            "key": "STATE",
+            "channel": 2
+        }
     }
 }
 
