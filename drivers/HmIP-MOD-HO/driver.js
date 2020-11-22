@@ -9,7 +9,7 @@ class HomematicDriver extends Driver {
         super.onInit();
         this.capabilities = [
             "measure_mod_ho_door_state",
-            "windowcoverings_set",
+            "windowcoverings_state",
             "homematic_button_mod_ho_partial_open"
         ];
         this.homematicTypes = ['HmIP-MOD-HO'];
