@@ -28,6 +28,10 @@ class HomematicDevice extends Device {
 
     onInit() {
         super.onInit(capabilityMap);
+
+        this.setCapabilityOptions("dim",{
+            "setOnDim": false
+        })
     }
 }
 
