@@ -2,6 +2,7 @@
 
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
+const Convert = require('../../lib/convert')
 
 const capabilityMap = {
     "onoff": {
@@ -23,12 +24,12 @@ const capabilityMap = {
     "measure_current": {
         "channel": 6,
         "key": "CURRENT",
-        "valueType": "mA"
+        "convert": Convert.ATomA
     },
     "meter_power": {
         "channel": 6,
         "key": "ENERGY_COUNTER",
-        "valueType": "Wh"
+        "convert": Convert.WhToKWh
     }
 }
 
