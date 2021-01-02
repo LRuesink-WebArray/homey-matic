@@ -4,6 +4,13 @@ const Homey = require('homey');
 const Device = require('../../lib/device.js')
 const Convert = require('../../lib/convert')
 
+const convertCurrent = function (value) {
+    console.log("HMIP-PSM raw current:", value)
+    let convertedValue = parseFloat(value) / 1000
+    console.log("HMIP-PSM converted current:", convertedValue)
+    return convertedValue
+}
+
 const capabilityMap = {
     "onoff": {
         "channel": 3,
@@ -24,7 +31,7 @@ const capabilityMap = {
     "measure_current": {
         "channel": 6,
         "key": "CURRENT",
-        "convert": Convert.ATomA
+        "convert": convertCurrent
     },
     "meter_power": {
         "channel": 6,

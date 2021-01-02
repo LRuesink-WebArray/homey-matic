@@ -3,26 +3,33 @@
 const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
+const convertLuminance = function (value) {
+    console.log("HmIP-SLO raw luminance:", value)
+    let convertedValue = parseFloat(value)
+    console.log("HmIP-SLO converted luminance:", convertedValue)
+    return convertedValue
+}
+
 const capabilityMap = {
     "measure_luminance.current": {
         "channel": 1,
         "key": "CURRENT_ILLUMINATION",
-        "valueType": "float"
+        "convert": convertLuminance
     },
     "measure_luminance.average": {
         "channel": 1,
         "key": "AVERAGE_ILLUMINATION",
-        "valueType": "float"
+        "convert": convertLuminance
     },
     "measure_luminance.highest": {
         "channel": 1,
         "key": "HIGHEST_ILLUMINATION",
-        "valueType": "float"
+        "convert": convertLuminance
     },
     "measure_luminance.lowest": {
         "channel": 1,
         "key": "LOWEST_ILLUMINATION",
-        "valueType": "float"
+        "convert": convertLuminance
     },
     "alarm_battery": {
         "channel": 0,
