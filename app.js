@@ -4,6 +4,7 @@ const Homey = require('homey');
 const HomeMaticDiscovery = require('./lib/HomeMaticDiscovery');
 const HomeMaticCCUMQTT = require('./lib/HomeMaticCCUMQTT');
 const HomeMaticCCURPC = require('./lib/HomeMaticCCURPC');
+const HomeMaticCCUJack = require('./lib/HomeMaticCCUJack');
 const Constants = require('./lib/constants');
 
 class Homematic extends Homey.App {
@@ -21,7 +22,7 @@ class Homematic extends Homey.App {
         self.discovery = new HomeMaticDiscovery();
         self.bridges = {};
         if (Homey.app.settings.use_stored_bridges) {
-          self.initializeStoredBridges();
+            self.initializeStoredBridges();
         } else {
             await self.discovery.discover()
         }
@@ -30,56 +31,62 @@ class Homematic extends Homey.App {
     getSettings() {
         return {
             "use_mqtt": Homey.ManagerSettings.get('use_mqtt'),
+            "use_ccu_jack": Homey.ManagerSettings.get('use_ccu_jack'),
             "use_stored_bridges": Homey.ManagerSettings.get('use_stored_bridges'),
         }
     }
 
     getStoredBridges() {
-      var self = this;
-      var bridges = {};
-      Homey.ManagerSettings.getKeys().forEach((key) => {
-        if (key.startsWith(Constants.SETTINGS_PREFIX_BRIDGE)) {
-          let bridge = Homey.ManagerSettings.get(key);
-          bridges[bridge.serial] = bridge
-        }
-      })
+        var self = this;
+        var bridges = {};
+        Homey.ManagerSettings.getKeys().forEach((key) => {
+            if (key.startsWith(Constants.SETTINGS_PREFIX_BRIDGE)) {
+                let bridge = Homey.ManagerSettings.get(key);
+                bridges[bridge.serial] = bridge
+            }
+        })
 
-      return bridges
+        return bridges
     }
 
     initializeStoredBridges() {
-      var self = this;
-      var bridges = this.getStoredBridges();
-      Object.keys(bridges).forEach((serial) => {
-        let bridge = bridges[serial];
-        self.logmodule.log('info', "Initializing stored ccu:", "Type", bridge.type, "Serial",  bridge.serial,"IP",  bridge.address);
-        self.initializeBridge(bridge)
-      });
+        var self = this;
+        var bridges = this.getStoredBridges();
+        Object.keys(bridges).forEach((serial) => {
+            let bridge = bridges[serial];
+            self.logmodule.log('info', "Initializing stored ccu:", "Type", bridge.type, "Serial", bridge.serial, "IP", bridge.address);
+            self.initializeBridge(bridge)
+        });
     }
 
     initializeBridge(bridge) {
-      var self = this;
-      if (Homey.app.settings.use_mqtt == true) {
-        self.logmodule.log('info', "Initializing MQTT CCU ");
-        self.bridges[bridge.serial] = new HomeMaticCCUMQTT(bridge.type, bridge.serial, bridge.address);
-      } else {
-        self.logmodule.log('info', "Initializing RPC CCU");
-        self.bridges[bridge.serial] = new HomeMaticCCURPC(bridge.type, bridge.serial, bridge.address);
-      }
-      return self.bridges[bridge.serial]
+        var self = this;
+        if (Homey.app.settings.use_mqtt === true) {
+            if (Homey.app.settings.use_ccu_jack === true) {
+                self.logmodule.log('info', "Initializing CCU Jack");
+                self.bridges[bridge.serial] = new HomeMaticCCUJack(bridge.type, bridge.serial, bridge.address);
+            } else {
+                self.logmodule.log('info', "Initializing MQTT CCU ");
+                self.bridges[bridge.serial] = new HomeMaticCCUMQTT(bridge.type, bridge.serial, bridge.address);
+            }
+        } else {
+            self.logmodule.log('info', "Initializing RPC CCU");
+            self.bridges[bridge.serial] = new HomeMaticCCURPC(bridge.type, bridge.serial, bridge.address);
+        }
+        return self.bridges[bridge.serial]
     }
 
     setBridgeAddress(serial, address) {
-      var self = this;
-      self.bridges[serial].address = address;
+        var self = this;
+        self.bridges[serial].address = address;
     }
 
     deleteStoredBridges() {
-      var self = this;
-      var bridges = this.getStoredBridges()
-      Object.keys(bridges).forEach((serial) => {
-        Homey.ManagerSettings.unset(Constants.SETTINGS_PREFIX_BRIDGE + serial)
-      })
+        var self = this;
+        var bridges = this.getStoredBridges()
+        Object.keys(bridges).forEach((serial) => {
+            Homey.ManagerSettings.unset(Constants.SETTINGS_PREFIX_BRIDGE + serial)
+        })
     }
 
     getLogLines() {

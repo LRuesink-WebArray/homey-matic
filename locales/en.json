@@ -4,7 +4,8 @@
         "subtitle": "Setup Homematic CCU connection",
         "mqtt": {
             "use_mqtt": "Use MQTT",
-            "description": "Experimental: MQTT is an expert feature it requires RedMatic and Mosquitto to be setup on the CCU. Changing this setting requires a restart of the app. See this link for instructions: https://github.com/twendt/homey-matic/wiki/MQTT-Setup"
+            "description": "Experimental: MQTT is an expert feature it requires RedMatic and Mosquitto to be setup on the CCU. Changing this setting requires a restart of the app. See this link for instructions: https://github.com/twendt/homey-matic/wiki/MQTT-Setup",
+            "use_ccu_jack": "Use CCU Jack"
         },
         "discovery": {
             "use_stored_bridges": "Use stored CCUs (only use this if you experience issues with discovery)",

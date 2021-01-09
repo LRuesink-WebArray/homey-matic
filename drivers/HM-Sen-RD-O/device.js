@@ -30,7 +30,7 @@ class HomematicDevice extends Device {
         var self = this;
         let tokens = {};
         let state = {};
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-STATE', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-STATE', (value) => {
             if (value == 1) {
                 self.driver.triggerTurnedOn(self, tokens, state)
             } else {

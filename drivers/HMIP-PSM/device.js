@@ -24,7 +24,7 @@ const capabilityMap = {
     "measure_current": {
         "channel": 6,
         "key": "CURRENT",
-        "convert": Convert.ATomA
+        "convert": Convert.mAToA
     },
     "meter_power": {
         "channel": 6,

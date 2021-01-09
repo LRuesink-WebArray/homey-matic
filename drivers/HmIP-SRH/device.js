@@ -19,7 +19,7 @@ class HomematicDevice extends Device {
 
     initializeExtraEventListeners() {
         var self = this;
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-STATE', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-STATE', (value) => {
             self.driver.triggerStateChangedFlow(self, { "state": value }, { "state": value })
         });
 

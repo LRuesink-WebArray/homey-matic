@@ -39,16 +39,16 @@ class HomematicDevice extends Device {
 
     initializeExtraEventListeners() {
         var self = this;
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-CURRENT_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-CURRENT_ILLUMINATION', (value) => {
             self.driver.triggerCurrentIlluminanceChangedFlow(self, {"Illuminance": self.getCapabilityValue('measure_luminance.current')}, {})
         });
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-AVERAGE_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-AVERAGE_ILLUMINATION', (value) => {
             self.driver.triggerAverageIlluminanceChangedFlow(self, {"Illuminance": self.getCapabilityValue('measure_luminance.average')}, {})
         });
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-HIGHEST_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-HIGHEST_ILLUMINATION', (value) => {
             self.driver.triggerHighestIlluminanceChangedFlow(self, {"Illuminance": self.getCapabilityValue('measure_luminance.highest')}, {})
         });
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-LOWEST_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-LOWEST_ILLUMINATION', (value) => {
             self.driver.triggerLowestIlluminanceChangedFlow(self, {"Illuminance": self.getCapabilityValue('measure_luminance.lowest')}, {})
         });
 
