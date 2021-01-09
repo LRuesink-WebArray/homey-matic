@@ -5,6 +5,7 @@
   "main": "app.js",
   "dependencies": {
     "@twendt/binrpc": "3.3.2",
+    "axios": "^0.21.1",
     "binary": "^0.3.0",
     "freeport": "1.0.5",
     "homematic-xmlrpc": "^1.0.2",

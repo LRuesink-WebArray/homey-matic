@@ -46,19 +46,19 @@ class HomematicDevice extends Device {
 
     initializeExtraEventListeners() {
         var self = this;
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-CURRENT_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-CURRENT_ILLUMINATION', (value) => {
             let val = Convert.toFloat(value)
             self.driver.triggerCurrentIlluminanceChangedFlow(self, {"Illuminance": val}, {})
         });
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-AVERAGE_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-AVERAGE_ILLUMINATION', (value) => {
             let val = Convert.toFloat(value)
             self.driver.triggerAverageIlluminanceChangedFlow(self, {"Illuminance": val}, {})
         });
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-HIGHEST_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-HIGHEST_ILLUMINATION', (value) => {
             let val = Convert.toFloat(value)
             self.driver.triggerHighestIlluminanceChangedFlow(self, {"Illuminance": val}, {})
         });
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-LOWEST_ILLUMINATION', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-LOWEST_ILLUMINATION', (value) => {
             let val = Convert.toFloat(value)
             self.driver.triggerLowestIlluminanceChangedFlow(self, {"Illuminance": val}, {})
         });

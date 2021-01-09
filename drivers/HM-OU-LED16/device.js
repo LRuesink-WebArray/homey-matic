@@ -27,7 +27,7 @@ class HomematicDevice extends Device {
         var self = this;
         let idx = this.getData().attributes.Index;
         let channel = idx+1;
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':' + channel + '-PRESS_SHORT', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':' + channel + '-PRESS_SHORT', (value) => {
             self.driver.triggerButtonPressedFlow(self, {"button": 1}, {"button": 1, "pressType": "short"})
         });
     }
