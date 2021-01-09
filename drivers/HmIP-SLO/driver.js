@@ -21,49 +21,49 @@ class HomematicDriver extends Driver {
         this._flowTriggerCurrentIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-current')
             .register()
             .registerRunListener((args, state) => {
-                self.log("Flow HmIP-SLO-illuminance-current triggered")
+                self.log("info", "Flow HmIP-SLO-illuminance-current triggered")
                 return Promise.resolve(true)
             })
         this._flowTriggerAverageIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-average')
             .register()
             .registerRunListener((args, state) => {
-                self.log("Flow HmIP-SLO-illuminance-average triggered")
+                self.log("info", "Flow HmIP-SLO-illuminance-average triggered")
                 return Promise.resolve(true)
             })
         this._flowTriggerHighestIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-highest')
             .register()
             .registerRunListener((args, state) => {
-                self.log("Flow HmIP-SLO-illuminance-highest triggered")
+                self.log("info", "Flow HmIP-SLO-illuminance-highest triggered")
                 return Promise.resolve(true)
             })
         this._flowTriggerLowestIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-lowest')
             .register()
             .registerRunListener((args, state) => {
-                self.log("Flow HmIP-SLO-illuminance-lowest triggered")
+                self.log("info", "Flow HmIP-SLO-illuminance-lowest triggered")
                 return Promise.resolve(true)
             })
     }
 
     triggerCurrentIlluminanceChangedFlow(device, tokens, state) {
-        this.log("Trigger flow HmIP-SLO-illuminance-current")
+        this.log("info", "Trigger flow HmIP-SLO-illuminance-current")
         this._flowTriggerCurrentIlluminanceChanged
             .trigger(device, tokens, state)
             .catch(this.error)
     }
     triggerAverageIlluminanceChangedFlow(device, tokens, state) {
-        this.log("Trigger flow HmIP-SLO-illuminance-average")
+        this.log("info", "Trigger flow HmIP-SLO-illuminance-average")
         this._flowTriggerAverageIlluminanceChanged
             .trigger(device, tokens, state)
             .catch(this.error)
     }
     triggerHighestIlluminanceChangedFlow(device, tokens, state) {
-        this.log("Trigger flow HmIP-SLO-illuminance-highest")
+        this.log("info", "Trigger flow HmIP-SLO-illuminance-highest")
         this._flowTriggerHighestIlluminanceChanged
             .trigger(device, tokens, state)
             .catch(this.error)
     }
     triggerLowestIlluminanceChangedFlow(device, tokens, state) {
-        this.log("Trigger flow HmIP-SLO-illuminance-lowest")
+        this.log("info", "Trigger flow HmIP-SLO-illuminance-lowest")
         this._flowTriggerLowestIlluminanceChanged
             .trigger(device, tokens, state)
             .catch(this.error)

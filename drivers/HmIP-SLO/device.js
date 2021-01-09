@@ -1,6 +1,6 @@
 'use strict';
 
-const Homey = require('homey');
+const Convert = require('../../lib/convert');
 const Device = require('../../lib/device.js')
 
 const convertLuminance = function (value) {
