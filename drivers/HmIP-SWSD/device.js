@@ -33,7 +33,7 @@ class HomematicDevice extends Device {
 
     initializeExtraEventListeners() {
         var self = this;
-        self.bridge.on('event-' + self.HomeyInterfaceName + '-' + self.deviceAddress + ':1-SMOKE_DETECTOR_ALARM_STATUS', (value) => {
+        self.bridge.on('event-' + self.deviceAddress + ':1-SMOKE_DETECTOR_ALARM_STATUS', (value) => {
             self.driver.triggerStateChangedFlow(self, { "state": value }, { "state": value })
         });
 

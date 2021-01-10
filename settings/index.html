@@ -32,6 +32,11 @@
         <label for="use_mqtt" data-i18n="settings.mqtt.use_mqtt"></label>
     </div>
 
+    <div class="field row">
+        <input id="use_ccu_jack" type="checkbox"/>
+        <label for="use_ccu_jack" data-i18n="settings.mqtt.use_ccu_jack"></label>
+    </div>
+
 </fieldset>
 
 <fieldset>
@@ -69,6 +74,8 @@
 
         var useMQTTElement = document.getElementById('use_mqtt');
 
+        var useMQTTCCUJackElement = document.getElementById('use_ccu_jack');
+
         var useStoredBridges = document.getElementById('use_stored_bridges');
 
         var saveElement = document.getElementById('save');
@@ -80,6 +87,13 @@
             useMQTTElement.checked = use_mqtt;
         });
 
+        Homey.get('use_ccu_jack', function (err, use_ccu_jack) {
+            if (err) return Homey.alert(err);
+            useMQTTCCUJackElement.value = use_ccu_jack;
+            if (typeof use_ccu_jack == 'undefined' || use_ccu_jack == null) use_ccu_jack = false;
+            useMQTTCCUJackElement.checked = use_ccu_jack;
+        });
+
         Homey.get('use_stored_bridges', function (err, use_stored_bridges) {
             if (err) return Homey.alert(err);
             useStoredBridges.value = use_stored_bridges;
@@ -89,6 +103,9 @@
 
         saveElement.addEventListener('click', function (e) {
             Homey.set('use_mqtt', useMQTTElement.checked, function (err) {
+                if (err) return Homey.alert(err);
+            });
+            Homey.set('use_ccu_jack', useMQTTCCUJackElement.checked, function (err) {
                 if (err) return Homey.alert(err);
             });
             Homey.set('use_stored_bridges', useStoredBridges.checked, function (err) {

@@ -17,6 +17,7 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-SLO'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
+        var self = this;
         this._flowTriggerCurrentIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-current')
             .register()
             .registerRunListener((args, state) => {
