@@ -3,38 +3,31 @@
 const Convert = require('../../lib/convert');
 const Device = require('../../lib/device.js')
 
-const convertLuminance = function (value) {
-    console.log("HmIP-SLO raw luminance:", value)
-    let convertedValue = parseFloat(value)
-    console.log("HmIP-SLO converted luminance:", convertedValue)
-    return convertedValue
-}
-
 const capabilityMap = {
     "measure_luminance.current": {
         "channel": 1,
         "key": "CURRENT_ILLUMINATION",
-        "convert": convertLuminance
+        "convert": Convert.toFloat
     },
     "measure_luminance.average": {
         "channel": 1,
         "key": "AVERAGE_ILLUMINATION",
-        "convert": convertLuminance
+        "convert": Convert.toFloat
     },
     "measure_luminance.highest": {
         "channel": 1,
         "key": "HIGHEST_ILLUMINATION",
-        "convert": convertLuminance
+        "convert": Convert.toFloat
     },
     "measure_luminance.lowest": {
         "channel": 1,
         "key": "LOWEST_ILLUMINATION",
-        "convert": convertLuminance
+        "convert": Convert.toFloat
     },
     "alarm_battery": {
         "channel": 0,
         "key": "LOW_BAT",
-        "valueType": "boolean"
+        "convert": Convert.toBoolean
     }
 }
 
