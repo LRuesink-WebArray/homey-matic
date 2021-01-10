@@ -13,11 +13,8 @@ class Homematic extends Homey.App {
         this.logmodule = require("./lib/logmodule");
         this.logmodule.log('info', 'Started homematic...');
         var self = this;
-        Homey.ManagerCloud.getLocalAddress()
-            .then((address) => {
-                self.homeyIP = address.split(':')[0]
-            })
-
+        let address = await Homey.ManagerCloud.getLocalAddress()
+        self.homeyIP = address.split(':')[0]
         self.settings = self.getSettings();
         self.discovery = new HomeMaticDiscovery();
         self.bridges = {};
