@@ -7,6 +7,10 @@ const HomeMaticCCURPC = require('./lib/HomeMaticCCURPC');
 const HomeMaticCCUJack = require('./lib/HomeMaticCCUJack');
 const Constants = require('./lib/constants');
 
+const connTypeRPC = 'use_rpc'
+const connTypeMQTT = 'use_mqtt'
+const connTypeCCUJack = 'use_ccu_jack'
+
 class Homematic extends Homey.App {
 
     async onInit() {
@@ -28,7 +32,10 @@ class Homematic extends Homey.App {
     getSettings() {
         return {
             "use_mqtt": Homey.ManagerSettings.get('use_mqtt'),
-            "use_ccu_jack": Homey.ManagerSettings.get('use_ccu_jack'),
+            "connection_type": Homey.ManagerSettings.get('connection_type'),
+            "ccu_jack_mqtt_port": Homey.ManagerSettings.get('ccu_jack_mqtt_port'),
+            "ccu_jack_user": Homey.ManagerSettings.get('ccu_jack_user'),
+            "ccu_jack_password": Homey.ManagerSettings.get('ccu_jack_password'),
             "use_stored_bridges": Homey.ManagerSettings.get('use_stored_bridges'),
         }
     }
@@ -56,20 +63,42 @@ class Homematic extends Homey.App {
         });
     }
 
-    initializeBridge(bridge) {
-        var self = this;
+    getConnectionType() {
+        if (Homey.app.settings.connection_type) {
+            return Homey.app.settings.connection_type
+        }
         if (Homey.app.settings.use_mqtt === true) {
-            if (Homey.app.settings.use_ccu_jack === true) {
-                self.logmodule.log('info', "Initializing CCU Jack");
-                self.bridges[bridge.serial] = new HomeMaticCCUJack(bridge.type, bridge.serial, bridge.address);
-            } else {
+            return connTypeMQTT
+        }
+        return connTypeRPC
+    }
+
+    initializeBridge(bridge) {
+        let self = this;
+        let connType = self.getConnectionType()
+        self.logmodule.log('info', 'Connection type:', connType)
+        switch (connType) {
+            case connTypeRPC:
+                self.logmodule.log('info', "Initializing RPC CCU");
+                self.bridges[bridge.serial] = new HomeMaticCCURPC(bridge.type, bridge.serial, bridge.address);
+                break;
+            case connTypeMQTT:
                 self.logmodule.log('info', "Initializing MQTT CCU ");
                 self.bridges[bridge.serial] = new HomeMaticCCUMQTT(bridge.type, bridge.serial, bridge.address);
-            }
-        } else {
-            self.logmodule.log('info', "Initializing RPC CCU");
-            self.bridges[bridge.serial] = new HomeMaticCCURPC(bridge.type, bridge.serial, bridge.address);
+                break;
+            case connTypeCCUJack:
+                self.logmodule.log('info', "Initializing CCU Jack");
+                self.bridges[bridge.serial] = new HomeMaticCCUJack(
+                    bridge.type,
+                    bridge.serial,
+                    bridge.address,
+                    Homey.app.settings.ccu_jack_mqtt_port,
+                    Homey.app.settings.ccu_jack_user,
+                    Homey.app.settings.ccu_jack_password,
+                );
+                break;
         }
+
         return self.bridges[bridge.serial]
     }
 
