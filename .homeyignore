@@ -1,4 +1,5 @@
 .git
+README.template
 tools/
 node-red/
 cli/
