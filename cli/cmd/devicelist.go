@@ -3,13 +3,12 @@ package cmd
 import (
 	"fmt"
 	"github.com/spf13/cobra"
+	"homeymatic-cli/pkg/devicelist"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"regexp"
 	"sort"
-	"strings"
 	"text/template"
 )
 
@@ -32,7 +31,8 @@ var genReadmeCmd = &cobra.Command{
 
 		vars := templateVars{}
 
-		deviceList, err := walkDir(driverDir)
+		g := devicelist.NewGenerator()
+		deviceList, err := g.Generate(driverDir)
 		if err != nil {
 			panic(err)
 		}
@@ -50,40 +50,6 @@ var genReadmeCmd = &cobra.Command{
 			fmt.Println(err)
 		}
 	},
-}
-
-func walkDir(dir string) ([]string, error) {
-	deviceList := make([]string, 0)
-
-	err := filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-		if info.Name() != "driver.js" {
-			return nil
-		}
-
-		content, err := ioutil.ReadFile(path)
-		if err != nil {
-			return fmt.Errorf("Failed to read file %s: %s", path, err)
-		}
-
-		groups := devicesRegex.FindSubmatch(content)
-		if len(groups) <= 1 {
-			return fmt.Errorf("Could not find devices in %s", path)
-		}
-
-		raw := string(groups[1])
-		raw = strings.ReplaceAll(raw, "'", "")
-		raw = strings.ReplaceAll(raw, " ", "")
-
-		list := strings.Split(raw, ",")
-		deviceList = append(deviceList, list...)
-
-		return nil
-	})
-	if err != nil {
-		return nil, err
-	}
-
-	return deviceList, nil
 }
 
 func genReadme(tmplPath string, vars *templateVars, out io.Writer) error {

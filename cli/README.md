@@ -33,3 +33,8 @@ Driver without buttons
 ```
 homeymatic-cli driver -n HM-PB-6-WM55 -d ~/Development/homey/homey-matic/drivers
 ```
+
+Generate README.md
+```
+cli/homeymatic-cli gen-readme
+```
