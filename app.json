@@ -11504,6 +11504,55 @@
         ]
       },
       {
+        "id": "homematic_sec_sir_hm_armstate",
+        "title": {
+          "en": "Arm state",
+          "de": "Scharfschalten"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sec-Sir-WM"
+          },
+          {
+            "name": "armstate",
+            "title": "Alarm Status",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Alarm off",
+                  "de": "Alarm aus"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "External sensors armed",
+                  "de": "Aussensensoren scharf"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "All sensor armed",
+                  "de": "Alle Sensoren scharf"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Alarm blocked",
+                  "de": "Alarm blockiert"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
@@ -11786,6 +11835,46 @@
       "uiComponent": "picker",
       "getable": true,
       "setable": false
+    },
+    "homematic_sec_sir_hm_armstate": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Alarm off",
+            "de": "Alarm aus"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "External sensors armed",
+            "de": "Aussensensoren scharf"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "All sensors armed",
+            "de": "Alle Sensoren scharf"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Alarm blocked",
+            "de": "Alarm blockiert"
+          }
+        }
+      ],
+      "title": {
+        "en": "Arm State",
+        "de": "Scharfschalten"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true
     },
     "homematic_swsd_alarm_button": {
       "type": "boolean",

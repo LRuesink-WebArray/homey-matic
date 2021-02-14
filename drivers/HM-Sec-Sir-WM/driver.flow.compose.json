@@ -1,0 +1,48 @@
+{
+    "actions": [
+        {
+            "id": "homematic_sec_sir_hm_armstate",
+            "title": {
+                "en": "Arm state",
+                "de": "Scharfschalten"
+            },
+            "args": [
+                {
+                    "name": "armstate",
+                    "title": "Alarm Status",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Alarm off",
+                                "de": "Alarm aus"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "External sensors armed",
+                                "de": "Aussensensoren scharf"
+                            }
+                        },
+                        {
+                            "id": "2",
+                            "label": {
+                                "en": "All sensor armed",
+                                "de": "Alle Sensoren scharf"
+                            }
+                        },
+                        {
+                            "id": "3",
+                            "label": {
+                                "en": "Alarm blocked",
+                                "de": "Alarm blockiert"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,6 +1,5 @@
 'use strict';
 
-const Homey = require('homey');
 const Device = require('../../lib/device.js')
 const Convert = require('../../lib/convert.js')
 
@@ -15,6 +14,16 @@ class HomematicDevice extends Device {
                 "set": {
                     "key": "STATE",
                     "channel": idx + 1
+                }
+            },
+            "homematic_sec_sir_hm_armstate": {
+                "channel": 4,
+                "key": "ARMSTATE",
+                "convert": Convert.toString,
+                "set": {
+                    "key": "ARMSTATE",
+                    "channel": 4,
+                    "convert": Convert.toInt
                 }
             },
             "alarm_battery": {
