@@ -8,6 +8,11 @@ class HomematicDevice extends Device {
     onInit() {
         var idx = this.getData().attributes.Index;
         var capabilityMap = {
+            "alarm_tamper": {
+                "channel": idx + 1,
+                "key": "ERROR_SABOTAGE",
+                "convert": Convert.toBoolean
+            },
             "onoff": {
                 "channel": idx + 1,
                 "key": "STATE",
