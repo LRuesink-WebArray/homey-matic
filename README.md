@@ -41,6 +41,7 @@ The app uses discovery to find your CCUs on the network. We were only able to te
 * HM-LC-Bl1-FM
 * HM-LC-Bl1PBU-FM
 * HM-LC-Dim1PWM-CV
+* HM-LC-Dim1T-CV
 * HM-LC-Dim1T-DR
 * HM-LC-Dim1T-FM
 * HM-LC-Dim1TPBU-FM
@@ -74,6 +75,7 @@ The app uses discovery to find your CCUs on the network. We were only able to te
 * HM-RC-Key4-2
 * HM-RC-Key4-3
 * HM-RC-Sec4-3
+* HM-SCI-3-FM
 * HM-Sec-Key
 * HM-Sec-MDIR-2
 * HM-Sec-RHS
@@ -121,6 +123,7 @@ The app uses discovery to find your CCUs on the network. We were only able to te
 * HmIP-MOD-HO
 * HmIP-MOD-OC8
 * HmIP-PCBS
+* HmIP-PCBS-BAT
 * HmIP-PS-CH
 * HmIP-PS-PE
 * HmIP-PS-UK
