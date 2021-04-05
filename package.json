@@ -11,7 +11,8 @@
     "homematic-xmlrpc": "^1.0.2",
     "mqtt": "^3.0.0",
     "node-fetch": "^2.6.0",
-    "put": "0.0.6"
+    "put": "0.0.6",
+    "which": "^2.0.2"
   },
   "devDependencies": {
     "eslint": "^7.13.0",
