@@ -1,0 +1,58 @@
+{
+  "id": "de.twendt.homey.matic",
+  "version": "0.19.0",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "Homematic"
+  },
+  "description": {
+    "en": "Connect Homematic with Homey"
+  },
+  "category": [
+    "tools",
+    "appliances"
+  ],
+  "permissions": [
+    "homey:app:nl.scanno.mqtt"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "brandColor": "#192c6e",
+  "homeyCommunityTopicId": 1057,
+  "author": {
+    "name": "Timo Wendt"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Bjoern Welker"
+      }
+    ]
+  },
+  "api": {
+    "getLogLines": {
+      "description": "Show loglines",
+      "method": "GET",
+      "path": ",/log/getloglines/",
+      "requires_authorization": true,
+      "role": "owner"
+    },
+    "getStoredBridges": {
+      "description": "Stored Bridges",
+      "method": "GET",
+      "path": ",/bridges/get/",
+      "requires_authorization": true,
+      "role": "owner"
+    },
+    "deleteStoredBridges": {
+      "description": "Delete Stored Bridges",
+      "method": "GET",
+      "path": "/bridges/delete/",
+      "requires_authorization": true,
+      "role": "owner"
+    }
+  }
+}

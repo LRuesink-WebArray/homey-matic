@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "eslint": "^7.13.0",
-    "homey": "^2.3.2"
+    "homey": "^2.14.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

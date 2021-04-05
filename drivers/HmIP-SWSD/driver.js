@@ -15,8 +15,7 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-SWSD'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerStateChanged = new Homey.FlowCardTriggerDevice('HmIP-SWSD-changed')
-            .register()
+        this._flowTriggerStateChanged = this.homey.flow.getDeviceTriggerCard('HmIP-SWSD-changed')
             .registerRunListener((args, state) => {
                 if (args.state == state.state) {
                     return Promise.resolve(true)

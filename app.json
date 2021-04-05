@@ -1,8 +1,9 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "de.twendt.homey.matic",
   "version": "0.19.0",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
   "name": {
     "en": "Homematic"
   },
@@ -31,6 +32,29 @@
         "name": "Bjoern Welker"
       }
     ]
+  },
+  "api": {
+    "getLogLines": {
+      "description": "Show loglines",
+      "method": "GET",
+      "path": ",/log/getloglines/",
+      "requires_authorization": true,
+      "role": "owner"
+    },
+    "getStoredBridges": {
+      "description": "Stored Bridges",
+      "method": "GET",
+      "path": ",/bridges/get/",
+      "requires_authorization": true,
+      "role": "owner"
+    },
+    "deleteStoredBridges": {
+      "description": "Delete Stored Bridges",
+      "method": "GET",
+      "path": "/bridges/delete/",
+      "requires_authorization": true,
+      "role": "owner"
+    }
   },
   "drivers": [
     {
@@ -11956,6 +11980,41 @@
         ]
       },
       {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HMIP-eTRV"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_mod_ho_set_partial_open",
         "title": {
           "en": "Set Ventialition",
@@ -12011,6 +12070,41 @@
         ]
       },
       {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-2"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
@@ -12052,6 +12146,41 @@
         ]
       },
       {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-B"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
@@ -12086,6 +12215,41 @@
                 "id": "3",
                 "label": {
                   "en": "3"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-C"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
                 }
               }
             ]
