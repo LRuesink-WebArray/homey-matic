@@ -16,9 +16,7 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-MOD-HO'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        let partialOpenAction = new Homey.FlowCardAction('homematic_mod_ho_set_partial_open');
-        partialOpenAction
-            .register()
+        this.homey.flow.getActionCard('homematic_mod_ho_set_partial_open')
             .registerRunListener((args, state) => {
                 return args.device.triggerCapabilityListener('homematic_button_mod_ho_partial_open', true, {})
             })

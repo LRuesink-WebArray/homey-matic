@@ -14,8 +14,7 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-FBL'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerButtonPressed = new Homey.FlowCardTriggerDevice('HmIP-FBL-press')
-            .register()
+        this._flowTriggerButtonPressed = this.homey.flow.getDeviceTriggerCard('HmIP-FBL-press')
             .registerRunListener((args, state) => {
                 if (args.button == state.button && args.pressType == state.pressType) {
                     return Promise.resolve(true)

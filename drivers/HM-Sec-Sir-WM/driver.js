@@ -18,9 +18,7 @@ class HomematicDriver extends Driver {
         this.multiDevice = true
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        let armstateAction = new Homey.FlowCardAction('homematic_sec_sir_hm_armstate');
-        armstateAction
-            .register()
+        this.homey.flow.getActionCard('homematic_sec_sir_hm_armstate')
             .registerRunListener((args, state) => {
                 return args.device.triggerCapabilityListener('homematic_sec_sir_hm_armstate', args.armstate, {})
             })
