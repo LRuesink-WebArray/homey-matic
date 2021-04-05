@@ -9,7 +9,6 @@ class HomematicDriver extends Driver {
         super.onInit();
         this.capabilities = [
             'measure_temperature',
-            'measure_humidity',
             'alarm_battery'
         ]
         this.homematicTypes = ['HmIP-STE2-PCB'];
