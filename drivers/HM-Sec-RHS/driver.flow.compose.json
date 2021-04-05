@@ -5,6 +5,9 @@
             "title": {
                 "en": "Handle state changed"
             },
+            "titleFormatted": {
+                "en": "Handle state changed: [[state]]"
+            },
             "args": [
                 {
                     "name": "state",

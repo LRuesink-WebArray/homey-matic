@@ -6,6 +6,10 @@
                 "en": "Arm state",
                 "de": "Scharfschalten"
             },
+            "titleFormatted": {
+                "en": "Arm state: [[armstate]]",
+                "de": "Scharfschalten: [[armstate]]"
+            },
             "args": [
                 {
                     "name": "armstate",

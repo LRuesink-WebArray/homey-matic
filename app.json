@@ -20,6 +20,7 @@
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
   },
+  "brandColor": "#192c6e",
   "homeyCommunityTopicId": 1057,
   "author": {
     "name": "Timo Wendt"
@@ -9536,6 +9537,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9583,6 +9587,9 @@
         "id": "HM-PB-2-FM-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9644,6 +9651,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9703,6 +9713,9 @@
         "id": "HM-PB-4-WM-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9812,6 +9825,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9896,6 +9912,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9967,6 +9986,9 @@
         "id": "HM-RC-4-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10040,6 +10062,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10112,6 +10137,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10183,6 +10211,9 @@
         "id": "HM-RC-8-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10280,6 +10311,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10351,6 +10385,9 @@
         "id": "HM-RC-Key4-3-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10424,6 +10461,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10496,6 +10536,9 @@
         "title": {
           "en": "Handle state changed"
         },
+        "titleFormatted": {
+          "en": "Handle state changed: [[state]]"
+        },
         "args": [
           {
             "type": "device",
@@ -10533,6 +10576,9 @@
         "id": "HM-Sec-WDS-changed",
         "title": {
           "en": "Water state changed"
+        },
+        "titleFormatted": {
+          "en": "Water state changed: [[state]]"
         },
         "args": [
           {
@@ -10574,6 +10620,9 @@
         "id": "HM-Sen-DB-PCB-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10622,6 +10671,9 @@
         "id": "HM-Sen-MDIR-WM55-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10748,6 +10800,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10807,6 +10862,9 @@
         "id": "HmIP-BDT-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10868,6 +10926,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10927,6 +10988,9 @@
         "id": "HmIP-BRC2-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10988,6 +11052,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -11047,6 +11114,9 @@
         "id": "HmIP-BSM-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -11108,6 +11178,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -11168,6 +11241,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -11227,6 +11303,9 @@
         "id": "HmIP-RC8-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -11412,6 +11491,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -11472,6 +11554,9 @@
         "title": {
           "en": "Handle state changed"
         },
+        "titleFormatted": {
+          "en": "Handle state changed: [[state]]"
+        },
         "args": [
           {
             "type": "device",
@@ -11509,6 +11594,9 @@
         "id": "HmIP-SWSD-changed",
         "title": {
           "en": "Alarm state changed"
+        },
+        "titleFormatted": {
+          "en": "Alarm state changed: [[state]]"
         },
         "args": [
           {
@@ -11553,6 +11641,9 @@
         "id": "HmIP-WRC6-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -11640,6 +11731,9 @@
         "title": {
           "en": "Set LED Status"
         },
+        "titleFormatted": {
+          "en": "Set LED Status: [[led_status]]"
+        },
         "args": [
           {
             "type": "device",
@@ -11684,6 +11778,10 @@
         "title": {
           "en": "Arm state",
           "de": "Scharfschalten"
+        },
+        "titleFormatted": {
+          "en": "Arm state: [[armstate]]",
+          "de": "Scharfschalten: [[armstate]]"
         },
         "args": [
           {
@@ -11732,6 +11830,9 @@
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
+        },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
         },
         "args": [
           {
@@ -11785,6 +11886,9 @@
         "title": {
           "en": "Set Week Profile"
         },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
+        },
         "args": [
           {
             "type": "device",
@@ -11823,6 +11927,9 @@
         "title": {
           "en": "Set Week Profile"
         },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
+        },
         "args": [
           {
             "type": "device",
@@ -11860,6 +11967,9 @@
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
+        },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
         },
         "args": [
           {

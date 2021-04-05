@@ -5,6 +5,9 @@
             "title": {
                 "en": "Button Event"
             },
+            "titleFormatted": {
+                "en": "Button [[button]] [[pressType]] Event"
+            },
             "tokens": [
                 {
                     "name": "button",

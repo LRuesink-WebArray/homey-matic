@@ -5,6 +5,9 @@
             "title": {
                 "en": "Water state changed"
             },
+            "titleFormatted": {
+                "en": "Water state changed: [[state]]"
+            },
             "args": [
                 {
                     "name": "state",
