@@ -1,12 +1,10 @@
 'use strict';
 
-const Homey = require('homey');
 const Device = require('../../lib/device.js')
 
 class HomematicDevice extends Device {
 
     onInit() {
-        this.mylog = Homey.app.logmodule.log;
         var capabilityMap = {
             "onoff": {
                 "channel": 4,

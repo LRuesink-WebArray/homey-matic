@@ -1,7 +1,7 @@
 module.exports = {
     async getLogLines({homey, query}) {
         var result = homey.app.getLogLines(query);
-        callback(null, result);
+        return result;
     },
     async getStoredBridges({homey, query}) {
         var bridges = homey.app.getStoredBridges();
@@ -9,11 +9,11 @@ module.exports = {
         Object.keys(bridges).forEach((serial) => {
             result.push('Serial: ' + serial + ' IP: ' + bridges[serial].address)
         })
-        callback(null, result);
+        return result;
     },
     async deleteStoredBridges({homey, query}) {
         var bridges = homey.app.deleteStoredBridges();
         var result = true;
-        callback(null, result);
+        return result;
     }
 }

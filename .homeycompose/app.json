@@ -1,6 +1,6 @@
 {
   "id": "de.twendt.homey.matic",
-  "version": "0.19.0",
+  "version": "0.19.1",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -34,25 +34,19 @@
   },
   "api": {
     "getLogLines": {
-      "description": "Show loglines",
       "method": "GET",
-      "path": ",/log/getloglines/",
-      "requires_authorization": true,
-      "role": "owner"
+      "path": "/log/getloglines/",
+      "public": false
     },
     "getStoredBridges": {
-      "description": "Stored Bridges",
       "method": "GET",
-      "path": ",/bridges/get/",
-      "requires_authorization": true,
-      "role": "owner"
+      "path": "/bridges/get/",
+      "public": false
     },
     "deleteStoredBridges": {
-      "description": "Delete Stored Bridges",
       "method": "GET",
       "path": "/bridges/delete/",
-      "requires_authorization": true,
-      "role": "owner"
+      "public": false
     }
   }
 }
