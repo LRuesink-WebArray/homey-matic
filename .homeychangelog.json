@@ -10,5 +10,11 @@
   },
   "0.18.1": {
     "en": "Fix HmIP-BSM"
+  },
+  "0.19.0": {
+    "en": "Added new devices, deactivate setOnDim option for HmIP-BDT, sdk 3"
+  },
+  "0.19.1": {
+    "en": "Fix errors in HmIP-BDT and HmIP-FDT and fix api."
   }
 }
