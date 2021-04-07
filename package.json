@@ -1,19 +1,22 @@
 {
   "name": "homeymatic",
-  "version": "0.18.1",
+  "version": "0.19.1",
   "description": "Connect Homematic CCU with Homey",
   "main": "app.js",
   "dependencies": {
     "@twendt/binrpc": "3.3.2",
+    "axios": "^0.21.1",
     "binary": "^0.3.0",
     "freeport": "1.0.5",
     "homematic-xmlrpc": "^1.0.2",
     "mqtt": "^3.0.0",
-    "node-fetch": "^2.6.0",
-    "put": "0.0.6"
+    "node-fetch": "^2.6.1",
+    "put": "0.0.6",
+    "which": "^2.0.2"
   },
   "devDependencies": {
-    "homey": "^2.3.2"
+    "eslint": "^7.13.0",
+    "homey": "^2.14.2"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

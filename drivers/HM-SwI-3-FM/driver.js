@@ -11,12 +11,9 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HM-SwI-3-FM'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerButtonPressed1 = new Homey.FlowCardTriggerDevice('HM-SwI-3-FM-pressed-1')
-            .register()
-        this._flowTriggerButtonPressed2 = new Homey.FlowCardTriggerDevice('HM-SwI-3-FM-pressed-2')
-            .register()
-        this._flowTriggerButtonPressed3 = new Homey.FlowCardTriggerDevice('HM-SwI-3-FM-pressed-3')
-            .register()
+        this._flowTriggerButtonPressed1 = this.homey.flow.getDeviceTriggerCard('HM-SwI-3-FM-pressed-1')
+        this._flowTriggerButtonPressed2 = this.homey.flow.getDeviceTriggerCard('HM-SwI-3-FM-pressed-2')
+        this._flowTriggerButtonPressed3 = this.homey.flow.getDeviceTriggerCard('HM-SwI-3-FM-pressed-3')
 
     }
 

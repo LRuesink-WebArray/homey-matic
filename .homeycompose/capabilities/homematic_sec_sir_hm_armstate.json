@@ -1,0 +1,40 @@
+{
+    "type": "enum",
+    "values": [
+        {
+            "id": "0",
+            "title": {
+                "en": "Alarm off",
+                "de": "Alarm aus"
+            }
+        },
+        {
+            "id": "1",
+            "title": {
+                "en": "External sensors armed",
+                "de": "Aussensensoren scharf"
+            }
+        },
+        {
+            "id": "2",
+            "title": {
+                "en": "All sensors armed",
+                "de": "Alle Sensoren scharf"
+            }
+        },
+        {
+            "id": "3",
+            "title": {
+                "en": "Alarm blocked",
+                "de": "Alarm blockiert"
+            }
+        }
+    ],
+    "title": {
+        "en": "Arm State",
+        "de": "Scharfschalten"
+    },
+    "uiComponent": "picker",
+    "getable": true,
+    "setable": true
+}

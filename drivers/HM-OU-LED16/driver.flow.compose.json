@@ -5,6 +5,9 @@
             "title": {
                 "en": "Set LED Status"
             },
+            "titleFormatted": {
+                "en": "Set LED Status: [[led_status]]"
+            },
             "args": [
                 {
                     "name": "led_status",
@@ -45,6 +48,9 @@
             "id": "HM-OU-LED16-press",
             "title": {
                 "en": "Button Event"
+            },
+            "titleFormatted": {
+                "en": "Button [[button]] [[pressType]] Event"
             },
             "tokens": [
                 {

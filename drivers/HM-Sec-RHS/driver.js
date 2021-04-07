@@ -13,8 +13,7 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HM-Sec-RHS']
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerStateChanged = new Homey.FlowCardTriggerDevice('HM-Sec-RHS-changed')
-            .register()
+        this._flowTriggerStateChanged = this.homey.flow.getDeviceTriggerCard('HM-Sec-RHS-changed')
             .registerRunListener((args, state) => {
                 // console.log(args.state + " " + state.state)
                 if (args.state == state.state) {

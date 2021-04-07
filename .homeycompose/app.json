@@ -1,0 +1,52 @@
+{
+  "id": "de.twendt.homey.matic",
+  "version": "0.19.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
+  "name": {
+    "en": "Homematic"
+  },
+  "description": {
+    "en": "Connect Homematic with Homey"
+  },
+  "category": [
+    "tools",
+    "appliances"
+  ],
+  "permissions": [
+    "homey:app:nl.scanno.mqtt"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "brandColor": "#192c6e",
+  "homeyCommunityTopicId": 1057,
+  "author": {
+    "name": "Timo Wendt"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Bjoern Welker"
+      }
+    ]
+  },
+  "api": {
+    "getLogLines": {
+      "method": "GET",
+      "path": "/log/getloglines/",
+      "public": false
+    },
+    "getStoredBridges": {
+      "method": "GET",
+      "path": "/bridges/get/",
+      "public": false
+    },
+    "deleteStoredBridges": {
+      "method": "GET",
+      "path": "/bridges/delete/",
+      "public": false
+    }
+  }
+}

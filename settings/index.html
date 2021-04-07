@@ -23,15 +23,41 @@
 </p>
 
 <fieldset>
+    <legend>Select connection type</legend>
+
+    <select id="connection_type">
+        <option value="use_rpc">XMLRPC</option>
+        <option value="use_mqtt">MQTT</option>
+        <option value="use_ccu_jack">CCU Jack</option>
+    </select>
+</fieldset>
+
+<fieldset id="xmlrpc_settings">
+    <p style="color:red" data-i18n="settings.xmlrpc.deprecation_warning"> </p>
+</fieldset>
+
+<fieldset id="mqtt_settings">
     <legend>MQTT Settings</legend>
 
+    <p style="color:red" data-i18n="settings.mqtt.deprecation_warning"> </p>
     <p data-i18n="settings.mqtt.description"></p>
 
-    <div class="field row">
-        <input id="use_mqtt" type="checkbox"/>
-        <label for="use_mqtt" data-i18n="settings.mqtt.use_mqtt"></label>
-    </div>
+</fieldset>
 
+<fieldset id="ccu_jack_settings">
+    <legend>CCU Jack Settings</legend>
+    <div class="field row">
+        <input id="ccu_jack_mqtt_port" type="text" value="1883"/>
+        <label for="ccu_jack_mqtt_port">CCU Jack MQTT Port</label>
+    </div>
+    <div class="field row">
+        <input id="ccu_jack_user" type="text" value=""/>
+        <label for="ccu_jack_user">CCU Jack Username</label>
+    </div>
+    <div class="field row">
+        <input id="ccu_jack_password" type="password" value=""/>
+        <label for="ccu_jack_password">CCU Jack Password</label>
+    </div>
 </fieldset>
 
 <fieldset>
@@ -63,21 +89,66 @@
 
 <script type="text/javascript">
 
+    const conn_type_rpc = 'use_rpc';
+    const conn_type_mqtt = 'use_mqtt';
+    const conn_type_ccu_jack = 'use_ccu_jack';
+
+    var xmlrpcSettingsElement = document.getElementById('xmlrpc_settings');
+    var mqttSettingsElement = document.getElementById('mqtt_settings');
+    var ccuJackSettingsElement = document.getElementById('ccu_jack_settings');
+    var connectionTypeElement = document.getElementById('connection_type');
+    var useStoredBridges = document.getElementById('use_stored_bridges');
+    var saveElement = document.getElementById('save');
+    var ccuJackUserElement = document.getElementById('ccu_jack_user')
+    var ccuJackPasswordElement = document.getElementById('ccu_jack_password')
+    var ccuJackMQTTPortElement = document.getElementById('ccu_jack_mqtt_port')
+
     // a method named 'onHomeyReady' must be present in your code
     function onHomeyReady(Homey) {
+
         HomeyAPI = Homey;
 
-        var useMQTTElement = document.getElementById('use_mqtt');
-
-        var useStoredBridges = document.getElementById('use_stored_bridges');
-
-        var saveElement = document.getElementById('save');
-
-        Homey.get('use_mqtt', function (err, use_mqtt) {
+        Homey.get('connection_type', function (err, connection_type) {
             if (err) return Homey.alert(err);
-            useMQTTElement.value = use_mqtt;
-            if (typeof use_mqtt == 'undefined' || use_mqtt == null) use_mqtt = false;
-            useMQTTElement.checked = use_mqtt;
+            if (typeof connection_type == 'undefined' || connection_type == null) {
+                connectionTypeElement.value = "use_rpc";
+                Homey.get('use_mqtt', function (err, use_mqtt) {
+                    if (err) return;
+                    if (use_mqtt === true) {
+                        connectionTypeElement.value = 'use_mqtt'
+                        setSettingsVisibility()
+                    }
+                });
+                return
+            }
+            connectionTypeElement.value = connection_type;
+            setSettingsVisibility()
+        });
+
+        Homey.get('ccu_jack_mqtt_port', function (err, ccu_jack_mqtt_port) {
+            if (err) return Homey.alert(err);
+            if (typeof ccu_jack_mqtt_port == 'undefined' || ccu_jack_mqtt_port == null) {
+                return
+            }
+            ccuJackMQTTPortElement.value = ccu_jack_mqtt_port;
+        });
+
+        Homey.get('ccu_jack_user', function (err, ccu_jack_user) {
+            if (err) return Homey.alert(err);
+            if (typeof ccu_jack_user == 'undefined' || ccu_jack_user == null) {
+                ccuJackUserElement.value = "";
+                return
+            }
+            ccuJackUserElement.value = ccu_jack_user;
+        });
+
+        Homey.get('ccu_jack_password', function (err, ccu_jack_password) {
+            if (err) return Homey.alert(err);
+            if (typeof ccu_jack_password == 'undefined' || ccu_jack_password == null) {
+                ccuJackPasswordElement.value = "";
+                return
+            }
+            ccuJackPasswordElement.value = ccu_jack_password;
         });
 
         Homey.get('use_stored_bridges', function (err, use_stored_bridges) {
@@ -87,13 +158,47 @@
             useStoredBridges.checked = use_stored_bridges;
         });
 
+        connectionTypeElement.addEventListener('change', function(e) {
+            setSettingsVisibility()
+        })
+
         saveElement.addEventListener('click', function (e) {
-            Homey.set('use_mqtt', useMQTTElement.checked, function (err) {
+            let errMsg = validateSettings(connectionTypeElement.value)
+            if (errMsg !== undefined) {
+                return Homey.alert(errMsg, 'error')
+            }
+
+            Homey.set('connection_type', connectionTypeElement.value, function (err) {
                 if (err) return Homey.alert(err);
             });
+
+            Homey.set('ccu_jack_mqtt_port', Number(ccuJackMQTTPortElement.value), function (err) {
+                if (err) return Homey.alert(err);
+            });
+
+            if (ccuJackUserElement === "") {
+                Homey.set('ccu_jack_user', undefined, function (err) {
+                    if (err) return Homey.alert(err);
+                });
+            } else {
+                Homey.set('ccu_jack_user', ccuJackUserElement.value, function (err) {
+                    if (err) return Homey.alert(err);
+                });
+            }
+            if (ccuJackPasswordElement === "") {
+                Homey.set('ccu_jack_password', undefined, function (err) {
+                    if (err) return Homey.alert(err);
+                });
+            } else {
+                Homey.set('ccu_jack_password', ccuJackPasswordElement.value, function (err) {
+                    if (err) return Homey.alert(err);
+                });
+            }
+
             Homey.set('use_stored_bridges', useStoredBridges.checked, function (err) {
                 if (err) return Homey.alert(err);
             });
+
             Homey.alert('Settings saved', 'info')
         });
 
@@ -101,6 +206,56 @@
         Homey.ready();
     }
 
+    function validateSettings(conn_type) {
+        switch (conn_type) {
+            case conn_type_rpc:
+                return
+            case conn_type_mqtt:
+                return
+            case conn_type_ccu_jack:
+                if ((ccuJackUserElement.value !== "" && ccuJackPasswordElement.value === "" ) || (ccuJackUserElement.value === "" && ccuJackPasswordElement.value !== "" )) {
+                    return "User and Password must be both set to enable authenticaton or both be empty to disable authentication"
+                }
+                if (ccuJackMQTTPortElement.value === "") {
+                    return "MQTT Port cannot be empty"
+                }
+                if (!isPositiveInteger(ccuJackMQTTPortElement.value)) {
+                    return "MQTT Port must be a positive integer value"
+                }
+                return
+        }
+    }
+
+    function isPositiveInteger(str) {
+        var n = Math.floor(Number(str));
+        return n !== Infinity && String(n) === str && n >= 0;
+    }
+
+    function setSettingsVisibility() {
+        switch (connectionTypeElement.value) {
+            case 'use_rpc':
+                ccuJackSettingsElement.style.display = 'none'
+                mqttSettingsElement.style.display = 'none'
+                xmlrpcSettingsElement.style.display = 'block'
+                break
+            case 'use_ccu_jack':
+                ccuJackSettingsElement.style.display = 'block'
+                mqttSettingsElement.style.display = 'none'
+                xmlrpcSettingsElement.style.display = 'none'
+                break
+            case 'use_mqtt':
+                ccuJackSettingsElement.style.display = 'none'
+                mqttSettingsElement.style.display = 'block'
+                xmlrpcSettingsElement.style.display = 'none'
+                break
+
+            default:
+                ccuJackSettingsElement.style.display = 'none'
+                mqttSettingsElement.style.display = 'none'
+                xmlrpcSettingsElement.style.display = 'block'
+                break
+        }
+    }
     function showLogLines() {
         HomeyAPI.api('GET', 'log/getloglines/', function (err, result) {
             if (!err) {

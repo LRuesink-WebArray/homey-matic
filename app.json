@@ -1,8 +1,9 @@
 {
+  "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "de.twendt.homey.matic",
-  "version": "0.18.1",
-  "compatibility": ">=1.5.0",
-  "sdk": 2,
+  "version": "0.19.1",
+  "compatibility": ">=5.0.0",
+  "sdk": 3,
   "name": {
     "en": "Homematic"
   },
@@ -20,6 +21,7 @@
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
   },
+  "brandColor": "#192c6e",
   "homeyCommunityTopicId": 1057,
   "author": {
     "name": "Timo Wendt"
@@ -30,6 +32,23 @@
         "name": "Bjoern Welker"
       }
     ]
+  },
+  "api": {
+    "getLogLines": {
+      "method": "GET",
+      "path": "/log/getloglines/",
+      "public": false
+    },
+    "getStoredBridges": {
+      "method": "GET",
+      "path": "/bridges/get/",
+      "public": false
+    },
+    "deleteStoredBridges": {
+      "method": "GET",
+      "path": "/bridges/delete/",
+      "public": false
+    }
   },
   "drivers": [
     {
@@ -690,12 +709,105 @@
       ]
     },
     {
+      "id": "HM-LC-Dim1T-CV",
+      "name": {
+        "en": "HM-LC-Dim1T-CV"
+      },
+      "class": "light",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-LC-Dim1T-CV/assets/images/large.png",
+        "small": "/drivers/HM-LC-Dim1T-CV/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HM-LC-Dim1T-DR",
       "name": {
         "en": "HM-LC-Dim1T-DR"
       },
       "class": "light",
       "capabilities": [],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "/drivers/HM-LC-Dim1T-DR/assets/images/large.png",
         "small": "/drivers/HM-LC-Dim1T-DR/assets/images/small.png"
@@ -3324,6 +3436,94 @@
       ]
     },
     {
+      "id": "HM-SCI-3-FM",
+      "name": {
+        "en": "HM-SCI-3-FM"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HM-SCI-3-FM/assets/images/large.png",
+        "small": "/drivers/HM-SCI-3-FM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HM-Sec-Key",
       "name": {
         "en": "HM-Sec-Key"
@@ -5146,6 +5346,94 @@
       ]
     },
     {
+      "id": "HMIP-PS",
+      "name": {
+        "en": "HMIP-PS"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HMIP-PS/assets/images/large.png",
+        "small": "/drivers/HMIP-PS/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HMIP-PSM",
       "name": {
         "en": "HMIP-PSM"
@@ -5684,12 +5972,105 @@
       ]
     },
     {
+      "id": "HmIP-ASIR",
+      "name": {
+        "en": "HmIP-ASIR"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-ASIR/assets/images/large.png",
+        "small": "/drivers/HmIP-ASIR/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-BDT",
       "name": {
         "en": "HmIP-BDT"
       },
       "class": "light",
       "capabilities": [],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
       "images": {
         "large": "/drivers/HmIP-BDT/assets/images/large.png",
         "small": "/drivers/HmIP-BDT/assets/images/small.png"
@@ -6260,6 +6641,94 @@
       ]
     },
     {
+      "id": "HmIP-DRSI1",
+      "name": {
+        "en": "HmIP-DRSI1"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-DRSI1/assets/images/large.png",
+        "small": "/drivers/HmIP-DRSI1/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-FBL",
       "name": {
         "en": "HmIP-FBL"
@@ -6269,6 +6738,99 @@
       "images": {
         "large": "/drivers/HmIP-FBL/assets/images/large.png",
         "small": "/drivers/HmIP-FBL/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HmIP-FDT",
+      "name": {
+        "en": "HmIP-FDT"
+      },
+      "class": "light",
+      "capabilities": [],
+      "capabilitiesOptions": {
+        "onoff": {
+          "setOnDim": false
+        }
+      },
+      "images": {
+        "large": "/drivers/HmIP-FDT/assets/images/large.png",
+        "small": "/drivers/HmIP-FDT/assets/images/small.png"
       },
       "pair": [
         {
@@ -6524,6 +7086,94 @@
       ]
     },
     {
+      "id": "HmIP-MOD-HO",
+      "name": {
+        "en": "HmIP-MOD-HO"
+      },
+      "class": "button",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-MOD-HO/assets/images/large.png",
+        "small": "/drivers/HmIP-MOD-HO/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-MOD-OC8",
       "name": {
         "en": "HmIP-MOD-OC8"
@@ -6700,6 +7350,94 @@
       ]
     },
     {
+      "id": "HmIP-PCBS-BAT",
+      "name": {
+        "en": "HmIP-PCBS-BAT"
+      },
+      "class": "socket",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-PCBS-BAT/assets/images/large.png",
+        "small": "/drivers/HmIP-PCBS-BAT/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-RC8",
       "name": {
         "en": "HmIP-RC8"
@@ -6709,6 +7447,182 @@
       "images": {
         "large": "/drivers/HmIP-RC8/assets/images/large.png",
         "small": "/drivers/HmIP-RC8/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SAM",
+      "name": {
+        "en": "HmIP-SAM"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-SAM/assets/images/large.png",
+        "small": "/drivers/HmIP-SAM/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SCI",
+      "name": {
+        "en": "HmIP-SCI"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-SCI/assets/images/large.png",
+        "small": "/drivers/HmIP-SCI/assets/images/small.png"
       },
       "pair": [
         {
@@ -6885,6 +7799,94 @@
       "images": {
         "large": "/drivers/HmIP-SMI/assets/images/large.png",
         "small": "/drivers/HmIP-SMI/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HmIP-SMI55",
+      "name": {
+        "en": "HmIP-SMI55"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-SMI55/assets/images/large.png",
+        "small": "/drivers/HmIP-SMI55/assets/images/small.png"
       },
       "pair": [
         {
@@ -7151,6 +8153,96 @@
       "images": {
         "large": "/drivers/HmIP-SRH/assets/images/large.png",
         "small": "/drivers/HmIP-SRH/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HmIP-STE2-PCB",
+      "name": {
+        "en": "HmIP-STE2-PCB"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/HmIP-STE2-PCB/assets/images/large.png",
+        "small": "/drivers/HmIP-STE2-PCB/assets/images/small.png"
       },
       "pair": [
         {
@@ -7868,6 +8960,94 @@
       ]
     },
     {
+      "id": "HmIP-SWO-PR",
+      "name": {
+        "en": "HmIP-SWO-PR"
+      },
+      "class": "sensor",
+      "capabilities": [],
+      "images": {
+        "large": "/drivers/HmIP-SWO-PR/assets/images/large.png",
+        "small": "/drivers/HmIP-SWO-PR/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-SWSD",
       "name": {
         "en": "HmIP-SWSD"
@@ -8463,6 +9643,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -8510,6 +9693,9 @@
         "id": "HM-PB-2-FM-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -8571,6 +9757,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -8630,6 +9819,9 @@
         "id": "HM-PB-4-WM-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -8739,6 +9931,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -8823,6 +10018,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -8894,6 +10092,9 @@
         "id": "HM-RC-4-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -8967,6 +10168,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9039,6 +10243,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9110,6 +10317,9 @@
         "id": "HM-RC-8-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9207,6 +10417,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9278,6 +10491,9 @@
         "id": "HM-RC-Key4-3-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9351,6 +10567,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9423,6 +10642,9 @@
         "title": {
           "en": "Handle state changed"
         },
+        "titleFormatted": {
+          "en": "Handle state changed: [[state]]"
+        },
         "args": [
           {
             "type": "device",
@@ -9460,6 +10682,9 @@
         "id": "HM-Sec-WDS-changed",
         "title": {
           "en": "Water state changed"
+        },
+        "titleFormatted": {
+          "en": "Water state changed: [[state]]"
         },
         "args": [
           {
@@ -9501,6 +10726,9 @@
         "id": "HM-Sen-DB-PCB-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9549,6 +10777,9 @@
         "id": "HM-Sen-MDIR-WM55-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9675,6 +10906,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9734,6 +10968,9 @@
         "id": "HmIP-BDT-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9795,6 +11032,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9854,6 +11094,9 @@
         "id": "HmIP-BRC2-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -9915,6 +11158,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -9974,6 +11220,9 @@
         "id": "HmIP-BSM-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10035,6 +11284,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10095,6 +11347,9 @@
         "title": {
           "en": "Button Event"
         },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
         "tokens": [
           {
             "name": "button",
@@ -10154,6 +11409,9 @@
         "id": "HmIP-RC8-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10335,9 +11593,75 @@
         ]
       },
       {
+        "id": "HmIP-SMI55-press",
+        "title": {
+          "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
+        },
+        "tokens": [
+          {
+            "name": "button",
+            "type": "number",
+            "title": {
+              "en": "Button"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-SMI55"
+          },
+          {
+            "name": "button",
+            "title": "Button",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "1",
+                "label": {
+                  "en": "1"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "2"
+                }
+              }
+            ]
+          },
+          {
+            "name": "pressType",
+            "title": "Press Type",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "short",
+                "label": {
+                  "en": "Short"
+                }
+              },
+              {
+                "id": "long",
+                "label": {
+                  "en": "Long"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "HmIP-SRH-changed",
         "title": {
           "en": "Handle state changed"
+        },
+        "titleFormatted": {
+          "en": "Handle state changed: [[state]]"
         },
         "args": [
           {
@@ -10376,6 +11700,9 @@
         "id": "HmIP-SWSD-changed",
         "title": {
           "en": "Alarm state changed"
+        },
+        "titleFormatted": {
+          "en": "Alarm state changed: [[state]]"
         },
         "args": [
           {
@@ -10420,6 +11747,9 @@
         "id": "HmIP-WRC6-press",
         "title": {
           "en": "Button Event"
+        },
+        "titleFormatted": {
+          "en": "Button [[button]] [[pressType]] Event"
         },
         "tokens": [
           {
@@ -10507,6 +11837,9 @@
         "title": {
           "en": "Set LED Status"
         },
+        "titleFormatted": {
+          "en": "Set LED Status: [[led_status]]"
+        },
         "args": [
           {
             "type": "device",
@@ -10547,9 +11880,65 @@
         ]
       },
       {
+        "id": "homematic_sec_sir_hm_armstate",
+        "title": {
+          "en": "Arm state",
+          "de": "Scharfschalten"
+        },
+        "titleFormatted": {
+          "en": "Arm state: [[armstate]]",
+          "de": "Scharfschalten: [[armstate]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HM-Sec-Sir-WM"
+          },
+          {
+            "name": "armstate",
+            "title": "Alarm Status",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Alarm off",
+                  "de": "Alarm aus"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "External sensors armed",
+                  "de": "Aussensensoren scharf"
+                }
+              },
+              {
+                "id": "2",
+                "label": {
+                  "en": "All sensor armed",
+                  "de": "Alle Sensoren scharf"
+                }
+              },
+              {
+                "id": "3",
+                "label": {
+                  "en": "Alarm blocked",
+                  "de": "Alarm blockiert"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
+        },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
         },
         "args": [
           {
@@ -10585,9 +11974,61 @@
         ]
       },
       {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HMIP-eTRV"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "homematic_mod_ho_set_partial_open",
+        "title": {
+          "en": "Set Ventialition",
+          "de": "Lüften"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-MOD-HO"
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
+        },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
         },
         "args": [
           {
@@ -10623,9 +12064,47 @@
         ]
       },
       {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-2"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
+        },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
         },
         "args": [
           {
@@ -10661,9 +12140,47 @@
         ]
       },
       {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-B"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
         "id": "homematic_thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
+        },
+        "titleFormatted": {
+          "en": "Set Week Profile: [[weekprofile]]"
         },
         "args": [
           {
@@ -10697,6 +12214,41 @@
             ]
           }
         ]
+      },
+      {
+        "id": "homematic_thermostat_set_mode",
+        "title": {
+          "en": "Set Mode"
+        },
+        "titleFormatted": {
+          "en": "Set Mode: [[mode]]"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=HmIP-eTRV-C"
+          },
+          {
+            "name": "mode",
+            "title": "Mode",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "0",
+                "label": {
+                  "en": "Auto"
+                }
+              },
+              {
+                "id": "1",
+                "label": {
+                  "en": "Manu"
+                }
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -10722,6 +12274,16 @@
       "getable": true,
       "setable": false,
       "uiComponent": "sensor"
+    },
+    "homematic_button_mod_ho_partial_open": {
+      "type": "boolean",
+      "title": {
+        "en": "Ventilation",
+        "de": "Lüften"
+      },
+      "uiComponent": "button",
+      "getable": false,
+      "setable": true
     },
     "homematic_led_status": {
       "type": "enum",
@@ -10805,6 +12367,46 @@
       "uiComponent": "picker",
       "getable": true,
       "setable": false
+    },
+    "homematic_sec_sir_hm_armstate": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Alarm off",
+            "de": "Alarm aus"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "External sensors armed",
+            "de": "Aussensensoren scharf"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "All sensors armed",
+            "de": "Alle Sensoren scharf"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Alarm blocked",
+            "de": "Alarm blockiert"
+          }
+        }
+      ],
+      "title": {
+        "en": "Arm State",
+        "de": "Scharfschalten"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": true
     },
     "homematic_swsd_alarm_button": {
       "type": "boolean",
@@ -11008,6 +12610,46 @@
       "min": 0,
       "max": 255,
       "step": 1
+    },
+    "measure_mod_ho_door_state": {
+      "type": "enum",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Closed",
+            "de": "Geschlossen"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Open",
+            "de": "Offen"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "Ventilation",
+            "de": "Lüftung"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Unknwon",
+            "de": "Unbekannt"
+          }
+        }
+      ],
+      "title": {
+        "en": "Door State",
+        "de": "Tor status"
+      },
+      "uiComponent": "picker",
+      "getable": true,
+      "setable": false
     },
     "meter_homematic_iec_power": {
       "type": "number",

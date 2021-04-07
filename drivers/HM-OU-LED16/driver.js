@@ -16,8 +16,7 @@ class HomematicDriver extends Driver {
 
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerButtonPressed = new Homey.FlowCardTriggerDevice('HM-OU-LED16-press')
-            .register()
+        this._flowTriggerButtonPressed = this.homey.flow.getDeviceTriggerCard('HM-OU-LED16-press')
             .registerRunListener((args, state) => {
                 if (args.button == state.button && args.pressType == state.pressType) {
                     return Promise.resolve(true)
@@ -26,9 +25,7 @@ class HomematicDriver extends Driver {
                 }
             })
 
-        let ledStatusAction = new Homey.FlowCardAction('homematic_set_led_status');
-        ledStatusAction
-            .register()
+        this.homey.flow.getActionCard('homematic_set_led_status')
             .registerRunListener((args, state) => {
                 return args.device.triggerCapabilityListener('homematic_led_status', args.led_status, {})
 

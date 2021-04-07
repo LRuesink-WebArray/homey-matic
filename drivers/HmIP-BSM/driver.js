@@ -17,8 +17,7 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-BSM'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerButtonPressed = new Homey.FlowCardTriggerDevice('HmIP-BSM-press')
-            .register()
+        this._flowTriggerButtonPressed = this.homey.flow.getDeviceTriggerCard('HmIP-BSM-press')
             .registerRunListener((args, state) => {
                 if (args.button == state.button && args.pressType == state.pressType) {
                     return Promise.resolve(true)

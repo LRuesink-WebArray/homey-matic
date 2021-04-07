@@ -1,0 +1,40 @@
+{
+    "type": "enum",
+    "values": [
+        {
+            "id": "0",
+            "title": {
+                "en": "Closed",
+                "de": "Geschlossen"
+            }
+        },
+        {
+            "id": "1",
+            "title": {
+                "en": "Open",
+                "de": "Offen"
+            }
+        },
+        {
+            "id": "2",
+            "title": {
+                "en": "Ventilation",
+                "de": "Lüftung"
+            }
+        },
+        {
+            "id": "3",
+            "title": {
+                "en": "Unknwon",
+                "de": "Unbekannt"
+            }
+        }
+    ],
+    "title": {
+        "en": "Door State",
+        "de": "Tor status"
+    },
+    "uiComponent": "picker",
+    "getable": true,
+    "setable": false
+}

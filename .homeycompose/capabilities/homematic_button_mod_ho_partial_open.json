@@ -1,0 +1,10 @@
+{
+    "type": "boolean",
+    "title": {
+        "en": "Ventilation",
+        "de": "Lüften"
+    },
+    "uiComponent": "button",
+    "getable": false,
+    "setable": true
+}
