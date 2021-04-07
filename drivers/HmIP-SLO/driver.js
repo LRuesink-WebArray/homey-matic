@@ -17,23 +17,20 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-SLO'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerCurrentIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-current')
-            .register()
+        var self = this;
+        this._flowTriggerCurrentIlluminanceChanged = this.homey.flow.getDeviceTriggerCard('HmIP-SLO-illuminance-current')
             .registerRunListener((args, state) => {
                 return Promise.resolve(true)
             })
-        this._flowTriggerAverageIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-average')
-            .register()
+        this._flowTriggerAverageIlluminanceChanged = this.homey.flow.getDeviceTriggerCard('HmIP-SLO-illuminance-average')
             .registerRunListener((args, state) => {
                 return Promise.resolve(true)
             })
-        this._flowTriggerHighestIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-highest')
-            .register()
+        this._flowTriggerHighestIlluminanceChanged = this.homey.flow.getDeviceTriggerCard('HmIP-SLO-illuminance-highest')
             .registerRunListener((args, state) => {
                 return Promise.resolve(true)
             })
-        this._flowTriggerLowestIlluminanceChanged = new Homey.FlowCardTriggerDevice('HmIP-SLO-illuminance-lowest')
-            .register()
+        this._flowTriggerLowestIlluminanceChanged = this.homey.flow.getDeviceTriggerCard('HmIP-SLO-illuminance-lowest')
             .registerRunListener((args, state) => {
                 return Promise.resolve(true)
             })

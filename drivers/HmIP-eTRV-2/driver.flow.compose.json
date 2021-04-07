@@ -5,6 +5,9 @@
             "title": {
                 "en": "Set Week Profile"
             },
+            "titleFormatted": {
+                "en": "Set Week Profile: [[weekprofile]]"
+            },
             "args": [
                 {
                     "name": "weekprofile",
@@ -27,6 +30,36 @@
                             "id": "3",
                             "label": {
                                 "en": "3"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "homematic_thermostat_set_mode",
+            "title": {
+                "en": "Set Mode"
+            },
+            "titleFormatted": {
+                "en": "Set Mode: [[mode]]"
+            },
+            "args": [
+                {
+                    "name": "mode",
+                    "title": "Mode",
+                    "type": "dropdown",
+                    "values": [
+                        {
+                            "id": "0",
+                            "label": {
+                                "en": "Auto"
+                            }
+                        },
+                        {
+                            "id": "1",
+                            "label": {
+                                "en": "Manu"
                             }
                         }
                     ]

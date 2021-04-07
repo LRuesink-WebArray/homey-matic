@@ -14,11 +14,9 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HM-Sen-RD-O']
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this._flowTriggerTurnedOn = new Homey.FlowCardTriggerDevice('HM-Sen-RD-O-turned-on')
-            .register()
+        this._flowTriggerTurnedOn = this.homey.flow.getDeviceTriggerCard('HM-Sen-RD-O-turned-on')
 
-        this._flowTriggerTurnedOff = new Homey.FlowCardTriggerDevice('HM-Sen-RD-O-turned-off')
-            .register()
+        this._flowTriggerTurnedOff = this.homey.flow.getDeviceTriggerCard('HM-Sen-RD-O-turned-off')
     }
 
     triggerTurnedOn(device, tokens, state) {

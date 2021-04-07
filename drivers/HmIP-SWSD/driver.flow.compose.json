@@ -5,6 +5,9 @@
             "title": {
                 "en": "Alarm state changed"
             },
+            "titleFormatted": {
+                "en": "Alarm state changed: [[state]]"
+            },
             "args": [
                 {
                     "name": "state",

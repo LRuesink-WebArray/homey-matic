@@ -1,43 +1,19 @@
-const Homey = require('homey');
-
-module.exports = [
-    {
-        description: 'Show loglines',
-        method: 'GET',
-        path: '/log/getloglines/',
-        requires_authorization: true,
-        role: 'owner',
-        fn: function (args, callback) {
-            var result = Homey.app.getLogLines(args);
-            callback(null, result);
-        }
+module.exports = {
+    async getLogLines({homey, query}) {
+        var result = homey.app.getLogLines(query);
+        return result;
     },
-    {
-        description: 'Stored Bridges',
-        method: 'GET',
-        path: '/bridges/get/',
-        requires_authorization: true,
-        role: 'owner',
-        fn: function (args, callback) {
-            var bridges = Homey.app.getStoredBridges();
-            var result = [];
-            Object.keys(bridges).forEach((serial) => {
-               result.push('Serial: ' + serial + ' IP: ' + bridges[serial].address)
-            })
-            callback(null, result);
-        }
+    async getStoredBridges({homey, query}) {
+        var bridges = homey.app.getStoredBridges();
+        var result = [];
+        Object.keys(bridges).forEach((serial) => {
+            result.push('Serial: ' + serial + ' IP: ' + bridges[serial].address)
+        })
+        return result;
     },
-    {
-        description: 'Delete Stored Bridges',
-        method: 'GET',
-        path: '/bridges/delete/',
-        requires_authorization: true,
-        role: 'owner',
-        fn: function (args, callback) {
-            var bridges = Homey.app.deleteStoredBridges();
-            var result = true;
-            callback(null, result);
-        }
+    async deleteStoredBridges({homey, query}) {
+        var bridges = homey.app.deleteStoredBridges();
+        var result = true;
+        return result;
     }
-
-]
+}

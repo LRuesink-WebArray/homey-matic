@@ -5,6 +5,11 @@
     },
     "class": "light",
     "capabilities": [],
+    "capabilitiesOptions": {
+        "onoff": {
+            "setOnDim": false
+        }
+    },
     "images": {
         "large": "/drivers/HM-LC-Dim1T-DR/assets/images/large.png",
         "small": "/drivers/HM-LC-Dim1T-DR/assets/images/small.png"
