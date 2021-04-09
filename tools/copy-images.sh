@@ -67,6 +67,8 @@ for drv in `ls drivers` ; do
     lower_drv="85_hm-rc-sec4-3"
   elif [ $lower_drv == "hm-wds30-t-o" ] ; then
     lower_drv="32_hmw-wsth-sm"
+  elif [ $lower_drv == "hm-lc-sw1pbu-fm" ] ; then
+    lower_drv="PushButton-2ch-wm"
   fi
   
   if ! [ -f drivers/$drv/assets/images/large.png ] ; then
