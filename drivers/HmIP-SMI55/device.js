@@ -6,12 +6,12 @@ const Convert = require('../../lib/convert.js');
 
 const capabilityMap = {
     "alarm_motion": {
-        "channel": 1,
+        "channel": 3,
         "key": "MOTION",
         "convert": Convert.toBoolean
     },
     "measure_luminance": {
-        "channel": 1,
+        "channel": 3,
         "key": "ILLUMINATION",
         "convert": Convert.toFloat()
     },
