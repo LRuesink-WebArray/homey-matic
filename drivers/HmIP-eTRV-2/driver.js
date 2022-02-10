@@ -18,13 +18,13 @@ class HomematicDriver extends Driver {
         this.homematicTypes = ['HmIP-eTRV-2'];
         this.log(this.homematicTypes.join(','), 'has been inited');
 
-        this.homey.flow.getActionCard('homematic_thermostat_set_weekprofile')
+        this.homey.flow.getActionCard('HmIP-eTRV-2-thermostat_set_weekprofile')
             .registerRunListener((args, state) => {
                 return args.device.triggerCapabilityListener('homematic_thermostat_weekprofile', args.weekprofile, {})
 
             })
 
-        this.homey.flow.getActionCard('homematic_thermostat_set_mode')
+        this.homey.flow.getActionCard('HmIP-eTRV-2-thermostat_set_mode')
             .registerRunListener((args, state) => {
                 return args.device.triggerCapabilityListener('homematic_thermostat_mode', args.mode, {})
 

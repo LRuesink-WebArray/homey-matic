@@ -11933,7 +11933,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_weekprofile",
+        "id": "HMIP-eTRV-thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
         },
@@ -11974,7 +11974,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_mode",
+        "id": "HMIP-eTRV-thermostat_set_mode",
         "title": {
           "en": "Set Mode"
         },
@@ -12023,7 +12023,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_weekprofile",
+        "id": "HmIP-eTRV-2-thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
         },
@@ -12064,7 +12064,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_mode",
+        "id": "HmIP-eTRV-2-thermostat_set_mode",
         "title": {
           "en": "Set Mode"
         },
@@ -12099,7 +12099,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_weekprofile",
+        "id": "HmIP-eTRV-B-thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
         },
@@ -12140,7 +12140,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_mode",
+        "id": "HmIP-eTRV-B-thermostat_set_mode",
         "title": {
           "en": "Set Mode"
         },
@@ -12175,7 +12175,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_weekprofile",
+        "id": "HmIP-eTRV-C-thermostat_set_weekprofile",
         "title": {
           "en": "Set Week Profile"
         },
@@ -12216,7 +12216,7 @@
         ]
       },
       {
-        "id": "homematic_thermostat_set_mode",
+        "id": "HmIP-eTRV-C-thermostat_set_mode",
         "title": {
           "en": "Set Mode"
         },
