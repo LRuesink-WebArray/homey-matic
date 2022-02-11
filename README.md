@@ -116,6 +116,7 @@ The app uses discovery to find your CCUs on the network. We were only able to te
 * HmIP-BWTH
 * HmIP-BWTH24
 * HmIP-DRSI1
+* HmIP-FCI1
 * HmIP-FBL
 * HmIP-FDT
 * HmIP-FROLL
