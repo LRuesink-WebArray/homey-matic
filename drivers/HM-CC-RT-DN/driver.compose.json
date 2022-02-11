@@ -12,6 +12,9 @@
         "homematic_measure_valve",
         "alarm_battery"
     ],
+    "energy": {
+        "batteries": ["AA", "AA"]
+    },
     "mobile": {
         "components": [
             {

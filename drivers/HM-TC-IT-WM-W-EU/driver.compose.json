@@ -13,6 +13,9 @@
         "alarm_battery",
         "measure_humidity"
     ],
+    "energy": {
+        "batteries": ["AAA", "AAA"]
+    },
     "mobile": {
         "components": [
             {
