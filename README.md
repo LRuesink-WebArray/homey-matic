@@ -68,6 +68,7 @@ The app uses discovery to find your CCUs on the network. We were only able to te
 * HM-PB-4-WM
 * HM-PB-6-WM55
 * HM-PBI-4-FM
+* HM-RC-2-PBU-FM
 * HM-RC-4
 * HM-RC-4-2
 * HM-RC-4-3
