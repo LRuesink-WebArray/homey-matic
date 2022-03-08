@@ -144,6 +144,7 @@ The app uses discovery to find your CCUs on the network. We were only able to te
 * HmIP-STH
 * HmIP-STHD
 * HmIP-STHO
+* HmIP-STHO-A
 * HmIP-SWD
 * HmIP-SWDM
 * HmIP-SWDO-I
