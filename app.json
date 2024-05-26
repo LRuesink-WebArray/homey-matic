@@ -50,6 +50,9 @@
       "public": false
     }
   },
+  "platforms": [
+    "local"
+  ],
   "drivers": [
     {
       "id": "HM-CC-RT-DN",

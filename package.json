@@ -5,18 +5,13 @@
   "main": "app.js",
   "dependencies": {
     "@twendt/binrpc": "3.3.2",
-    "axios": "^0.21.1",
-    "binary": "^0.3.0",
+    "axios": "^1.7.2",
     "freeport": "1.0.5",
     "homematic-xmlrpc": "^1.0.2",
-    "mqtt": "^3.0.0",
-    "node-fetch": "^2.6.1",
-    "put": "0.0.6",
-    "which": "^2.0.2"
+    "mqtt": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^7.13.0",
-    "homey": "^2.14.2"
+    "homey": "^3.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
