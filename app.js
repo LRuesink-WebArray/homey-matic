@@ -13,25 +13,24 @@ const connTypeMQTT = 'use_mqtt';
 const connTypeCCUJack = 'use_ccu_jack';
 
 class Homematic extends Homey.App {
-    
+
     async onInit() {
         this.logger = new Logger(this.homey);
         this.logger.log('info', 'Started homematic...');
-        this.discoveryInProgress = false; // Flag to prevent multiple discovery processes
-        
+
         try {
             const address = await this.homey.cloud.getLocalAddress();
             this.homeyIP = address.split(':')[0];
             this.settings = this.getSettings();
             this.discovery = new HomeMaticDiscovery(this.logger, this.homey);
             this.bridges = {};
-            
+
             const storedBridges = this.getStoredBridges();
             if (Object.keys(storedBridges).length > 0) {
                 this.logger.log('info', 'Initializing stored bridges...');
                 this.initializeStoredBridges(storedBridges);
             } else {
-                this.startDiscoveryProcess();
+                await this.discovery.discover();
             }
         } catch (err) {
             this.logger.log('error', 'Initialization failed:', err);
@@ -124,25 +123,6 @@ class Homematic extends Homey.App {
 
     getLogLines() {
         return this.logger.getLogLines();
-    }
-
-    async startDiscoveryProcess() {
-        if (this.discoveryInProgress) {
-            this.logger.log('info', 'Discovery process already in progress...');
-            return;
-        }
-
-        this.discoveryInProgress = true;
-        this.logger.log('info', 'Starting discovery process...');
-        
-        try {
-            await this.discovery.discover();
-        } catch (err) {
-            this.logger.log('error', 'Discovery process failed:', err);
-        } finally {
-            this.discoveryInProgress = false;
-            this.logger.log('info', 'Discovery process finished.');
-        }
     }
 }
 
