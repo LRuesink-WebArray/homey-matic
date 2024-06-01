@@ -14,7 +14,7 @@ const capabilityMap = {
         "key": "HUMIDITY",
         "convert": Convert.toFloat
     },
-    "	measure_wind_strength": {
+    "measure_wind_strength": {
         "channel": 1,
         "key": "WIND_SPEED",
         "convert": Convert.toFloat
