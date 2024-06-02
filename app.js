@@ -78,32 +78,39 @@ class Homematic extends Homey.App {
     }
 
     initializeBridge(bridge) {
-        const connType = this.getConnectionType();
-        this.logger.log('info', 'Connection type:', connType);
-        switch (connType) {
-            case connTypeRPC:
-                this.logger.log('info', "Initializing RPC CCU");
-                this.bridges[bridge.serial] = new HomeMaticCCURPC(this.logger, this.homey, bridge.type, bridge.serial, bridge.address);
-                break;
-            case connTypeMQTT:
-                this.logger.log('info', "Initializing MQTT CCU ");
-                this.bridges[bridge.serial] = new HomeMaticCCUMQTT(this.logger, this.homey, bridge.type, bridge.serial, bridge.address);
-                break;
-            case connTypeCCUJack:
-                this.logger.log('info', "Initializing CCU Jack");
-                this.bridges[bridge.serial] = new HomeMaticCCUJack(
-                    this.logger,
-                    this.homey,
-                    bridge.type,
-                    bridge.serial,
-                    bridge.address,
-                    this.settings.ccu_jack_mqtt_port,
-                    this.settings.ccu_jack_user,
-                    this.settings.ccu_jack_password,
-                );
-                break;
+        try {
+            const connType = this.getConnectionType();
+            this.logger.log('info', 'Connection type:', connType);
+            switch (connType) {
+                case connTypeRPC:
+                    this.logger.log('info', "Initializing RPC CCU");
+                    this.bridges[bridge.serial] = new HomeMaticCCURPC(this.logger, this.homey, bridge.type, bridge.serial, bridge.address);
+                    break;
+                case connTypeMQTT:
+                    this.logger.log('info', "Initializing MQTT CCU ");
+                    this.bridges[bridge.serial] = new HomeMaticCCUMQTT(this.logger, this.homey, bridge.type, bridge.serial, bridge.address);
+                    break;
+                case connTypeCCUJack:
+                    this.logger.log('info', "Initializing CCU Jack");
+                    this.bridges[bridge.serial] = new HomeMaticCCUJack(
+                        this.logger,
+                        this.homey,
+                        bridge.type,
+                        bridge.serial,
+                        bridge.address,
+                        this.settings.ccu_jack_mqtt_port,
+                        this.settings.ccu_jack_user,
+                        this.settings.ccu_jack_password,
+                    );
+                    break;
+                default:
+                    throw new Error(`Unsupported connection type: ${connType}`);
+            }
+            return this.bridges[bridge.serial];
+        } catch (err) {
+            this.logger.log('error', `Failed to initialize bridge ${bridge.serial}:`, err);
         }
-        return this.bridges[bridge.serial];
+        
     }
 
     setBridgeAddress(serial, address) {
