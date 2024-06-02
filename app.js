@@ -37,6 +37,15 @@ class Homematic extends Homey.App {
         }
     }
 
+    async onUninit() {
+        this.logger.log('info', 'Unloading homematic app...');
+        Object.keys(this.bridges).forEach(serial => {
+            if (this.bridges[serial].cleanup) {
+                this.bridges[serial].cleanup();
+            }
+        });
+    }
+
     getSettings() {
         return {
             "use_mqtt": this.homey.settings.get('use_mqtt'),
@@ -110,7 +119,6 @@ class Homematic extends Homey.App {
         } catch (err) {
             this.logger.log('error', `Failed to initialize bridge ${bridge.serial}:`, err);
         }
-        
     }
 
     setBridgeAddress(serial, address) {
