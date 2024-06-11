@@ -48,5 +48,8 @@
       "path": "/bridges/delete/",
       "public": false
     }
-  }
+  },
+  "platforms": [
+    "local"
+  ]
 }
