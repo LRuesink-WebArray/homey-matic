@@ -1,5 +1,9 @@
 {
     "id": "HM-RC-8",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-RC-8"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HM-MOD-Re-8",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-MOD-Re-8"
     },

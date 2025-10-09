@@ -1,5 +1,9 @@
 {
     "id": "HmIP-STE2-PCB",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-STE2-PCB"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HMIP-PSM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HMIP-PSM"
     },

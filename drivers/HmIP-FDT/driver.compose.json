@@ -1,5 +1,9 @@
 {
     "id": "HmIP-FDT",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-FDT"
     },

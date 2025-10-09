@@ -1,5 +1,9 @@
 {
     "id": "HM-WDS30-T-O",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-WDS30-T-O"
     },

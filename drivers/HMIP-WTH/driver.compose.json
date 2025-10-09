@@ -1,5 +1,9 @@
 {
     "id": "HMIP-WTH",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HMIP-WTH"
     },

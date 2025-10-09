@@ -1,5 +1,9 @@
 {
     "id": "HM-LC-Dim1T-FM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-LC-Dim1T-FM"
     },

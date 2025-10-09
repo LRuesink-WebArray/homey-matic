@@ -1,5 +1,9 @@
 {
     "id": "HM-Sen-DB-PCB",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-Sen-DB-PCB"
     },

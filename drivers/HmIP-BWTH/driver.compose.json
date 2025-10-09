@@ -1,5 +1,9 @@
 {
     "id": "HmIP-BWTH",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-BWTH"
     },

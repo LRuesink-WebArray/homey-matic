@@ -1,5 +1,9 @@
 {
     "id": "HM-PB-2-FM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-PB-2-FM"
     },

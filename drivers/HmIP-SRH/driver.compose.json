@@ -1,5 +1,9 @@
 {
     "id": "HmIP-SRH",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-SRH"
     },

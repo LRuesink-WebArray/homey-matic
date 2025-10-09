@@ -1,5 +1,9 @@
 {
     "id": "HM-OU-LED16",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-OU-LED16"
     },

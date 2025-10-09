@@ -1,5 +1,9 @@
 {
     "id": "HmIP-FSM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-FSM"
     },

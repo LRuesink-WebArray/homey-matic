@@ -16,5 +16,8 @@
   },
   "0.19.1": {
     "en": "Fix errors in HmIP-BDT and HmIP-FDT and fix api."
+  },
+  "0.19.2": {
+    "en": "Add FALMOT, add plugs, I9F eTRv-2"
   }
 }

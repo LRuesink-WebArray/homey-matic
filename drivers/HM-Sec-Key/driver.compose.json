@@ -1,5 +1,9 @@
 {
     "id": "HM-Sec-Key",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-Sec-Key"
     },
@@ -7,7 +11,9 @@
     "capabilities": [],
     "capabilitiesOptions": {
         "button": {
-            "title": { "en": "Open" }
+            "title": {
+                "en": "Open"
+            }
         }
     },
     "images": {

@@ -1,5 +1,9 @@
 {
     "id": "HmIP-FROLL",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-FROLL"
     },

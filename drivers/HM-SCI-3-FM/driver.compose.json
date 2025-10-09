@@ -1,5 +1,9 @@
 {
     "id": "HM-SCI-3-FM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-SCI-3-FM"
     },

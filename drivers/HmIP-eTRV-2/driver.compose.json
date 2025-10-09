@@ -1,5 +1,9 @@
 {
     "id": "HmIP-eTRV-2",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-eTRV-2"
     },

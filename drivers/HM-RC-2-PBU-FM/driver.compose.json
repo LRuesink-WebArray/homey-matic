@@ -1,5 +1,9 @@
 {
     "id": "HM-RC-2-PBU-FM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-RC-2-PBU-FM"
     },

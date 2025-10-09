@@ -1,5 +1,9 @@
 {
     "id": "HmIP-SWDM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-SWDM"
     },

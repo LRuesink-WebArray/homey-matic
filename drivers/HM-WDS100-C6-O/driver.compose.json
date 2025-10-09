@@ -1,5 +1,9 @@
 {
     "id": "HM-WDS100-C6-O",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-WDS100-C6-O"
     },

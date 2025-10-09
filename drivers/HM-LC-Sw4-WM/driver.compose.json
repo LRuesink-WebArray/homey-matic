@@ -1,5 +1,9 @@
 {
     "id": "HM-LC-Sw4-WM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-LC-Sw4-WM"
     },

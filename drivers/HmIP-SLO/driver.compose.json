@@ -1,5 +1,9 @@
 {
     "id": "HmIP-SLO",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-SLO"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HM-TC-IT-WM-W-EU",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-TC-IT-WM-W-EU"
     },
@@ -14,7 +18,10 @@
         "measure_humidity"
     ],
     "energy": {
-        "batteries": ["AAA", "AAA"]
+        "batteries": [
+            "AAA",
+            "AAA"
+        ]
     },
     "mobile": {
         "components": [

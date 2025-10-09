@@ -1,5 +1,9 @@
 {
     "id": "HmIP-MOD-OC8",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-MOD-OC8"
     },

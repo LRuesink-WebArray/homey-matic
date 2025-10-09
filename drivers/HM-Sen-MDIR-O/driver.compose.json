@@ -1,5 +1,9 @@
 {
     "id": "HM-Sen-MDIR-O",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-Sen-MDIR-O"
     },

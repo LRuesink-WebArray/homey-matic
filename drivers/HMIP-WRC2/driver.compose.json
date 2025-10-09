@@ -1,5 +1,9 @@
 {
     "id": "HMIP-WRC2",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HMIP-WRC2"
     },

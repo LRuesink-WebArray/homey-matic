@@ -1,5 +1,9 @@
 {
     "id": "HM-RC-Sec4-3",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-RC-Sec4-3"
     },

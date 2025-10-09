@@ -1,0 +1,111 @@
+{
+    "id": "HmIP-FALMOT-C12",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
+    "name": {
+        "en": "HmIP-FALMOT-C12"
+    },
+    "class": "thermostat",
+    "capabilities": [
+        "target_temperature",
+        "homematic_measure_valve"
+    ],
+    "mobile": {
+        "components": [
+            {
+                "id": "thermostat",
+                "capabilities": [
+                    "target_temperature"
+                ]
+            },
+            {
+                "id": "sensor",
+                "capabilities": [
+                    "homematic_measure_valve"
+                ]
+            }
+        ]
+    },
+    "images": {
+        "large": "/drivers/HmIP-FALMOT-C12/assets/images/large.png",
+        "small": "/drivers/HmIP-FALMOT-C12/assets/images/small.png"
+    },
+    "pair": [
+        {
+            "id": "list_bridges",
+            "template": "list_devices",
+            "options": {
+                "singular": true
+            },
+            "navigation": {
+                "next": "list_devices"
+            }
+        },
+        {
+            "id": "list_devices",
+            "template": "list_devices",
+            "navigation": {
+                "next": "add_devices"
+            }
+        },
+        {
+            "id": "add_devices",
+            "template": "add_devices"
+        }
+    ],
+    "settings": [
+        {
+            "type": "group",
+            "label": {
+                "en": "Device data"
+            },
+            "children": [
+                {
+                    "id": "app",
+                    "type": "label",
+                    "label": {
+                        "en": "App"
+                    },
+                    "value": "Homematic"
+                },
+                {
+                    "id": "driver",
+                    "type": "label",
+                    "label": {
+                        "en": "Driver"
+                    },
+                    "value": "",
+                    "hint": {
+                        "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+                    }
+                },
+                {
+                    "id": "address",
+                    "type": "label",
+                    "label": {
+                        "en": "Device Address"
+                    },
+                    "value": ""
+                },
+                {
+                    "id": "ccuIP",
+                    "type": "label",
+                    "label": {
+                        "en": "CCU IP"
+                    },
+                    "value": ""
+                },
+                {
+                    "id": "ccuSerial",
+                    "type": "text",
+                    "label": {
+                        "en": "CCU Serial"
+                    },
+                    "value": ""
+                }
+            ]
+        }
+    ]
+}

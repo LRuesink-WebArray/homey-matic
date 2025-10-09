@@ -1,5 +1,9 @@
 {
     "id": "HmIP-SMI",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-SMI"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HM-LC-Sw1-FM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-LC-Sw1-FM"
     },

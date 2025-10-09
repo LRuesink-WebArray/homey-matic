@@ -1,5 +1,9 @@
 {
     "id": "HM-PBI-4-FM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-PBI-4-FM"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HM-PB-6-WM55",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-PB-6-WM55"
     },

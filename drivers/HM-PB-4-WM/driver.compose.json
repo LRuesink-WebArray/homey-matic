@@ -1,5 +1,9 @@
 {
     "id": "HM-PB-4-WM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-PB-4-WM"
     },

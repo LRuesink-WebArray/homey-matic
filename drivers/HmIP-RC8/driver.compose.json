@@ -1,5 +1,9 @@
 {
     "id": "HmIP-RC8",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-RC8"
     },

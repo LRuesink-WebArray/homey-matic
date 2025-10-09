@@ -1,5 +1,9 @@
 {
     "id": "HM-RC-4-2",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-RC-4-2"
     },

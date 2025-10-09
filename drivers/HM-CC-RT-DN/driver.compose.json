@@ -1,5 +1,9 @@
 {
     "id": "HM-CC-RT-DN",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-CC-RT-DN"
     },
@@ -13,7 +17,10 @@
         "alarm_battery"
     ],
     "energy": {
-        "batteries": ["AA", "AA"]
+        "batteries": [
+            "AA",
+            "AA"
+        ]
     },
     "mobile": {
         "components": [

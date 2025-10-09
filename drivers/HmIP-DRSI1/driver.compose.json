@@ -1,5 +1,9 @@
 {
     "id": "HmIP-DRSI1",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-DRSI1"
     },

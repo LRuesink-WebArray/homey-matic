@@ -1,5 +1,9 @@
 {
     "id": "HmIP-MOD-HO",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-MOD-HO"
     },

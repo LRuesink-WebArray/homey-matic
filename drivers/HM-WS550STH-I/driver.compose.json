@@ -1,5 +1,9 @@
 {
     "id": "HM-WS550STH-I",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-WS550STH-I"
     },

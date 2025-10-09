@@ -1,5 +1,9 @@
 {
     "id": "HM-LC-Dim1PWM-CV",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-LC-Dim1PWM-CV"
     },

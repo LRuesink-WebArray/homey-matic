@@ -1,5 +1,9 @@
 {
     "id": "HmIP-SAM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-SAM"
     },

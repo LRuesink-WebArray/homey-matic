@@ -1,6 +1,6 @@
 {
   "id": "de.twendt.homey.matic",
-  "version": "0.19.1",
+  "version": "0.19.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -15,6 +15,9 @@
   ],
   "permissions": [
     "homey:app:nl.scanno.mqtt"
+  ],
+  "platforms": [
+    "local"
   ],
   "images": {
     "large": "/assets/images/large.png",
@@ -32,6 +35,7 @@
       }
     ]
   },
+  "support": "https://github.com/timowendt/homey-matic/issues",
   "api": {
     "getLogLines": {
       "method": "GET",

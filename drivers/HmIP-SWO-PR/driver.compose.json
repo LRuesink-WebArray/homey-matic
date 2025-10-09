@@ -1,5 +1,9 @@
 {
     "id": "HmIP-SWO-PR",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-SWO-PR"
     },

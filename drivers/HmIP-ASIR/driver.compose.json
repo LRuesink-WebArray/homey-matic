@@ -1,5 +1,9 @@
 {
     "id": "HmIP-ASIR",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-ASIR"
     },

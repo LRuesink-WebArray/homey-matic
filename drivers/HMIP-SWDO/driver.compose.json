@@ -1,5 +1,9 @@
 {
     "id": "HMIP-SWDO",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HMIP-SWDO"
     },

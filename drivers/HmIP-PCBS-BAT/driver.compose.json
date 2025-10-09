@@ -1,5 +1,9 @@
 {
     "id": "HmIP-PCBS-BAT",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-PCBS-BAT"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HmIP-BRC2",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-BRC2"
     },

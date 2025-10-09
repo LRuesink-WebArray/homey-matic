@@ -1,5 +1,9 @@
 {
     "id": "HM-Sec-MDIR-2",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-Sec-MDIR-2"
     },

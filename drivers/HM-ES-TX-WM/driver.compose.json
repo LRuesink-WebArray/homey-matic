@@ -1,5 +1,9 @@
 {
     "id": "HM-ES-TX-WM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-ES-TX-WM"
     },

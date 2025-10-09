@@ -1,5 +1,9 @@
 {
     "id": "HM-Sen-MDIR-WM55",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-Sen-MDIR-WM55"
     },

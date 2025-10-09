@@ -1,5 +1,9 @@
 {
     "id": "HmIP-FCI1",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-FCI1"
     },

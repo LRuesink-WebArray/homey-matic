@@ -1,5 +1,9 @@
 {
     "id": "HM-RC-Key4-3",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-RC-Key4-3"
     },

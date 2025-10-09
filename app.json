@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "de.twendt.homey.matic",
-  "version": "0.19.1",
+  "version": "0.19.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "name": {
@@ -16,6 +16,9 @@
   ],
   "permissions": [
     "homey:app:nl.scanno.mqtt"
+  ],
+  "platforms": [
+    "local"
   ],
   "images": {
     "large": "/assets/images/large.png",
@@ -33,6 +36,7 @@
       }
     ]
   },
+  "support": "https://github.com/timowendt/homey-matic/issues",
   "api": {
     "getLogLines": {
       "method": "GET",
@@ -53,6 +57,10 @@
   "drivers": [
     {
       "id": "HM-CC-RT-DN",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-CC-RT-DN"
       },
@@ -188,6 +196,10 @@
     },
     {
       "id": "HM-ES-PMSw1-DR",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-ES-PMSw1-DR"
       },
@@ -276,6 +288,10 @@
     },
     {
       "id": "HM-ES-PMSw1-Pl",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-ES-PMSw1-Pl"
       },
@@ -364,6 +380,10 @@
     },
     {
       "id": "HM-ES-TX-WM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-ES-TX-WM"
       },
@@ -452,6 +472,10 @@
     },
     {
       "id": "HM-LC-Bl1-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Bl1-FM"
       },
@@ -540,6 +564,10 @@
     },
     {
       "id": "HM-LC-Bl1PBU-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Bl1PBU-FM"
       },
@@ -628,6 +656,10 @@
     },
     {
       "id": "HM-LC-Dim1PWM-CV",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Dim1PWM-CV"
       },
@@ -716,6 +748,10 @@
     },
     {
       "id": "HM-LC-Dim1T-CV",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Dim1T-CV"
       },
@@ -804,6 +840,10 @@
     },
     {
       "id": "HM-LC-Dim1T-DR",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Dim1T-DR"
       },
@@ -897,6 +937,10 @@
     },
     {
       "id": "HM-LC-Dim1T-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Dim1T-FM"
       },
@@ -985,6 +1029,10 @@
     },
     {
       "id": "HM-LC-Dim1TPBU-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Dim1TPBU-FM"
       },
@@ -1073,6 +1121,10 @@
     },
     {
       "id": "HM-LC-Sw1-Ba-PCB",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1-Ba-PCB"
       },
@@ -1161,6 +1213,10 @@
     },
     {
       "id": "HM-LC-Sw1-DR",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1-DR"
       },
@@ -1249,6 +1305,10 @@
     },
     {
       "id": "HM-LC-Sw1-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1-FM"
       },
@@ -1337,6 +1397,10 @@
     },
     {
       "id": "HM-LC-Sw1-Pl",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1-Pl"
       },
@@ -1425,6 +1489,10 @@
     },
     {
       "id": "HM-LC-Sw1-Pl-CT-R1",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1-Pl-CT-R1"
       },
@@ -1513,6 +1581,10 @@
     },
     {
       "id": "HM-LC-Sw1-Pl-DN-R1",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1-Pl-DN-Rx"
       },
@@ -1601,6 +1673,10 @@
     },
     {
       "id": "HM-LC-Sw1PBU-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw1PBU-FM"
       },
@@ -1689,6 +1765,10 @@
     },
     {
       "id": "HM-LC-Sw2-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw2-FM"
       },
@@ -1777,6 +1857,10 @@
     },
     {
       "id": "HM-LC-Sw2PBU-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw2PBU-FM"
       },
@@ -1865,6 +1949,10 @@
     },
     {
       "id": "HM-LC-Sw4-Ba-PCB",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw4-Ba-PCB"
       },
@@ -1953,6 +2041,10 @@
     },
     {
       "id": "HM-LC-Sw4-DR",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw4-DR"
       },
@@ -2041,6 +2133,10 @@
     },
     {
       "id": "HM-LC-Sw4-SM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw4-SM"
       },
@@ -2129,6 +2225,10 @@
     },
     {
       "id": "HM-LC-Sw4-WM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-LC-Sw4-WM"
       },
@@ -2217,6 +2317,10 @@
     },
     {
       "id": "HM-MOD-Re-8",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-MOD-Re-8"
       },
@@ -2305,6 +2409,10 @@
     },
     {
       "id": "HM-OU-LED16",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-OU-LED16"
       },
@@ -2393,6 +2501,10 @@
     },
     {
       "id": "HM-PB-2-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-PB-2-FM"
       },
@@ -2481,6 +2593,10 @@
     },
     {
       "id": "HM-PB-2-WM55-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-PB-2-WM55-2"
       },
@@ -2569,6 +2685,10 @@
     },
     {
       "id": "HM-PB-4-WM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-PB-4-WM"
       },
@@ -2659,6 +2779,10 @@
     },
     {
       "id": "HM-PB-6-WM55",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-PB-6-WM55"
       },
@@ -2747,6 +2871,10 @@
     },
     {
       "id": "HM-PBI-4-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-PBI-4-FM"
       },
@@ -2835,6 +2963,10 @@
     },
     {
       "id": "HM-RC-2-PBU-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-2-PBU-FM"
       },
@@ -2923,6 +3055,10 @@
     },
     {
       "id": "HM-RC-4",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-4"
       },
@@ -3011,6 +3147,10 @@
     },
     {
       "id": "HM-RC-4-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-4-2"
       },
@@ -3091,6 +3231,10 @@
     },
     {
       "id": "HM-RC-4-3",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-4-3"
       },
@@ -3179,6 +3323,10 @@
     },
     {
       "id": "HM-RC-8",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-8"
       },
@@ -3267,6 +3415,10 @@
     },
     {
       "id": "HM-RC-Key4-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-Key4-2"
       },
@@ -3355,6 +3507,10 @@
     },
     {
       "id": "HM-RC-Key4-3",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-Key4-3"
       },
@@ -3443,6 +3599,10 @@
     },
     {
       "id": "HM-RC-Sec4-3",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-RC-Sec4-3"
       },
@@ -3531,6 +3691,10 @@
     },
     {
       "id": "HM-SCI-3-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-SCI-3-FM"
       },
@@ -3619,6 +3783,10 @@
     },
     {
       "id": "HM-Sec-Key",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-Key"
       },
@@ -3714,6 +3882,10 @@
     },
     {
       "id": "HM-Sec-MDIR-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-MDIR-2"
       },
@@ -3802,6 +3974,10 @@
     },
     {
       "id": "HM-Sec-RHS",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-RHS"
       },
@@ -3892,6 +4068,10 @@
     },
     {
       "id": "HM-Sec-SC",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-SC"
       },
@@ -3980,6 +4160,10 @@
     },
     {
       "id": "HM-Sec-SC-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-SC-2"
       },
@@ -4068,6 +4252,10 @@
     },
     {
       "id": "HM-Sec-SCo",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-SCo"
       },
@@ -4156,6 +4344,10 @@
     },
     {
       "id": "HM-Sec-SD",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-SD"
       },
@@ -4244,6 +4436,10 @@
     },
     {
       "id": "HM-Sec-SD-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-SD-2"
       },
@@ -4332,6 +4528,10 @@
     },
     {
       "id": "HM-Sec-Sir-WM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-Sir-WM"
       },
@@ -4420,6 +4620,10 @@
     },
     {
       "id": "HM-Sec-WDS",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sec-WDS"
       },
@@ -4510,6 +4714,10 @@
     },
     {
       "id": "HM-Sen-DB-PCB",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sen-DB-PCB"
       },
@@ -4598,6 +4806,10 @@
     },
     {
       "id": "HM-Sen-MDIR-O",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sen-MDIR-O"
       },
@@ -4686,6 +4898,10 @@
     },
     {
       "id": "HM-Sen-MDIR-WM55",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sen-MDIR-WM55"
       },
@@ -4774,6 +4990,10 @@
     },
     {
       "id": "HM-Sen-RD-O",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-Sen-RD-O"
       },
@@ -4865,6 +5085,10 @@
     },
     {
       "id": "HM-SwI-3-FM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-SwI-3-FM"
       },
@@ -4953,6 +5177,10 @@
     },
     {
       "id": "HM-TC-IT-WM-W-EU",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-TC-IT-WM-W-EU"
       },
@@ -5095,6 +5323,10 @@
     },
     {
       "id": "HM-WDS10-TH-O",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-WDS10-TH-O"
       },
@@ -5183,6 +5415,10 @@
     },
     {
       "id": "HM-WDS100-C6-O",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-WDS100-C6-O"
       },
@@ -5271,6 +5507,10 @@
     },
     {
       "id": "HM-WDS30-T-O",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-WDS30-T-O"
       },
@@ -5359,6 +5599,10 @@
     },
     {
       "id": "HM-WS550STH-I",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HM-WS550STH-I"
       },
@@ -5447,6 +5691,10 @@
     },
     {
       "id": "HMIP-PS",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HMIP-PS"
       },
@@ -5535,6 +5783,10 @@
     },
     {
       "id": "HMIP-PSM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HMIP-PSM"
       },
@@ -5623,6 +5875,10 @@
     },
     {
       "id": "HMIP-SWDO",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HMIP-SWDO"
       },
@@ -5711,6 +5967,10 @@
     },
     {
       "id": "HMIP-WRC2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HMIP-WRC2"
       },
@@ -5799,6 +6059,10 @@
     },
     {
       "id": "HMIP-WTH",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HMIP-WTH"
       },
@@ -5935,6 +6199,10 @@
     },
     {
       "id": "HMIP-eTRV",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HMIP-eTRV"
       },
@@ -6073,6 +6341,10 @@
     },
     {
       "id": "HmIP-ASIR",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-ASIR"
       },
@@ -6161,6 +6433,10 @@
     },
     {
       "id": "HmIP-BDT",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-BDT"
       },
@@ -6254,6 +6530,10 @@
     },
     {
       "id": "HmIP-BRA",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-BRA"
       },
@@ -6342,6 +6622,10 @@
     },
     {
       "id": "HmIP-BRC2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-BRC2"
       },
@@ -6430,6 +6714,10 @@
     },
     {
       "id": "HmIP-BROLL",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-BROLL"
       },
@@ -6518,6 +6806,10 @@
     },
     {
       "id": "HmIP-BSM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-BSM"
       },
@@ -6606,6 +6898,10 @@
     },
     {
       "id": "HmIP-BWTH",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-BWTH"
       },
@@ -6742,6 +7038,10 @@
     },
     {
       "id": "HmIP-DRSI1",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-DRSI1"
       },
@@ -6829,7 +7129,122 @@
       ]
     },
     {
+      "id": "HmIP-FALMOT-C12",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
+      "name": {
+        "en": "HmIP-FALMOT-C12"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "target_temperature",
+        "homematic_measure_valve"
+      ],
+      "mobile": {
+        "components": [
+          {
+            "id": "thermostat",
+            "capabilities": [
+              "target_temperature"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "homematic_measure_valve"
+            ]
+          }
+        ]
+      },
+      "images": {
+        "large": "/drivers/HmIP-FALMOT-C12/assets/images/large.png",
+        "small": "/drivers/HmIP-FALMOT-C12/assets/images/small.png"
+      },
+      "pair": [
+        {
+          "id": "list_bridges",
+          "template": "list_devices",
+          "options": {
+            "singular": true
+          },
+          "navigation": {
+            "next": "list_devices"
+          }
+        },
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "settings": [
+        {
+          "type": "group",
+          "label": {
+            "en": "Device data"
+          },
+          "children": [
+            {
+              "id": "app",
+              "type": "label",
+              "label": {
+                "en": "App"
+              },
+              "value": "Homematic"
+            },
+            {
+              "id": "driver",
+              "type": "label",
+              "label": {
+                "en": "Driver"
+              },
+              "value": "",
+              "hint": {
+                "en": "In most cases the driver name is the same as the device type, but some drivers support multiple device types. In those cases they might not match."
+              }
+            },
+            {
+              "id": "address",
+              "type": "label",
+              "label": {
+                "en": "Device Address"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuIP",
+              "type": "label",
+              "label": {
+                "en": "CCU IP"
+              },
+              "value": ""
+            },
+            {
+              "id": "ccuSerial",
+              "type": "text",
+              "label": {
+                "en": "CCU Serial"
+              },
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "HmIP-FBL",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-FBL"
       },
@@ -6918,6 +7333,10 @@
     },
     {
       "id": "HmIP-FCI1",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-FCI1"
       },
@@ -7006,6 +7425,10 @@
     },
     {
       "id": "HmIP-FDT",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-FDT"
       },
@@ -7099,6 +7522,10 @@
     },
     {
       "id": "HmIP-FROLL",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-FROLL"
       },
@@ -7187,6 +7614,10 @@
     },
     {
       "id": "HmIP-FSM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-FSM"
       },
@@ -7275,6 +7706,10 @@
     },
     {
       "id": "HmIP-MOD-HO",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-MOD-HO"
       },
@@ -7363,6 +7798,10 @@
     },
     {
       "id": "HmIP-MOD-OC8",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-MOD-OC8"
       },
@@ -7451,6 +7890,10 @@
     },
     {
       "id": "HmIP-PCBS",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-PCBS"
       },
@@ -7539,6 +7982,10 @@
     },
     {
       "id": "HmIP-PCBS-BAT",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-PCBS-BAT"
       },
@@ -7627,6 +8074,10 @@
     },
     {
       "id": "HmIP-RC8",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-RC8"
       },
@@ -7715,6 +8166,10 @@
     },
     {
       "id": "HmIP-SAM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SAM"
       },
@@ -7803,6 +8258,10 @@
     },
     {
       "id": "HmIP-SCI",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SCI"
       },
@@ -7891,6 +8350,10 @@
     },
     {
       "id": "HmIP-SLO",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SLO"
       },
@@ -7979,6 +8442,10 @@
     },
     {
       "id": "HmIP-SMI",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SMI"
       },
@@ -8067,6 +8534,10 @@
     },
     {
       "id": "HmIP-SMI55",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SMI55"
       },
@@ -8155,6 +8626,10 @@
     },
     {
       "id": "HmIP-SMO-A",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SMO-A"
       },
@@ -8243,6 +8718,10 @@
     },
     {
       "id": "HmIP-SPI",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SPI"
       },
@@ -8331,6 +8810,10 @@
     },
     {
       "id": "HmIP-SRH",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SRH"
       },
@@ -8421,6 +8904,10 @@
     },
     {
       "id": "HmIP-STE2-PCB",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-STE2-PCB"
       },
@@ -8511,6 +8998,10 @@
     },
     {
       "id": "HmIP-STH",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-STH"
       },
@@ -8647,6 +9138,10 @@
     },
     {
       "id": "HmIP-STHD",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-STHD"
       },
@@ -8783,6 +9278,10 @@
     },
     {
       "id": "HmIP-STHO",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-STHO"
       },
@@ -8885,6 +9384,10 @@
     },
     {
       "id": "HmIP-SWD",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SWD"
       },
@@ -8973,6 +9476,10 @@
     },
     {
       "id": "HmIP-SWDM",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SWDM"
       },
@@ -9061,6 +9568,10 @@
     },
     {
       "id": "HmIP-SWDO-I",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SWDO-I"
       },
@@ -9149,6 +9660,10 @@
     },
     {
       "id": "HmIP-SWO-PR",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SWO-PR"
       },
@@ -9237,6 +9752,10 @@
     },
     {
       "id": "HmIP-SWSD",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-SWSD"
       },
@@ -9325,6 +9844,10 @@
     },
     {
       "id": "HmIP-WRC6",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-WRC6"
       },
@@ -9413,6 +9936,10 @@
     },
     {
       "id": "HmIP-eTRV-2",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-eTRV-2"
       },
@@ -9549,6 +10076,10 @@
     },
     {
       "id": "HmIP-eTRV-B",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-eTRV-B"
       },
@@ -9687,6 +10218,10 @@
     },
     {
       "id": "HmIP-eTRV-C",
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [],
       "name": {
         "en": "HmIP-eTRV-C"
       },

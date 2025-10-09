@@ -1,5 +1,9 @@
 {
     "id": "HM-ES-PMSw1-Pl",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-ES-PMSw1-Pl"
     },

@@ -1,5 +1,9 @@
 {
     "id": "HMIP-PS",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HMIP-PS"
     },

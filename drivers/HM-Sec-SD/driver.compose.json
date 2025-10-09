@@ -1,5 +1,9 @@
 {
     "id": "HM-Sec-SD",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HM-Sec-SD"
     },

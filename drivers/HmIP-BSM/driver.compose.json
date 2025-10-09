@@ -1,5 +1,9 @@
 {
     "id": "HmIP-BSM",
+    "platforms": [
+        "local"
+    ],
+    "connectivity": [],
     "name": {
         "en": "HmIP-BSM"
     },
