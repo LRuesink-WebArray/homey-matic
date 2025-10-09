@@ -10,7 +10,7 @@ class HomematicDriver extends Driver {
         this.capabilities = [
             'onoff'
         ]
-        this.homematicTypes = ['HMIP-PS', 'HmIP-PS-CH', 'HmIP-PS-PE', 'HmIP-PS-UK'];
+        this.homematicTypes = ['HMIP-PS', 'HmIP-PS-CH', 'HmIP-PS-PE', 'HmIP-PS-UK', 'HmIP-PS-2'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 

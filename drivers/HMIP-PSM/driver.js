@@ -14,7 +14,7 @@ class HomematicDriver extends Driver {
             'measure_current',
             'meter_power'
         ]
-        this.homematicTypes = ['HMIP-PSM', 'HmIP-PSM-CH'];
+        this.homematicTypes = ['HMIP-PSM', 'HmIP-PSM-CH', 'HmIP-PSM-2'];
         this.log(this.homematicTypes.join(','), 'has been inited');
     }
 
